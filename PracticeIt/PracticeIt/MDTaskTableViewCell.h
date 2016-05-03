@@ -10,4 +10,12 @@
 
 @interface MDTaskTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIProgressView *timeProgress;
+
+@property (weak, nonatomic) IBOutlet UITextField *ttsTextField;
+@property (weak, nonatomic) IBOutlet UILabel *audioLabel;
+
 @end
