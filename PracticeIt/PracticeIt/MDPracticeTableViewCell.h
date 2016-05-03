@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
 
-@interface MDPracticeTableViewCell : UITableViewCell
+// SWTableViewCell pod
+@interface MDPracticeTableViewCell : SWTableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

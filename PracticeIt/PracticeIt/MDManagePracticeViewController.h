@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MDManagePracticeViewController : UIViewController
+@interface MDManagePracticeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

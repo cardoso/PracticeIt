@@ -7,8 +7,12 @@
 //
 
 #import "MDManagePracticeViewController.h"
+#import "MDTaskTableViewCell.h"
 
 @interface MDManagePracticeViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableOfTasks;
+@property NSIndexPath *lastSelectedTaskIndexPath;
 
 @end
 
@@ -22,6 +26,38 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark TableViewDataSource
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MDTaskTableViewCell *cell = [self.tableOfTasks dequeueReusableCellWithIdentifier:@"taskCell" forIndexPath:indexPath];
+    
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 15;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath == [self.tableOfTasks indexPathForSelectedRow]) {
+        return  160;
+    }
+    else return 76;
+
+}
+
+#pragma mark TableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [((MDTaskTableViewCell*)[self.tableOfTasks cellForRowAtIndexPath:self.lastSelectedTaskIndexPath]).ttsTextField resignFirstResponder];
+    
+    [tableView beginUpdates];
+    [tableView endUpdates];
+    
+    self.lastSelectedTaskIndexPath = indexPath;
 }
 
 /*

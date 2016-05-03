@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UICollectionView *iconCollectionView;
+@property NSInteger selectedIconIndex;
 
 @end
 
@@ -21,8 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,9 +49,18 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [self.iconCollectionView dequeueReusableCellWithReuseIdentifier:@"iconCell" forIndexPath:indexPath];
     
+    cell.selectedBackgroundView = [[UIView alloc] initWithFrame: cell.bounds];
+    cell.selectedBackgroundView.backgroundColor = [UIColor redColor];
+    
     ((UIImageView*)([cell viewWithTag:12])).image = [UIImage imageNamed:@"icon_clock"];
     
     return cell;
+}
+
+#pragma mark CollectionViewDelegate
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
 }
 
 /*
