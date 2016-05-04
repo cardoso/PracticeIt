@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MDPracticeIt.h"
 
 @interface MDAddPracticeViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (weak, nonatomic) MDPracticeIt *practiceIt;
 
 @end

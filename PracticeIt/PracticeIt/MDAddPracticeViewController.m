@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UICollectionView *iconCollectionView;
+
+@property NSArray *iconNames;
 @property NSInteger selectedIconIndex;
 
 @end
@@ -22,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.iconNames = @[@"",@"icon_clock",@"icon_audio", @"icon_tts"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +36,9 @@
 
 - (IBAction)savePressed:(UIButton *)sender {
     // TODO: Everything
+    
+    [self.practiceIt addPracticeWithTitle:self.nameTextField.text WithDescription:self.descriptionTextView.text WithIconName:[self.iconNames objectAtIndex:self.selectedIconIndex]];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -43,7 +50,7 @@
 #pragma mark CollectionViewDataSource
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.iconNames.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,7 +59,7 @@
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame: cell.bounds];
     cell.selectedBackgroundView.backgroundColor = [UIColor redColor];
     
-    ((UIImageView*)([cell viewWithTag:12])).image = [UIImage imageNamed:@"icon_clock"];
+    ((UIImageView*)([cell viewWithTag:12])).image = [UIImage imageNamed:[self.iconNames objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -60,7 +67,7 @@
 #pragma mark CollectionViewDelegate
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
+    self.selectedIconIndex = indexPath.row;
 }
 
 /*
