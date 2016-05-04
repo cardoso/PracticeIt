@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MDPracticeIt.h"
 #import "MDPracticeTableViewCell.h"
 
-@interface MDListOfPracticesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate>
+@interface MDListOfPracticesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, MDPracticeItDelegate>
+
+@property MDPracticeIt *practiceIt;
 
 @end

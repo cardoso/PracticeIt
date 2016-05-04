@@ -23,6 +23,9 @@
 		89043C7D1CD78026002976B1 /* MDAddPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */; };
 		89789C6A1CD8D2BA00962098 /* MDTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89789C691CD8D2BA00962098 /* MDTaskTableViewCell.m */; };
 		89789C6E1CD8D34800962098 /* MDManagePracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89789C6D1CD8D34800962098 /* MDManagePracticeViewController.m */; };
+		89CD82D61CDA2FA300F42090 /* MDPracticeIt.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82D51CDA2FA300F42090 /* MDPracticeIt.m */; };
+		89CD82D91CDA30B700F42090 /* MDPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82D81CDA30B700F42090 /* MDPractice.m */; };
+		89CD82DD1CDA404D00F42090 /* MDTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82DC1CDA404D00F42090 /* MDTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,13 @@
 		89789C691CD8D2BA00962098 /* MDTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTaskTableViewCell.m; sourceTree = "<group>"; };
 		89789C6C1CD8D34800962098 /* MDManagePracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDManagePracticeViewController.h; sourceTree = "<group>"; };
 		89789C6D1CD8D34800962098 /* MDManagePracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDManagePracticeViewController.m; sourceTree = "<group>"; };
+		89CD82D41CDA2FA300F42090 /* MDPracticeIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDPracticeIt.h; sourceTree = "<group>"; };
+		89CD82D51CDA2FA300F42090 /* MDPracticeIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDPracticeIt.m; sourceTree = "<group>"; };
+		89CD82D71CDA30B700F42090 /* MDPractice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDPractice.h; sourceTree = "<group>"; };
+		89CD82D81CDA30B700F42090 /* MDPractice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDPractice.m; sourceTree = "<group>"; };
+		89CD82DA1CDA347500F42090 /* MDPracticeItDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDPracticeItDelegate.h; sourceTree = "<group>"; };
+		89CD82DB1CDA404D00F42090 /* MDTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTask.h; sourceTree = "<group>"; };
+		89CD82DC1CDA404D00F42090 /* MDTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTask.m; sourceTree = "<group>"; };
 		909A70A2F76A3AAA0FFAB914 /* Pods-PracticeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeIt/Pods-PracticeIt.debug.xcconfig"; sourceTree = "<group>"; };
 		BABFC45ADBC91544A05C2BB1 /* Pods-PracticeItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeItTests/Pods-PracticeItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE48488AD432FAA9737C1810 /* Pods-PracticeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeIt/Pods-PracticeIt.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +169,13 @@
 				89789C6B1CD8D2CB00962098 /* TableViewCells */,
 				89043C411CD77088002976B1 /* AppDelegate.h */,
 				89043C421CD77088002976B1 /* AppDelegate.m */,
+				89CD82DA1CDA347500F42090 /* MDPracticeItDelegate.h */,
+				89CD82D41CDA2FA300F42090 /* MDPracticeIt.h */,
+				89CD82D51CDA2FA300F42090 /* MDPracticeIt.m */,
+				89CD82D71CDA30B700F42090 /* MDPractice.h */,
+				89CD82D81CDA30B700F42090 /* MDPractice.m */,
+				89CD82DB1CDA404D00F42090 /* MDTask.h */,
+				89CD82DC1CDA404D00F42090 /* MDTask.m */,
 				89043C471CD77088002976B1 /* Main.storyboard */,
 				89043C4D1CD77088002976B1 /* Assets.xcassets */,
 				89043C4F1CD77088002976B1 /* LaunchScreen.storyboard */,
@@ -198,12 +215,12 @@
 		89043C7A1CD7746D002976B1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				89789C6C1CD8D34800962098 /* MDManagePracticeViewController.h */,
-				89789C6D1CD8D34800962098 /* MDManagePracticeViewController.m */,
 				89043C771CD77455002976B1 /* MDListOfPracticesViewController.h */,
 				89043C781CD77455002976B1 /* MDListOfPracticesViewController.m */,
 				89043C7B1CD78026002976B1 /* MDAddPracticeViewController.h */,
 				89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */,
+				89789C6C1CD8D34800962098 /* MDManagePracticeViewController.h */,
+				89789C6D1CD8D34800962098 /* MDManagePracticeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -486,7 +503,10 @@
 				89043C401CD77088002976B1 /* main.m in Sources */,
 				89043C7D1CD78026002976B1 /* MDAddPracticeViewController.m in Sources */,
 				89043C4C1CD77088002976B1 /* PracticeIt.xcdatamodeld in Sources */,
+				89CD82D61CDA2FA300F42090 /* MDPracticeIt.m in Sources */,
+				89CD82D91CDA30B700F42090 /* MDPractice.m in Sources */,
 				89789C6E1CD8D34800962098 /* MDManagePracticeViewController.m in Sources */,
+				89CD82DD1CDA404D00F42090 /* MDTask.m in Sources */,
 				89789C6A1CD8D2BA00962098 /* MDTaskTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
