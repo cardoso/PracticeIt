@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
 
-@interface MDTaskTableViewCell : UITableViewCell
+// SWTableViewCell pod
+@interface MDTaskTableViewCell : SWTableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ttsMessageLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *timeProgress;
 
-@property (weak, nonatomic) IBOutlet UITextField *ttsTextField;
+
 @property (weak, nonatomic) IBOutlet UILabel *audioLabel;
 
 @end

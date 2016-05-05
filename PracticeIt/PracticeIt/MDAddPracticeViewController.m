@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.iconNames = @[@"",@"icon_clock",@"icon_audio", @"icon_tts"];
+    self.iconNames = @[@"icon_clock",@"icon_audio", @"icon_tts"];
 }
 
 - (void)didReceiveMemoryWarning {

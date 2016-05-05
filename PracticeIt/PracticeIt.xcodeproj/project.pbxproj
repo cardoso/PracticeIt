@@ -26,6 +26,7 @@
 		89CD82D61CDA2FA300F42090 /* MDPracticeIt.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82D51CDA2FA300F42090 /* MDPracticeIt.m */; };
 		89CD82D91CDA30B700F42090 /* MDPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82D81CDA30B700F42090 /* MDPractice.m */; };
 		89CD82DD1CDA404D00F42090 /* MDTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82DC1CDA404D00F42090 /* MDTask.m */; };
+		89EB874F1CDB68DD0026BD6A /* MDAddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB874E1CDB68DD0026BD6A /* MDAddTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,9 @@
 		89CD82DA1CDA347500F42090 /* MDPracticeItDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDPracticeItDelegate.h; sourceTree = "<group>"; };
 		89CD82DB1CDA404D00F42090 /* MDTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTask.h; sourceTree = "<group>"; };
 		89CD82DC1CDA404D00F42090 /* MDTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTask.m; sourceTree = "<group>"; };
+		89EB874C1CDB65A80026BD6A /* MDPracticeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDPracticeDelegate.h; sourceTree = "<group>"; };
+		89EB874D1CDB68DD0026BD6A /* MDAddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAddTaskViewController.h; sourceTree = "<group>"; };
+		89EB874E1CDB68DD0026BD6A /* MDAddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAddTaskViewController.m; sourceTree = "<group>"; };
 		909A70A2F76A3AAA0FFAB914 /* Pods-PracticeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeIt/Pods-PracticeIt.debug.xcconfig"; sourceTree = "<group>"; };
 		BABFC45ADBC91544A05C2BB1 /* Pods-PracticeItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeItTests/Pods-PracticeItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE48488AD432FAA9737C1810 /* Pods-PracticeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeIt/Pods-PracticeIt.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,11 +173,12 @@
 				89789C6B1CD8D2CB00962098 /* TableViewCells */,
 				89043C411CD77088002976B1 /* AppDelegate.h */,
 				89043C421CD77088002976B1 /* AppDelegate.m */,
-				89CD82DA1CDA347500F42090 /* MDPracticeItDelegate.h */,
 				89CD82D41CDA2FA300F42090 /* MDPracticeIt.h */,
 				89CD82D51CDA2FA300F42090 /* MDPracticeIt.m */,
+				89CD82DA1CDA347500F42090 /* MDPracticeItDelegate.h */,
 				89CD82D71CDA30B700F42090 /* MDPractice.h */,
 				89CD82D81CDA30B700F42090 /* MDPractice.m */,
+				89EB874C1CDB65A80026BD6A /* MDPracticeDelegate.h */,
 				89CD82DB1CDA404D00F42090 /* MDTask.h */,
 				89CD82DC1CDA404D00F42090 /* MDTask.m */,
 				89043C471CD77088002976B1 /* Main.storyboard */,
@@ -221,6 +226,8 @@
 				89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */,
 				89789C6C1CD8D34800962098 /* MDManagePracticeViewController.h */,
 				89789C6D1CD8D34800962098 /* MDManagePracticeViewController.m */,
+				89EB874D1CDB68DD0026BD6A /* MDAddTaskViewController.h */,
+				89EB874E1CDB68DD0026BD6A /* MDAddTaskViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -497,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EB874F1CDB68DD0026BD6A /* MDAddTaskViewController.m in Sources */,
 				89043C761CD7740E002976B1 /* MDPracticeTableViewCell.m in Sources */,
 				89043C431CD77088002976B1 /* AppDelegate.m in Sources */,
 				89043C791CD77455002976B1 /* MDListOfPracticesViewController.m in Sources */,
