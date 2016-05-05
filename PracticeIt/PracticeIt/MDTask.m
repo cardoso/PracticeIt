@@ -10,12 +10,14 @@
 
 @implementation MDTask
 
-- (instancetype)initWithTitle:(NSString*)title WithTime:(NSTimeInterval*)time
+- (instancetype)initWithTitle:(NSString*)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(NSString*)audio WithTime:(NSTimeInterval)time
 {
     self = [super init];
     if (self) {
         self.title = title;
-        self.time = time;
+        self.ttsMessage = ttsMessage;
+        self.audio = audio;
+        self.time = (time - fmod(time, 60));
     }
     return self;
 }

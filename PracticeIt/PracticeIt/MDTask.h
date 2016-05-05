@@ -12,8 +12,10 @@
 
 @property NSString *title;
 @property NSString *ttsMessage;
-@property NSString *audioPlaceholder;
-@property NSTimeInterval *time;
+@property NSString *audio;
+@property NSTimeInterval time;
+@property NSTimeInterval currentTime;
 
-- (instancetype)initWithTitle:(NSString*)title WithTime:(NSTimeInterval*)time;
+- (instancetype)initWithTitle:(NSString*)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(NSString*)audio WithTime:(NSTimeInterval)time;
+
 @end

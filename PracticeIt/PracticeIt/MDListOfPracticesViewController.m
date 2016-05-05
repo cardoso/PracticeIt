@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableOfPractices;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *AddBarButton;
 
+@property (strong,nonatomic) MDAddPracticeViewController *AddView;
+
 @end
 
 @implementation MDListOfPracticesViewController
@@ -49,8 +51,28 @@
     }
 }
 
-/*- (IBAction)addPracticePressed:(id)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+- (IBAction)addPracticePressed:(id)sender {
+    if (self.childViewControllers.count == 0) {
+        self.AddView = [self.storyboard instantiateViewControllerWithIdentifier:@"AddView"];
+        [self addChildViewController:self.AddView];
+        self.AddView.view.frame = CGRectMake(0, 568, 320, 284);
+        [self.view addSubview:self.AddView.view];
+        [UIView animateWithDuration:1 animations:^{
+            self.AddView.view.frame = CGRectMake(0, 284, 320, 284);;
+        } completion:^(BOOL finished) {
+            [self.AddView didMoveToParentViewController:self];
+        }];
+    }else{
+        [UIView animateWithDuration:1 animations:^{
+            self.AddView.view.frame = CGRectMake(0, 568, 320, 284);
+        } completion:^(BOOL finished) {
+            [self.AddView.view removeFromSuperview];
+            [self.AddView removeFromParentViewController];
+            self.AddView = nil;
+        }];
+    }
+    
+    /*UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MDAddPracticeViewController *AddViewController = [storyboard instantiateViewControllerWithIdentifier:@"Pop"];
     
     // present the controller
@@ -63,8 +85,8 @@
     UIPopoverPresentationController *popController = [AddViewController popoverPresentationController];
     popController.permittedArrowDirections = UIPopoverArrowDirectionAny;
     popController.barButtonItem = self.AddBarButton;
-    popController.delegate = self;
-}*/
+    popController.delegate = self;*/
+}
 
 #pragma mark - TableViewDataSource
 
