@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MDPractice.h"
+#import "MDPracticeIt.h"
 #import "SWTableViewCell.h"
 
 @interface MDManagePracticeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, MDPracticeDelegate>
 
+@property (weak, nonatomic) MDPracticeIt *practiceIt;
 @property (weak, nonatomic) MDPractice *practice;
 
 @end

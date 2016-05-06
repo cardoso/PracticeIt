@@ -12,5 +12,6 @@
 @interface MDAddTaskViewController : UIViewController
 
 @property (weak,nonatomic) MDPractice *practice;
+@property (weak,nonatomic) MDTask *task;
 
 @end

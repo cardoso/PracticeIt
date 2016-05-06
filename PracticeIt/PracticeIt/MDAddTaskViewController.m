@@ -22,6 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if(self.task) {
+        self.titleTextField.text = self.task.title;
+        self.ttsMessageTextField.text = self.task.ttsMessage;
+        self.audioTextField.text = self.task.audio;
+        [self.timeDatePicker setCountDownDuration:self.task.time];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +37,16 @@
 }
 
 - (IBAction)savePressed:(UIButton *)sender {
-    [self.practice addTaskWithTitle:self.titleTextField.text WithTTSMessage:self.ttsMessageTextField.text WithAudio:self.audioTextField.text WithTime:self.timeDatePicker.countDownDuration];
+    
+    if(self.practice) {
+        [self.practice addTaskWithTitle:self.titleTextField.text WithTTSMessage:self.ttsMessageTextField.text WithAudio:self.audioTextField.text WithTime:self.timeDatePicker.countDownDuration];
+    }
+    else if(self.task) {
+        self.task.title = self.titleTextField.text;
+        self.task.ttsMessage = self.ttsMessageTextField.text;
+        self.task.audio = self.audioTextField.text;
+        self.task.time = self.timeDatePicker.countDownDuration;
+    }
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

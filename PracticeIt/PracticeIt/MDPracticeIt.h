@@ -15,8 +15,14 @@
 @property NSMutableArray *practices;
 @property NSObject<MDPracticeItDelegate> *delegate;
 
--(MDPractice*)getPracticeAtIndex:(NSInteger)index;
+
+
+-(MDPractice*)practiceAtIndex:(NSInteger)index;
 -(BOOL)removePracticeAtIndex:(NSInteger)index;
--(BOOL)addPracticeWithTitle:(NSString*)title WithDescription:(NSString*)description WithIconName:(NSString*)iconName;
+-(MDPractice*)addPracticeWithTitle:(NSString*)title WithDescription:(NSString*)description WithIconName:(NSString*)iconName;
+
+
+-(BOOL)loadData;
+-(BOOL)saveData;
 
 @end
