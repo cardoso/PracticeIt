@@ -26,6 +26,13 @@
     // Do any additional setup after loading the view.
     
     self.iconNames = @[@"icon_clock",@"icon_audio", @"icon_tts"];
+    
+    // If is editing
+    if(self.practice) {
+        self.nameTextField.text = self.practice.title;
+        self.descriptionTextView.text = self.practice.desc;
+        [self.iconCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:[self.iconNames indexOfObject:self.practice.iconName] inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionTop];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +44,14 @@
 - (IBAction)savePressed:(UIButton *)sender {
     // TODO: Everything
     
-    [self.practiceIt addPracticeWithTitle:self.nameTextField.text WithDescription:self.descriptionTextView.text WithIconName:[self.iconNames objectAtIndex:self.selectedIconIndex]];
+    if(self.practiceIt) {
+        [self.practiceIt addPracticeWithTitle:self.nameTextField.text WithDescription:self.descriptionTextView.text WithIconName:[self.iconNames objectAtIndex:self.selectedIconIndex]];
+    }
+    else if(self.practice) {
+        self.practice.title = self.nameTextField.text;
+        self.practice.desc = self.descriptionTextView.text;
+        self.practice.iconName = [self.iconNames objectAtIndex:self.selectedIconIndex];
+    }
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

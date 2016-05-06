@@ -6,7 +6,8 @@
 //  Copyright © 2016 MatheusDaniel. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import AVFoundation;
 #import "MDTask.h"
 #import "MDPracticeDelegate.h"
 
@@ -21,7 +22,17 @@
 @property NSInteger currentTaskIndex;
 @property NSTimer *timer;
 
+@property AVSpeechSynthesizer *synthesizer;
+
+@property BOOL isPaused;
+
 -(BOOL)start;
+-(BOOL)resume;
+-(BOOL)pause;
+-(BOOL)reset;
+
+-(BOOL)nextTask;
+-(BOOL)previousTask;
 
 -(MDTask*)taskAtIndex:(NSInteger)index;
 -(MDTask*)currentTask;

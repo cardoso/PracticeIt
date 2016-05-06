@@ -21,6 +21,7 @@
 		89043C761CD7740E002976B1 /* MDPracticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C751CD7740E002976B1 /* MDPracticeTableViewCell.m */; };
 		89043C791CD77455002976B1 /* MDListOfPracticesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C781CD77455002976B1 /* MDListOfPracticesViewController.m */; };
 		89043C7D1CD78026002976B1 /* MDAddPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */; };
+		891B05371CDCB56C001718F8 /* practices.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891B05361CDCB56C001718F8 /* practices.plist */; };
 		89789C6A1CD8D2BA00962098 /* MDTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89789C691CD8D2BA00962098 /* MDTaskTableViewCell.m */; };
 		89789C6E1CD8D34800962098 /* MDManagePracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89789C6D1CD8D34800962098 /* MDManagePracticeViewController.m */; };
 		89CD82D61CDA2FA300F42090 /* MDPracticeIt.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82D51CDA2FA300F42090 /* MDPracticeIt.m */; };
@@ -72,6 +73,7 @@
 		89043C781CD77455002976B1 /* MDListOfPracticesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDListOfPracticesViewController.m; sourceTree = "<group>"; };
 		89043C7B1CD78026002976B1 /* MDAddPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAddPracticeViewController.h; sourceTree = "<group>"; };
 		89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAddPracticeViewController.m; sourceTree = "<group>"; };
+		891B05361CDCB56C001718F8 /* practices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = practices.plist; sourceTree = "<group>"; };
 		89789C681CD8D2BA00962098 /* MDTaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTaskTableViewCell.h; sourceTree = "<group>"; };
 		89789C691CD8D2BA00962098 /* MDTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTaskTableViewCell.m; sourceTree = "<group>"; };
 		89789C6C1CD8D34800962098 /* MDManagePracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDManagePracticeViewController.h; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				89CD82DB1CDA404D00F42090 /* MDTask.h */,
 				89CD82DC1CDA404D00F42090 /* MDTask.m */,
 				89043C471CD77088002976B1 /* Main.storyboard */,
+				891B05361CDCB56C001718F8 /* practices.plist */,
 				89043C4D1CD77088002976B1 /* Assets.xcassets */,
 				89043C4F1CD77088002976B1 /* LaunchScreen.storyboard */,
 				89043C521CD77088002976B1 /* Info.plist */,
@@ -318,6 +321,7 @@
 				TargetAttributes = {
 					89043C3A1CD77088002976B1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = LU88L87M76;
 					};
 					89043C561CD77088002976B1 = {
 						CreatedOnToolsVersion = 7.3;
@@ -357,6 +361,7 @@
 				89043C511CD77088002976B1 /* LaunchScreen.storyboard in Resources */,
 				89043C4E1CD77088002976B1 /* Assets.xcassets in Resources */,
 				89043C491CD77088002976B1 /* Main.storyboard in Resources */,
+				891B05371CDCB56C001718F8 /* practices.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,10 +664,13 @@
 			baseConfigurationReference = 909A70A2F76A3AAA0FFAB914 /* Pods-PracticeIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PracticeIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MD.PracticeIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -671,10 +679,13 @@
 			baseConfigurationReference = BE48488AD432FAA9737C1810 /* Pods-PracticeIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PracticeIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MD.PracticeIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

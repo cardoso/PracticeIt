@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Pratica Teste</string>
+		<key>desc</key>
+		<string>Isso é uma prática de teste.</string>
+		<key>iconName</key>
+		<string>icon_clock</string>
+		<key>tasks</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Task Teste</string>
+				<key>ttsMessage</key>
+				<string>Oi</string>
+				<key>audio</key>
+				<string>Muito massa</string>
+				<key>time</key>
+				<integer>60</integer>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

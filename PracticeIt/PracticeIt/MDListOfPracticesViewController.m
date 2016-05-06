@@ -29,6 +29,11 @@
     self.practiceIt.delegate = self;
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [self.tableOfPractices reloadData];
+    [self.practiceIt saveData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,15 +44,19 @@
     if([segue.identifier isEqualToString:@"segueToAddPractice"]) {
         MDAddPracticeViewController *controller = segue.destinationViewController;
     
-        controller.practiceIt = self.practiceIt;
+        if(sender && [sender isKindOfClass:NSClassFromString(@"NSNumber")])
+            controller.practice = [self.practiceIt practiceAtIndex:[sender longValue]];
+        else
+            controller.practiceIt = self.practiceIt;
     }
     
     if([segue.identifier isEqualToString:@"segueToManagePractice"]) {
         MDManagePracticeViewController *controller = segue.destinationViewController;
         
-        MDPractice *practice = [self.practiceIt getPracticeAtIndex:((NSIndexPath*)sender).row];
+        MDPractice *practice = [self.practiceIt practiceAtIndex:((NSIndexPath*)sender).row];
         
         controller.practice = practice;
+        controller.practiceIt = self.practiceIt;
     }
 }
 
@@ -101,7 +110,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MDPractice *practice = [self.practiceIt getPracticeAtIndex:indexPath.row];
+    MDPractice *practice = [self.practiceIt practiceAtIndex:indexPath.row];
     
     MDPracticeTableViewCell *cell = [self.tableOfPractices dequeueReusableCellWithIdentifier:@"practiceCell" forIndexPath:indexPath];
     
@@ -118,10 +127,12 @@
 
 -(void)onPracticeAdded {
     [self.tableOfPractices reloadData];
+    [self.practiceIt saveData];
 }
 
 -(void)onPracticeRemoved {
     [self.tableOfPractices reloadData];
+    [self.practiceIt saveData];
 }
 
 #pragma mark - TableViewDelegate
@@ -135,9 +146,9 @@
 - (NSArray *)rightButtonsForPracticeCell
 {
     NSMutableArray *rightUtilityButtons = [NSMutableArray new];
-    /*[rightUtilityButtons sw_addUtilityButtonWithColor:
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
-                                                title:@"Share"];*/
+                                                title:@"Edit"];
     [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
                                                 title:@"Delete"];
@@ -154,6 +165,9 @@
     NSInteger row = [self.tableOfPractices indexPathForCell:cell].row;
     
     if(index == 0) {
+        [self performSegueWithIdentifier:@"segueToAddPractice" sender:[NSNumber numberWithLong:row]];
+    }
+    else if(index == 1) {
         [self.practiceIt removePracticeAtIndex:row];
     }
 }

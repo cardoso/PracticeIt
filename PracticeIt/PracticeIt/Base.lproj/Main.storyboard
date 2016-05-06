@@ -245,15 +245,23 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="sAY-5Q-rhn"/>
-                                    <barButtonItem systemItem="rewind" id="aKy-dg-el3"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zUu-Dv-L0S"/>
-                                    <barButtonItem systemItem="play" id="gTY-kN-7e3">
+                                    <barButtonItem systemItem="rewind" id="aKy-dg-el3">
                                         <connections>
-                                            <action selector="startPressed:" destination="4Es-OK-pgE" id="rea-hd-Jg3"/>
+                                            <action selector="previousPressed:" destination="4Es-OK-pgE" id="pmf-5h-tWr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zUu-Dv-L0S"/>
+                                    <barButtonItem systemItem="play" id="2Y2-ev-Yix">
+                                        <connections>
+                                            <action selector="startPressed:" destination="4Es-OK-pgE" id="kWg-gQ-bEv"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3Mz-By-5GT"/>
-                                    <barButtonItem systemItem="fastForward" id="ch8-9y-IrI"/>
+                                    <barButtonItem systemItem="fastForward" id="ch8-9y-IrI">
+                                        <connections>
+                                            <action selector="nextPressed:" destination="4Es-OK-pgE" id="C81-cN-gJg"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ozh-V9-owl"/>
                                 </items>
                             </toolbar>
@@ -343,6 +351,9 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the Practice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uld-V6-AXg">
                                                     <rect key="frame" x="8" y="8" width="584" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="6zU-zf-ooi"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -405,8 +416,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="startButton" destination="gTY-kN-7e3" id="dVk-oc-rks"/>
+                        <outlet property="nextButton" destination="ch8-9y-IrI" id="TOw-C0-Tjp"/>
+                        <outlet property="previousButton" destination="aKy-dg-el3" id="Wug-mH-QRS"/>
+                        <outlet property="startButton" destination="2Y2-ev-Yix" id="Bhr-JG-4uS"/>
                         <outlet property="tableOfTasks" destination="PIf-gZ-OBm" id="2BM-kl-wcl"/>
+                        <outlet property="toolbar" destination="X1M-nE-wzj" id="sPf-TO-nmo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6u-h1-T5O" userLabel="First Responder" sceneMemberID="firstResponder"/>

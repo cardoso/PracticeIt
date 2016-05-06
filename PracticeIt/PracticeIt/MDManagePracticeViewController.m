@@ -14,7 +14,14 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableOfTasks;
 @property NSIndexPath *lastSelectedTaskIndexPath;
+
+
+@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *previousButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *startButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *nextButton;
+
+@property (strong, nonatomic) UIBarButtonItem *pauseButton;
 
 @end
 
@@ -25,6 +32,15 @@
     // Do any additional setup after loading the view.
     self.title = self.practice.title;
     self.practice.delegate = self;
+    
+    // Create pause button
+    self.pauseButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePressed:)];
+    [self setToolBarPaused];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self.tableOfTasks reloadData];
+    [self.practiceIt saveData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,20 +49,57 @@
 }
 
 - (IBAction)doneButtonPressed:(id)sender {
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)startPressed:(UIBarButtonItem *)sender {
-    [self.practice start];
+    [self setToolBarStarted];
+    
+    if(self.practice.isPaused)
+        [self.practice resume];
+    else
+        [self.practice start];
+}
+- (void)pausePressed:(UIBarButtonItem *)sender {
+    [self setToolBarPaused];
+    
+    [self.practice pause];
+}
+
+- (IBAction)nextPressed:(id)sender {
+    [self.practice nextTask];
+}
+- (IBAction)previousPressed:(id)sender {
+    [self.practice previousTask];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"segueToAddTask"]){
         MDAddTaskViewController *controller = segue.destinationViewController;
         
-        controller.practice = self.practice;
+        if(sender && [sender isKindOfClass:NSClassFromString(@"NSNumber")])
+            controller.task = [self.practice taskAtIndex:[sender longValue]];
+        else
+            controller.practice = self.practice;
     }
 }
+
+-(void)setToolBarPaused {
+    NSMutableArray *aux = [self.toolbar.items mutableCopy];
+    [aux replaceObjectAtIndex:3 withObject:self.startButton];
+    
+    [self.toolbar setItems:aux animated:YES];
+}
+
+-(void)setToolBarStarted {
+    NSMutableArray *aux = [self.toolbar.items mutableCopy];
+    [aux replaceObjectAtIndex:3 withObject:self.pauseButton];
+    
+    [self.toolbar setItems:aux animated:YES];
+}
+
+
 
 #pragma mark TableViewDataSource
 
@@ -76,7 +129,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath == [self.tableOfTasks indexPathForSelectedRow]) {
+    if ([indexPath isEqual:[self.tableOfTasks indexPathForSelectedRow]]) {
         return  160;
     }
     else return 76;
@@ -97,10 +150,12 @@
 
 -(void)onTaskAdded{
     [self.tableOfTasks reloadData];
+    [self.practiceIt saveData];
 }
 
 -(void)onTaskRemoved{
     [self.tableOfTasks reloadData];
+    [self.practiceIt saveData];
 }
 
 -(void)onTimerTick {
@@ -123,11 +178,22 @@
 }
 
 -(void)onPracticeStarted {
-    [self.startButton setStyle:UIBarButtonSystemItemPause];
+    /*NSLog(@"%@",self.actionsToolbar.items);
+    UIBarButtonItem *pause = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:nil action:nil];*/
+    
+    /*self.actionsToolbar.items = pause;
+    [[self.actionsToolbar setItems:[[self.actionsToolbar.items mutableCopy] replaceObjectAtIndex:3 withObject:pause]] ];
+    NSMutableArray *placeholder = [[NSMutableArray alloc] init];
+    placeholder = [self.actionsToolbar.items mutableCopy];
+    [placeholder replaceObjectAtIndex:3 withObject:pause];
+    self.actionsToolbar.items = placeholder;*/
+    
 }
 
 -(void)onPracticeFinished {
-    
+    [self setToolBarPaused];
+    [self.practice reset];
+    [self.tableOfTasks reloadData];
 }
 
 #pragma mark - SWTableViewCell
@@ -135,9 +201,9 @@
 - (NSArray *)rightButtonsForTaskCell
 {
     NSMutableArray *rightUtilityButtons = [NSMutableArray new];
-    /*[rightUtilityButtons sw_addUtilityButtonWithColor:
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
-     title:@"Share"];*/
+     title:@"Edit"];
     [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
                                                 title:@"Delete"];
@@ -154,6 +220,9 @@
     NSInteger row = [self.tableOfTasks indexPathForCell:cell].row;
     
     if(index == 0) {
+        [self performSegueWithIdentifier:@"segueToAddTask" sender:[NSNumber numberWithLong:row]];
+    }
+    if(index == 1) {
         [self.practice removeTaskAtIndex:row];
     }
 }

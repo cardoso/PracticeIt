@@ -12,5 +12,6 @@
 @interface MDAddPracticeViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (weak, nonatomic) MDPracticeIt *practiceIt;
+@property (weak, nonatomic) MDPractice *practice;
 
 @end
