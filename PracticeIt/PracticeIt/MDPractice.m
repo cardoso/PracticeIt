@@ -15,20 +15,44 @@
     self = [super init];
     if (self) {
         self.tasks = [NSMutableArray array];
-        self.synthesizer = [[AVSpeechSynthesizer alloc]init];
+        self.currentTaskIndex = -1;
     }
     return self;
 }
 
--(BOOL)start {
-    [self.timer invalidate];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(timerTick) userInfo:nil repeats:YES];
+- (BOOL)start {
+    [self startTimer];
     
-    [self startTask:[self currentTask]];
-    
-    [self.delegate onPracticeStarted];
-
     return YES;
+}
+
+- (void)timerTick {
+    
+    if(!self.isPaused && self.currentTaskIndex == -1) {
+        self.currentTaskIndex = 0;
+        
+        [self.delegate practice:self didStartTask:[self currentTask]];
+        [self.delegate onPracticeStarted];
+    }
+    
+    [self currentTask].currentTime++;
+    
+    if([self currentTask].currentTime > [self currentTask].time) {
+        [self.delegate practice:self willFinishTask:[self currentTask]];
+        
+        self.currentTaskIndex++;
+        
+        if(self.currentTaskIndex < [self.tasks count])
+            [self.delegate practice:self didStartTask:[self currentTask]];
+        else {
+            self.currentTaskIndex = -1;
+            [self stopTimer];
+            
+            [self.delegate onPracticeFinished];
+        }
+    }
+    
+    [self.delegate onTimerTick];
 }
 
 -(BOOL)pause {
@@ -52,7 +76,9 @@
 }
 
 -(BOOL)reset {
-    self.currentTaskIndex = 0;
+    [self stopTimer];
+    
+    self.currentTaskIndex = -1;
     
     for(MDTask *task in self.tasks) {
         task.currentTime = 0;
@@ -62,25 +88,12 @@
 }
 
 -(BOOL)nextTask {
-    if(self.currentTaskIndex < [self.tasks count]) {
-        self.currentTaskIndex++;
-        if(!self.isPaused)
-            [self startTask:[self currentTask]];
-        return YES;
-    }
-    
+
     return NO;
 }
 
 -(BOOL)previousTask {
-    self.currentTaskIndex--;
-    [self currentTask].currentTime = 0;
-    
-    if(!self.isPaused) {
-            [self startTask:[self currentTask]];
-        return YES;
-    }
-    
+
     return NO;
 }
 
@@ -93,48 +106,9 @@
     [self.timer invalidate];
 }
 
--(void)timerTick {
-    // LOGICA DE ATUALIZAR TASK ATUAL
-    MDTask *task = [self currentTask];
-    
-    task.currentTime++;
-    
-    if(task.currentTime > task.time) {
-        // LOGICA DE FINALIZAR TASK ATUAL
-        task.currentTime = task.time;
-        
-        self.currentTaskIndex++;
-        
-        [self.delegate onTaskFinished];
-        
-        if(self.currentTaskIndex >= [self taskCount]) {
-            // LOGICA DE FINALIZAR PRATICA
-            self.currentTaskIndex = 0;
-            
-            [self stopTimer];
-        
-            [self.delegate onPracticeFinished];
-
-        } else if(self.currentTaskIndex < [self taskCount]) {
-            // LOGICA DE INICIAR PROXIMA TASK
-            [self startTask:[self taskAtIndex:self.currentTaskIndex]];
-            [self.delegate onTaskStarted];
-        }
-        
-    }
-    
-    [self.delegate onTimerTick];
-}
-
 -(MDTask *)currentTask {
-    if(self.currentTaskIndex >= [self.tasks count]){
-        // USUARIO APAGOU A TASK ENQUANTO EXECUTAVA
-        
-        [self.timer invalidate];
-        self.timer = nil;
-        
+    if(self.currentTaskIndex < 0 || self.currentTaskIndex >= [self.tasks count])
         return nil;
-    }
     
     return [self.tasks objectAtIndex:self.currentTaskIndex];
 }
@@ -142,9 +116,7 @@
 -(BOOL)startTask:(MDTask*)task {
     task.currentTime = 0;
     
-    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:task.ttsMessage];
-    [utterance setRate:0.4f];
-    [self.synthesizer speakUtterance:utterance];
+    [self.delegate practice:self didStartTask:task];
     
     return YES;
 }
@@ -158,23 +130,27 @@
 }
 
 -(BOOL)removeTaskAtIndex:(NSInteger)index {
-    if(index < [self.tasks count]) {
-        [self.tasks removeObjectAtIndex:index];
-        
-        [self.delegate onTaskRemoved];
-        
+    if(index >= [self.tasks count])
+        return NO;
+    
+    MDTask *task = [self.tasks objectAtIndex:index];
+    
+    if([self.delegate practice:self shouldRemoveTask:task]) {
+        [self.delegate practice:self willRemoveTask:task];
+        [self.tasks removeObject:task];
         return YES;
     }
     
     return NO;
 }
 
--(BOOL)addTaskWithTitle:(NSString *)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(NSString*)audio WithTime:(NSTimeInterval)time {
+-(BOOL)addTaskWithTitle:(NSString *)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(MPMediaItem*)audio WithTime:(NSTimeInterval)time {
     
     MDTask *task = [[MDTask alloc] initWithTitle:title WithTTSMessage:ttsMessage WithAudio:audio WithTime:time];
+    
     [self.tasks addObject:task];
     
-    [self.delegate onTaskAdded];
+    [self.delegate onTaskAdded:task];
     
     return YES;
 }

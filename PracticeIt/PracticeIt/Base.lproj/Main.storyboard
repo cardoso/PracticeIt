@@ -351,9 +351,6 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the Practice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uld-V6-AXg">
                                                     <rect key="frame" x="8" y="8" width="584" height="29"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="29" id="6zU-zf-ooi"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -473,11 +470,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0No-l1-xpk">
-                                <rect key="frame" x="20" y="183" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUU-yB-04c">
                                 <rect key="frame" x="276" y="476" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
@@ -507,6 +499,22 @@
                                     </mask>
                                 </variation>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDy-lF-CwH">
+                                <rect key="frame" x="20" y="183" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="nPH-9m-OGs"/>
+                                </constraints>
+                                <state key="normal" title="change"/>
+                                <connections>
+                                    <action selector="changeAudioPressed:" destination="7Q7-e5-HOj" eventType="touchUpInside" id="6Jk-RO-4zv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixR-50-c6f">
+                                <rect key="frame" x="88" y="183" width="492" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -514,31 +522,34 @@
                             <constraint firstItem="lgf-GV-Fs5" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="21I-NV-jF7"/>
                             <constraint firstItem="hbg-ab-MU6" firstAttribute="top" secondItem="lgf-GV-Fs5" secondAttribute="bottom" constant="8" id="4PY-BV-2aH"/>
                             <constraint firstItem="sAw-ae-N09" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" constant="20" id="4Th-E3-Dqs"/>
+                            <constraint firstItem="SDy-lF-CwH" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="5tx-Yi-QnK"/>
                             <constraint firstItem="EUU-yB-04c" firstAttribute="centerX" secondItem="bwQ-Qe-0Fd" secondAttribute="centerX" id="7sh-HK-P4i"/>
                             <constraint firstItem="9xc-qf-z6S" firstAttribute="top" secondItem="sAw-ae-N09" secondAttribute="bottom" constant="8" id="9hf-zb-Ilc"/>
                             <constraint firstItem="ylA-LM-dOa" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="A8e-JB-StC"/>
                             <constraint firstItem="ylA-LM-dOa" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="EKY-aX-Sre"/>
                             <constraint firstItem="9xc-qf-z6S" firstAttribute="centerX" secondItem="bwQ-Qe-0Fd" secondAttribute="centerX" id="IXq-6u-ggU"/>
+                            <constraint firstItem="sAw-ae-N09" firstAttribute="top" secondItem="ixR-50-c6f" secondAttribute="bottom" constant="37" id="JzG-QS-v9B"/>
                             <constraint firstItem="hbg-ab-MU6" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="K0D-hs-9vd"/>
                             <constraint firstItem="EUU-yB-04c" firstAttribute="top" secondItem="9xc-qf-z6S" secondAttribute="bottom" constant="8" id="LXQ-q1-0Da"/>
                             <constraint firstItem="2ev-x0-Row" firstAttribute="top" secondItem="Lcq-ZJ-Xna" secondAttribute="bottom" id="Ld7-um-JEH"/>
+                            <constraint firstItem="ixR-50-c6f" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="Loc-mh-Vht"/>
                             <constraint firstItem="Yi9-9C-0Lx" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="OtC-MT-Shz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sAw-ae-N09" secondAttribute="trailing" constant="20" id="QDV-TJ-yZ2"/>
                             <constraint firstItem="2ev-x0-Row" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="S5B-Bw-NiS"/>
                             <constraint firstItem="sAw-ae-N09" firstAttribute="top" secondItem="Yi9-9C-0Lx" secondAttribute="bottom" constant="8" id="SH8-tP-Zlx"/>
-                            <constraint firstItem="0No-l1-xpk" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="TFV-hm-5cW"/>
+                            <constraint firstItem="SDy-lF-CwH" firstAttribute="top" secondItem="2aP-SY-Epj" secondAttribute="bottom" constant="8" id="YBL-ZS-hKJ"/>
+                            <constraint firstItem="Yi9-9C-0Lx" firstAttribute="top" secondItem="SDy-lF-CwH" secondAttribute="bottom" constant="8" id="b5N-2U-CAA"/>
                             <constraint firstItem="lgf-GV-Fs5" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="bCv-hd-jAD"/>
                             <constraint firstItem="2aP-SY-Epj" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="cd7-hZ-eK7"/>
-                            <constraint firstItem="Yi9-9C-0Lx" firstAttribute="top" secondItem="0No-l1-xpk" secondAttribute="bottom" constant="8" id="kfr-wE-y9Z"/>
                             <constraint firstItem="ylA-LM-dOa" firstAttribute="top" secondItem="hbg-ab-MU6" secondAttribute="bottom" constant="8" id="ktS-P5-cYL"/>
-                            <constraint firstItem="0No-l1-xpk" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="o91-98-2vo"/>
+                            <constraint firstItem="ixR-50-c6f" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="37" id="s0h-SI-fqM"/>
                             <constraint firstItem="sAw-ae-N09" firstAttribute="centerX" secondItem="bwQ-Qe-0Fd" secondAttribute="centerX" id="vAG-42-P7X"/>
-                            <constraint firstItem="0No-l1-xpk" firstAttribute="top" secondItem="2aP-SY-Epj" secondAttribute="bottom" constant="8" id="x41-VK-S3C"/>
                             <constraint firstItem="2aP-SY-Epj" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="8" id="y0c-tc-jOa"/>
+                            <constraint firstItem="ixR-50-c6f" firstAttribute="leading" secondItem="SDy-lF-CwH" secondAttribute="trailing" constant="8" id="yrt-lp-LV2"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="audioTextField" destination="0No-l1-xpk" id="zcP-2d-m3f"/>
+                        <outlet property="audioLabel" destination="ixR-50-c6f" id="apb-mR-2v3"/>
                         <outlet property="timeDatePicker" destination="sAw-ae-N09" id="Y9s-4y-i2P"/>
                         <outlet property="titleTextField" destination="lgf-GV-Fs5" id="cA4-6X-wh8"/>
                         <outlet property="ttsMessageTextField" destination="ylA-LM-dOa" id="fsZ-Td-Ixg"/>

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F455053AF8EBC0A79C4B3E7C059C10E5'
-               BlueprintName = 'Pods-PracticeIt'
+               BlueprintIdentifier = 'A3C1DB5C355C911F7C99F73D102DD1E2'
+               BlueprintName = 'UITextField+Shake'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-PracticeIt.a'>
+               BuildableName = 'libUITextField+Shake.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

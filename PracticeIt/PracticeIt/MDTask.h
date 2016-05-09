@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MDTask : NSObject
 
 @property NSString *title;
 @property NSString *ttsMessage;
-@property NSString *audio;
+@property MPMediaItem *audio;
 @property NSTimeInterval time;
 @property NSTimeInterval currentTime;
 
-- (instancetype)initWithTitle:(NSString*)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(NSString*)audio WithTime:(NSTimeInterval)time;
+- (instancetype)initWithTitle:(NSString*)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(MPMediaItem*)audio WithTime:(NSTimeInterval)time;
 
 @end

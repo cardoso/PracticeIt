@@ -77,8 +77,21 @@
         for(NSDictionary *dictTask in arrTasks) {
             NSString *title = [dictTask objectForKey:@"title"];
             NSString *ttsMessage = [dictTask objectForKey:@"ttsMessage"];
-            NSString *audio = [dictTask objectForKey:@"audio"];
+            NSNumber *audioId = [dictTask objectForKey:@"audio"];
             NSNumber *time = [dictTask objectForKey:@"time"];
+            
+            MPMediaQuery *query = [MPMediaQuery songsQuery];
+            MPMediaPropertyPredicate *predicate = [MPMediaPropertyPredicate predicateWithValue:audioId forProperty:MPMediaItemPropertyPersistentID];
+            [query addFilterPredicate:predicate];
+            NSArray *mediaItems = [query items];
+            //this array will consist of song with given persistentId. add it to collection and play it
+            MPMediaItemCollection *col = [[MPMediaItemCollection alloc] initWithItems:mediaItems];
+            ///....
+            
+            
+            MPMediaItem *audio = nil;
+            if([col count] > 0)
+                audio = col.items[0];
             
             [pract addTaskWithTitle:title WithTTSMessage:ttsMessage WithAudio:audio WithTime:time.doubleValue];
         }
@@ -110,7 +123,7 @@
             
             [dictTask setValue:task.title forKey:@"title"];
             [dictTask setValue:task.ttsMessage forKey:@"ttsMessage"];
-            [dictTask setValue:task.audio forKey:@"audio"];
+            [dictTask setValue:[NSNumber numberWithUnsignedLongLong:task.audio.persistentID] forKey:@"audio"];
             [dictTask setValue:[NSNumber numberWithDouble:task.time] forKey:@"time"];
             
             [arrTasks addObject:dictTask];
