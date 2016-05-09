@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+
 #import "MDPractice.h"
 
-@interface MDAddTaskViewController : UIViewController
+@interface MDAddTaskViewController : UIViewController <MPMediaPickerControllerDelegate>
 
 @property (weak,nonatomic) MDPractice *practice;
 @property (weak,nonatomic) MDTask *task;

@@ -7,6 +7,7 @@
 //
 
 #import "MDAddPracticeViewController.h"
+#import "UITextField+Shake.h"
 
 @interface MDAddPracticeViewController ()
 
@@ -43,17 +44,21 @@
 
 - (IBAction)savePressed:(UIButton *)sender {
     // TODO: Everything
-    
-    if(self.practiceIt) {
-        [self.practiceIt addPracticeWithTitle:self.nameTextField.text WithDescription:self.descriptionTextView.text WithIconName:[self.iconNames objectAtIndex:self.selectedIconIndex]];
+    if([self.nameTextField.text isEqualToString:@""]) {
+        [self.nameTextField shake];
     }
-    else if(self.practice) {
-        self.practice.title = self.nameTextField.text;
-        self.practice.desc = self.descriptionTextView.text;
-        self.practice.iconName = [self.iconNames objectAtIndex:self.selectedIconIndex];
+    else {
+        if(self.practiceIt) {
+            [self.practiceIt addPracticeWithTitle:self.nameTextField.text WithDescription:self.descriptionTextView.text WithIconName:[self.iconNames objectAtIndex:self.selectedIconIndex]];
+        }
+        else if(self.practice) {
+            self.practice.title = self.nameTextField.text;
+            self.practice.desc = self.descriptionTextView.text;
+            self.practice.iconName = [self.iconNames objectAtIndex:self.selectedIconIndex];
+        }
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)cancelPressed:(UIButton *)sender {

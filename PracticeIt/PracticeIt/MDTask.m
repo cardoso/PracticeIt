@@ -10,7 +10,7 @@
 
 @implementation MDTask
 
-- (instancetype)initWithTitle:(NSString*)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(NSString*)audio WithTime:(NSTimeInterval)time
+- (instancetype)initWithTitle:(NSString*)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(MPMediaItem*)audio WithTime:(NSTimeInterval)time
 {
     self = [super init];
     if (self) {

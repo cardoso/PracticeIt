@@ -10,6 +10,7 @@
 #import "MDTaskTableViewCell.h"
 #import "MDAddTaskViewController.h"
 
+
 @interface MDManagePracticeViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableOfTasks;
@@ -23,6 +24,10 @@
 
 @property (strong, nonatomic) UIBarButtonItem *pauseButton;
 
+@property MPMusicPlayerController *audioPlayer;
+
+@property AVSpeechSynthesizer *synthesizer;
+
 @end
 
 @implementation MDManagePracticeViewController
@@ -33,9 +38,19 @@
     self.title = self.practice.title;
     self.practice.delegate = self;
     
+    // Create TTS
+    self.synthesizer = [[AVSpeechSynthesizer alloc]init];
+    self.synthesizer.delegate = self;
+    
+    // Create audio player
+    self.audioPlayer = [[MPMusicPlayerController alloc] init];
+    
     // Create pause button
     self.pauseButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePressed:)];
     [self setToolBarPaused];
+    
+    // Reset Practice
+    [self.practice reset];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -118,7 +133,7 @@
     
     
     cell.ttsMessageLabel.text = task.ttsMessage;
-    cell.audioLabel.text = task.audio;
+    cell.audioLabel.text = task.audio.title;
     cell.timeProgress.progress = task.currentTime/task.time;
     
     return cell;
@@ -148,14 +163,17 @@
 
 #pragma  mark MDPracticeDelegate
 
--(void)onTaskAdded{
+-(void)onTaskAdded:(MDTask *)task {
     [self.tableOfTasks reloadData];
     [self.practiceIt saveData];
 }
 
--(void)onTaskRemoved{
-    [self.tableOfTasks reloadData];
-    [self.practiceIt saveData];
+-(BOOL)practice:(MDPractice*)practice shouldRemoveTask:(MDTask *)task {
+    return YES;
+}
+
+-(void)practice:(MDPractice*)practice willRemoveTask:(MDTask *)task {
+    
 }
 
 -(void)onTimerTick {
@@ -169,12 +187,21 @@
     cell.timeProgress.progress = task.currentTime/task.time;
 }
 
--(void)onTaskFinished {
-    
+-(void)practice:(id)practice willFinishTask:(MDTask *)task {
+    [self.audioPlayer stop];
 }
 
--(void)onTaskStarted {
+-(void)practice:(id)practice didStartTask:(MDTask *)task {
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:task.ttsMessage];
+    [utterance setRate:0.4f];
+    [self.synthesizer speakUtterance:utterance];
     
+    [self.audioPlayer stop];
+    
+    if(task.audio)
+        [self.audioPlayer setQueueWithItemCollection:[MPMediaItemCollection collectionWithItems:@[task.audio]]];
+    else
+        [self.audioPlayer setQueueWithItemCollection:[MPMediaItemCollection collectionWithItems:@[]]];
 }
 
 -(void)onPracticeStarted {
@@ -194,6 +221,13 @@
     [self setToolBarPaused];
     [self.practice reset];
     [self.tableOfTasks reloadData];
+}
+
+#pragma mark - AVSpeechSyntesizerDelegate
+
+-(void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance {
+    [self.audioPlayer prepareToPlay];
+    [self.audioPlayer play];
 }
 
 #pragma mark - SWTableViewCell
@@ -217,13 +251,17 @@
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
     
-    NSInteger row = [self.tableOfTasks indexPathForCell:cell].row;
+    NSIndexPath *indexPath = [self.tableOfTasks indexPathForCell:cell];
     
     if(index == 0) {
-        [self performSegueWithIdentifier:@"segueToAddTask" sender:[NSNumber numberWithLong:row]];
+        [self performSegueWithIdentifier:@"segueToAddTask" sender:[NSNumber numberWithLong:indexPath.row]];
     }
     if(index == 1) {
-        [self.practice removeTaskAtIndex:row];
+        [self.tableOfTasks beginUpdates];
+        if([self.practice removeTaskAtIndex:indexPath.row]) {
+            [self.tableOfTasks deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        }
+        [self.tableOfTasks endUpdates];
     }
 }
 

@@ -7,7 +7,6 @@
 //
 
 @import Foundation;
-@import AVFoundation;
 #import "MDTask.h"
 #import "MDPracticeDelegate.h"
 
@@ -21,8 +20,6 @@
 
 @property NSInteger currentTaskIndex;
 @property NSTimer *timer;
-
-@property AVSpeechSynthesizer *synthesizer;
 
 @property BOOL isPaused;
 
@@ -38,7 +35,7 @@
 -(MDTask*)currentTask;
 -(NSInteger)taskCount;
 -(BOOL)removeTaskAtIndex:(NSInteger)index;
--(BOOL)addTaskWithTitle:(NSString *)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(NSString*)audio WithTime:(NSTimeInterval)time;
+-(BOOL)addTaskWithTitle:(NSString *)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(MPMediaItem*)audio WithTime:(NSTimeInterval)time;
 
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval;
 
