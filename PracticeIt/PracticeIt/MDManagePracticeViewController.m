@@ -6,6 +6,9 @@
 //
 //
 
+#import "MZFormSheetPresentationViewController.h"
+#import "MZFormSheetPresentationViewControllerSegue.h"
+
 #import "MDManagePracticeViewController.h"
 #import "MDTaskTableViewCell.h"
 #import "MDAddTaskViewController.h"
@@ -24,9 +27,7 @@
 
 @property (strong, nonatomic) UIBarButtonItem *pauseButton;
 
-@property MPMusicPlayerController *audioPlayer;
-
-@property AVSpeechSynthesizer *synthesizer;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -37,13 +38,9 @@
     // Do any additional setup after loading the view.
     self.title = self.practice.title;
     self.practice.delegate = self;
+    self.tableOfTasks.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    // Create TTS
-    self.synthesizer = [[AVSpeechSynthesizer alloc]init];
     self.synthesizer.delegate = self;
-    
-    // Create audio player
-    self.audioPlayer = [[MPMusicPlayerController alloc] init];
     
     // Create pause button
     self.pauseButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePressed:)];
@@ -58,23 +55,42 @@
     [self.practiceIt saveData];
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.practice pause];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)doneButtonPressed:(id)sender {
+/*- (BOOL)loseProgressAlert{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert" message:@"This is an alert." preferredStyle:UIAlertControllerStyleAlert];
     
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}*/
+
+- (IBAction)doneButtonPressed:(id)sender {
+    //alert
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)addButtonPressed:(id)sender {
+    //alert
+    
 }
 
 - (IBAction)startPressed:(UIBarButtonItem *)sender {
-    [self setToolBarStarted];
-    
-    if(self.practice.isPaused)
-        [self.practice resume];
-    else
-        [self.practice start];
+    if([self.practice taskCount] > 0) {
+            [self setToolBarStarted];
+        
+        if([self.practice isPaused])
+            [self.practice resume];
+        else
+            [self.practice start];
+    }
 }
 - (void)pausePressed:(UIBarButtonItem *)sender {
     [self setToolBarPaused];
@@ -91,6 +107,16 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"segueToAddTask"]){
+        MZFormSheetPresentationViewControllerSegue *presentationSegue = (id)segue;
+        
+        presentationSegue.formSheetPresentationController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleSlideAndBounceFromTop;
+        
+        presentationSegue.formSheetPresentationController.allowDismissByPanningPresentedView = YES;
+        
+        presentationSegue.formSheetPresentationController.presentationController.shouldDismissOnBackgroundViewTap = YES;
+        
+        presentationSegue.formSheetPresentationController.presentationController.movementActionWhenKeyboardAppears = MZFormSheetActionWhenKeyboardAppearsMoveToTop;
+        
         MDAddTaskViewController *controller = segue.destinationViewController;
         
         if(sender && [sender isKindOfClass:NSClassFromString(@"NSNumber")])
@@ -161,9 +187,25 @@
     self.lastSelectedTaskIndexPath = indexPath;
 }
 
-#pragma  mark MDPracticeDelegate
+#pragma mark MDPracticeDelegate
 
--(void)onTaskAdded:(MDTask *)task {
+-(void)didPausePractice:(id)practice {
+
+    [self.audioPlayer pause];
+    
+    [self.synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+}
+
+-(void)didResumePractice:(id)practice {
+    [self.audioPlayer play];
+    [self.synthesizer continueSpeaking];
+}
+
+-(BOOL)practice:(MDPractice*)practice shouldAddTask:(MDTask *)task {
+    return YES;
+}
+
+-(void)practice:(MDPractice*)practice didAddTask:(MDTask *)task {
     [self.tableOfTasks reloadData];
     [self.practiceIt saveData];
 }
@@ -173,10 +215,10 @@
 }
 
 -(void)practice:(MDPractice*)practice willRemoveTask:(MDTask *)task {
-    
+    [self.practice previousTask];
 }
 
--(void)onTimerTick {
+-(void)didTimerTickOnPractice:(MDPractice*)practice {
     MDTask *task = [self.practice currentTask];
     
     MDTaskTableViewCell *cell = [self.tableOfTasks cellForRowAtIndexPath:[NSIndexPath indexPathForRow:self.practice.currentTaskIndex inSection:0]];
@@ -187,24 +229,29 @@
     cell.timeProgress.progress = task.currentTime/task.time;
 }
 
--(void)practice:(id)practice willFinishTask:(MDTask *)task {
-    [self.audioPlayer stop];
-}
-
 -(void)practice:(id)practice didStartTask:(MDTask *)task {
     AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:task.ttsMessage];
     [utterance setRate:0.4f];
+    
+    [self.synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
     [self.synthesizer speakUtterance:utterance];
     
-    [self.audioPlayer stop];
+    if(task.audio) {
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[task.audio valueForProperty:MPMediaItemPropertyAssetURL] error: nil];
+    }
+    else {
+        self.audioPlayer = nil;
+    }
+
     
-    if(task.audio)
-        [self.audioPlayer setQueueWithItemCollection:[MPMediaItemCollection collectionWithItems:@[task.audio]]];
-    else
-        [self.audioPlayer setQueueWithItemCollection:[MPMediaItemCollection collectionWithItems:@[]]];
 }
 
--(void)onPracticeStarted {
+-(void)practice:(id)practice willFinishTask:(MDTask *)task {
+    [self.audioPlayer stop];
+    self.audioPlayer = nil;
+}
+
+-(void)didStartPractice:(MDPractice*)practice {
     /*NSLog(@"%@",self.actionsToolbar.items);
     UIBarButtonItem *pause = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:nil action:nil];*/
     
@@ -214,10 +261,9 @@
     placeholder = [self.actionsToolbar.items mutableCopy];
     [placeholder replaceObjectAtIndex:3 withObject:pause];
     self.actionsToolbar.items = placeholder;*/
-    
 }
 
--(void)onPracticeFinished {
+-(void)didFinishPractice:(MDPractice*)practice {
     [self setToolBarPaused];
     [self.practice reset];
     [self.tableOfTasks reloadData];
@@ -226,7 +272,6 @@
 #pragma mark - AVSpeechSyntesizerDelegate
 
 -(void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance {
-    [self.audioPlayer prepareToPlay];
     [self.audioPlayer play];
 }
 
@@ -247,6 +292,10 @@
 
 -(BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell {
     return YES;
+}
+
+-(BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state {
+    return [self.practice isPaused] || [self.practice isStopped];
 }
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {

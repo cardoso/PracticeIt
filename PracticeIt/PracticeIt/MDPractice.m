@@ -20,6 +20,14 @@
     return self;
 }
 
+-(BOOL)isPaused {
+    return ![self.timer isValid] && self.currentTaskIndex > -1;
+}
+
+-(BOOL)isStopped {
+    return ![self.timer isValid] && self.currentTaskIndex == -1;
+}
+
 - (BOOL)start {
     [self startTimer];
     
@@ -28,12 +36,14 @@
 
 - (void)timerTick {
     
-    if(!self.isPaused && self.currentTaskIndex == -1) {
+    if(self.currentTaskIndex == -1) {
         self.currentTaskIndex = 0;
         
-        [self.delegate practice:self didStartTask:[self currentTask]];
-        [self.delegate onPracticeStarted];
+        [self.delegate didStartPractice:self];
     }
+    
+    if([self currentTask].currentTime == 0)
+        [self.delegate practice:self didStartTask:[self currentTask]];
     
     [self currentTask].currentTime++;
     
@@ -42,36 +52,63 @@
         
         self.currentTaskIndex++;
         
-        if(self.currentTaskIndex < [self.tasks count])
-            [self.delegate practice:self didStartTask:[self currentTask]];
-        else {
+        if(self.currentTaskIndex >= [self.tasks count]) {
             self.currentTaskIndex = -1;
             [self stopTimer];
             
-            [self.delegate onPracticeFinished];
+            [self.delegate didFinishPractice:self];
         }
     }
     
-    [self.delegate onTimerTick];
+    [self.delegate didTimerTickOnPractice:self];
 }
 
+/*- (BOOL)timerTick {
+    if(self.isPaused){
+        return NO;
+    }
+    if(self.currentTaskIndex == -1){
+        self.currentTaskIndex = 0;
+        //[self.delegate practice:self didStartTask:[self currentTask]];
+        [self.delegate onPracticeStarted];
+    }
+    [self currentTask].currentTime++;
+    
+    if([self currentTask].currentTime > [self currentTask].time){
+        self.currentTask.currentTime = self.currentTask.time;
+        self.currentTaskIndex++;
+        if(self.currentTaskIndex < [self.tasks count]){
+            //[self.delegate practice:self didStartTask:[self currentTask]];
+        }else{
+            self.currentTaskIndex = -1;
+            [self stopTimer];
+            [self.delegate onPracticeFinished];
+        }
+        
+    }
+    [self.delegate onTimerTick];
+    return YES;
+}*/
+
 -(BOOL)pause {
-    if(self.isPaused)
+    if([self isPaused])
         return NO;
     
     [self stopTimer];
     
-    self.isPaused = YES;
+    [self.delegate didPausePractice:self];
+    
     return YES;
 }
 
 -(BOOL)resume {
-    if(!self.isPaused)
+    if(![self isPaused])
         return NO;
     
     [self startTimer];
     
-    self.isPaused = NO;
+    [self.delegate didResumePractice:self];
+    
     return YES;
 }
 
@@ -88,13 +125,34 @@
 }
 
 -(BOOL)nextTask {
-
-    return NO;
+    if(self.currentTaskIndex < 0){
+        return NO;
+    }
+    
+    if(self.currentTaskIndex+1 == [self.tasks count]){
+        return NO;
+    }
+    
+    self.currentTask.currentTime = self.currentTask.time-1;
+    
+    return YES;
 }
 
 -(BOOL)previousTask {
-
-    return NO;
+    if(self.currentTaskIndex < 0){
+        return NO;
+    }
+    
+    if(self.currentTaskIndex == 0){
+        return NO;
+    }
+    
+    [self currentTask].currentTime = -1;
+    [self timerTick];
+    self.currentTaskIndex--;
+    [self currentTask].currentTime = 0;
+    
+    return YES;
 }
 
 -(void)startTimer {
@@ -148,11 +206,15 @@
     
     MDTask *task = [[MDTask alloc] initWithTitle:title WithTTSMessage:ttsMessage WithAudio:audio WithTime:time];
     
-    [self.tasks addObject:task];
+    if([self.delegate practice:self shouldAddTask:task]) {
+        [self.tasks addObject:task];
     
-    [self.delegate onTaskAdded:task];
+        [self.delegate practice:self didAddTask:task];
+        
+        return YES;
+    }
     
-    return YES;
+    return NO;
 }
 
 #pragma mark - Helper Methods

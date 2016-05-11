@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MZAppearance.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MZFormSheetPresentationController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PracticeIt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3CB21694EAEF9BC715CF24078B7A8ADA</key>
+		<key>1DAC2FF166EBB39D93C76C245CCD170C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2D562DCC53CC66CAE00F09A5759B4CE8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>34440D436B6519A357FFA66228EB4C96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3C1DB5C355C911F7C99F73D102DD1E2</key>
+		<key>A13EC6FBA4EF4C7653DD949A92243810</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF83AECC4E8AB9A213078AE6762568E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DBA45D7C63D2D1F1D323A4AF3C303580</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F455053AF8EBC0A79C4B3E7C059C10E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

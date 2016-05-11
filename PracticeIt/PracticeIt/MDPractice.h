@@ -21,7 +21,8 @@
 @property NSInteger currentTaskIndex;
 @property NSTimer *timer;
 
-@property BOOL isPaused;
+-(BOOL)isPaused;
+-(BOOL)isStopped;
 
 -(BOOL)start;
 -(BOOL)resume;

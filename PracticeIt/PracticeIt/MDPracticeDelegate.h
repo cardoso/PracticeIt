@@ -10,11 +10,16 @@
 
 @protocol MDPracticeDelegate <NSObject>
 
--(void)onPracticeStarted;
--(void)onPracticeFinished;
--(void)onTaskAdded:(MDTask*)task;
--(void)onTimerTick;
+-(void)didTimerTickOnPractice:(id)practice;
 
+-(void)didPausePractice:(id)practice;
+-(void)didResumePractice:(id)practice;
+
+-(void)didStartPractice:(id)practice;
+-(void)didFinishPractice:(id)practice;
+
+-(BOOL)practice:(id)practice shouldAddTask:(MDTask*)task;
+-(void)practice:(id)practice didAddTask:(MDTask*)task;
 
 -(BOOL)practice:(id)practice shouldRemoveTask:(MDTask*)task;
 -(void)practice:(id)practice willRemoveTask:(MDTask*)task;

@@ -17,5 +17,6 @@
 
 @property (weak, nonatomic) MDPracticeIt *practiceIt;
 @property (weak, nonatomic) MDPractice *practice;
+@property (weak, nonatomic) AVSpeechSynthesizer *synthesizer;
 
 @end

@@ -26,14 +26,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.iconNames = @[@"icon_clock",@"icon_audio", @"icon_tts"];
+    self.descriptionTextView.layer.borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0].CGColor;
+    self.descriptionTextView.layer.cornerRadius = 5;
+    self.descriptionTextView.layer.borderWidth = 0.5;
     
-    // If is editing
+    self.iconCollectionView.layer.borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0].CGColor;
+    self.iconCollectionView.layer.cornerRadius = 5;
+    self.iconCollectionView.layer.borderWidth = 0.5;
+    
+    self.iconNames = @[@"icon_clock",@"adhesive-tape",@"archive",@"bar-chart",@"briefcase-1",@"briefcase",@"cabinet",@"cactus",@"calculator",@"circular-chart",@"coffee",@"contract-1",@"contract",@"cutter",@"desk",@"diskette",@"email",@"envelope-1",@"envelope",@"exchange",@"fax",@"file",@"idea",@"lamp"];
+    
+    self.nameTextField.delegate = self;
+    self.descriptionTextView.delegate = self;
+    
+    [self.nameTextField becomeFirstResponder];
+
+}
+
+-(void)viewWillAppear:(BOOL)animated {
     if(self.practice) {
         self.nameTextField.text = self.practice.title;
         self.descriptionTextView.text = self.practice.desc;
         [self.iconCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:[self.iconNames indexOfObject:self.practice.iconName] inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionTop];
     }
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.nameTextField resignFirstResponder];
+    [self.descriptionTextView resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +64,7 @@
 
 - (IBAction)savePressed:(UIButton *)sender {
     // TODO: Everything
+    
     if([self.nameTextField.text isEqualToString:@""]) {
         [self.nameTextField shake];
     }
@@ -76,9 +97,11 @@
     UICollectionViewCell *cell = [self.iconCollectionView dequeueReusableCellWithReuseIdentifier:@"iconCell" forIndexPath:indexPath];
     
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame: cell.bounds];
-    cell.selectedBackgroundView.backgroundColor = [UIColor redColor];
     
     ((UIImageView*)([cell viewWithTag:12])).image = [UIImage imageNamed:[self.iconNames objectAtIndex:indexPath.row]];
+    cell.layer.borderColor = [UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:1 alpha:1.0].CGColor;
+    cell.layer.cornerRadius = 5;
+    cell.layer.borderWidth = 0;
     
     return cell;
 }
@@ -86,7 +109,31 @@
 #pragma mark CollectionViewDelegate
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *oldSelectedCell = [self.iconCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:self.selectedIconIndex inSection:0]];
+    UICollectionViewCell *selectedCell = [self.iconCollectionView cellForItemAtIndexPath:indexPath];
+    
+    oldSelectedCell.layer.borderWidth = 0;
+    selectedCell.layer.borderWidth = 2;
+    
     self.selectedIconIndex = indexPath.row;
+}
+
+#pragma mark TextFieldDelegate
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    [textField resignFirstResponder];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    [self.descriptionTextView becomeFirstResponder];
+    return YES;
+}
+
+#pragma mark TextViewDelegate
+
+-(void)textViewDidEndEditing:(UITextView *)textView {
+    [textView resignFirstResponder];
 }
 
 /*
