@@ -30,12 +30,19 @@
     self.audioPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeAnyAudio];
     self.audioPicker.delegate = self;
     
+    self.titleTextField.delegate = self;
+    self.ttsMessageTextField.delegate = self;
+    
     if(self.task) {
         self.titleTextField.text = self.task.title;
         self.ttsMessageTextField.text = self.task.ttsMessage;
         self.audioLabel.text = self.task.audio.title;
         [self.timeDatePicker setCountDownDuration:self.task.time];
     }
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.titleTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,8 +52,6 @@
 
 - (IBAction)changeAudioPressed:(UIButton *)sender {
     [self presentViewController:self.audioPicker animated:YES completion:nil];
-    
-    
 }
 
 -(void)mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection {
@@ -82,6 +87,21 @@
 
 - (IBAction)cancelPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if(textField == self.titleTextField) {
+        [self.titleTextField resignFirstResponder];
+        [self.ttsMessageTextField becomeFirstResponder];
+    }
+    
+    if(textField == self.ttsMessageTextField) {
+        [self.ttsMessageTextField resignFirstResponder];
+    }
+    
+    return YES;
 }
 
 

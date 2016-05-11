@@ -1,15 +1,21 @@
 PODS:
+  - MZAppearance (1.1.6)
+  - MZFormSheetPresentationController (2.4.0):
+    - MZAppearance
   - SWTableViewCell (0.3.7)
   - UITextField+Shake (1.1.2)
 
 DEPENDENCIES:
+  - MZFormSheetPresentationController (~> 2.4)
   - SWTableViewCell (~> 0.3.7)
   - UITextField+Shake (~> 1.1)
 
 SPEC CHECKSUMS:
+  MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
+  MZFormSheetPresentationController: 3b9b6d76adc9f81c2defd0bb59e0f3dc2431e41e
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   UITextField+Shake: 47cc0429dafb3da580686339ad2da091249a8ea2
 
-PODFILE CHECKSUM: b42b28c7f4ea0e1f8e278fa769e8fc4baacd65ae
+PODFILE CHECKSUM: 05d0412362aec0f0a2dbf61d8cfd60617727d0a5
 
 COCOAPODS: 1.0.0.rc.1

@@ -93,7 +93,8 @@
             if([col count] > 0)
                 audio = col.items[0];
             
-            [pract addTaskWithTitle:title WithTTSMessage:ttsMessage WithAudio:audio WithTime:time.doubleValue];
+            MDTask *task = [[MDTask alloc] initWithTitle:title WithTTSMessage:ttsMessage WithAudio:audio WithTime:time.doubleValue];
+            [pract.tasks addObject:task];
         }
         
     }
@@ -137,7 +138,7 @@
     NSError *error = nil;
     //NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:arrPractices format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
     NSData *plistData = [NSPropertyListSerialization dataWithPropertyList:arrPractices format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
-    
+
     if(plistData) {
         [plistData writeToFile:plistPath atomically:YES];
     }

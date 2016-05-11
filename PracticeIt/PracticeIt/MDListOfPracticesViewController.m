@@ -6,6 +6,9 @@
 //  Copyright © 2016 MatheusDaniel. All rights reserved.
 //
 
+#import "MZFormSheetPresentationViewController.h"
+#import "MZFormSheetPresentationViewControllerSegue.h"
+
 #import "MDListOfPracticesViewController.h"
 #import "MDAddPracticeViewController.h"
 #import "MDManagePracticeViewController.h"
@@ -17,6 +20,8 @@
 
 @property (strong,nonatomic) MDAddPracticeViewController *AddView;
 
+@property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
+
 @end
 
 @implementation MDListOfPracticesViewController
@@ -27,6 +32,10 @@
     
     self.practiceIt = [[MDPracticeIt alloc] init];
     self.practiceIt.delegate = self;
+    
+    self.tableOfPractices.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    self.synthesizer = [[AVSpeechSynthesizer alloc] init];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -42,8 +51,18 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if([segue.identifier isEqualToString:@"segueToAddPractice"]) {
+        MZFormSheetPresentationViewControllerSegue *presentationSegue = (id)segue;
+        
+        presentationSegue.formSheetPresentationController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleSlideAndBounceFromTop;
+        
+        presentationSegue.formSheetPresentationController.allowDismissByPanningPresentedView = YES;
+        
+        presentationSegue.formSheetPresentationController.presentationController.shouldDismissOnBackgroundViewTap = YES;
+        
+        presentationSegue.formSheetPresentationController.presentationController.movementActionWhenKeyboardAppears = MZFormSheetActionWhenKeyboardAppearsMoveToTop;
+        
         MDAddPracticeViewController *controller = segue.destinationViewController;
-    
+        
         if(sender && [sender isKindOfClass:NSClassFromString(@"NSNumber")])
             controller.practice = [self.practiceIt practiceAtIndex:[sender longValue]];
         else
@@ -57,44 +76,8 @@
         
         controller.practice = practice;
         controller.practiceIt = self.practiceIt;
+        controller.synthesizer = self.synthesizer;
     }
-}
-
-- (IBAction)addPracticePressed:(id)sender {
-    if (self.childViewControllers.count == 0) {
-        self.AddView = [self.storyboard instantiateViewControllerWithIdentifier:@"AddView"];
-        [self addChildViewController:self.AddView];
-        self.AddView.view.frame = CGRectMake(0, 568, 320, 284);
-        [self.view addSubview:self.AddView.view];
-        [UIView animateWithDuration:1 animations:^{
-            self.AddView.view.frame = CGRectMake(0, 284, 320, 284);;
-        } completion:^(BOOL finished) {
-            [self.AddView didMoveToParentViewController:self];
-        }];
-    }else{
-        [UIView animateWithDuration:1 animations:^{
-            self.AddView.view.frame = CGRectMake(0, 568, 320, 284);
-        } completion:^(BOOL finished) {
-            [self.AddView.view removeFromSuperview];
-            [self.AddView removeFromParentViewController];
-            self.AddView = nil;
-        }];
-    }
-    
-    /*UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    MDAddPracticeViewController *AddViewController = [storyboard instantiateViewControllerWithIdentifier:@"Pop"];
-    
-    // present the controller
-    // on iPad, this will be a Popover
-    // on iPhone, this will be an action sheet
-    AddViewController.modalPresentationStyle = UIModalPresentationPopover;
-    [self presentViewController:AddViewController animated:YES completion:nil];
-    
-    // configure the Popover presentation controller
-    UIPopoverPresentationController *popController = [AddViewController popoverPresentationController];
-    popController.permittedArrowDirections = UIPopoverArrowDirectionAny;
-    popController.barButtonItem = self.AddBarButton;
-    popController.delegate = self;*/
 }
 
 #pragma mark - TableViewDataSource
@@ -119,6 +102,7 @@
     cell.titleLabel.text = practice.title;
     [cell.iconImageView setImage: [UIImage imageNamed:practice.iconName]];
     cell.rightUtilityButtons = [self rightButtonsForPracticeCell];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -162,13 +146,17 @@
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
     
-    NSInteger row = [self.tableOfPractices indexPathForCell:cell].row;
+    NSIndexPath *indexPath = [self.tableOfPractices indexPathForCell:cell];
     
     if(index == 0) {
-        [self performSegueWithIdentifier:@"segueToAddPractice" sender:[NSNumber numberWithLong:row]];
+        [self performSegueWithIdentifier:@"segueToAddPractice" sender:[NSNumber numberWithLong:indexPath.row]];
     }
     else if(index == 1) {
-        [self.practiceIt removePracticeAtIndex:row];
+        [self.tableOfPractices beginUpdates];
+        if([self.practiceIt removePracticeAtIndex:indexPath.row]){
+            [self.tableOfPractices deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        }
+        [self.tableOfPractices endUpdates];
     }
 }
 

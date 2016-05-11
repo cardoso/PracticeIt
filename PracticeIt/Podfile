@@ -8,6 +8,7 @@ target 'PracticeIt' do
   # Pods for PracticeIt
   pod 'SWTableViewCell', '~> 0.3.7'
   pod 'UITextField+Shake', '~> 1.1'
+  pod 'MZFormSheetPresentationController', '~> 2.4'
 
   target 'PracticeItTests' do
     inherit! :search_paths

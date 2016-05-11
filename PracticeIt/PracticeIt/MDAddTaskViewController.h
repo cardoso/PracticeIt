@@ -11,7 +11,7 @@
 
 #import "MDPractice.h"
 
-@interface MDAddTaskViewController : UIViewController <MPMediaPickerControllerDelegate>
+@interface MDAddTaskViewController : UIViewController <MPMediaPickerControllerDelegate, UITextFieldDelegate>
 
 @property (weak,nonatomic) MDPractice *practice;
 @property (weak,nonatomic) MDTask *task;
