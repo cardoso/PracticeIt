@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "TableViewDragger-Swift.h"
+
 #import "MDPracticeIt.h"
 #import "MDPracticeTableViewCell.h"
 
-@interface MDListOfPracticesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, MDPracticeItDelegate>
+@interface MDListOfPracticesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, MDPracticeItDelegate, TableViewDraggerDelegate, TableViewDraggerDataSource>
 
 @property MDPracticeIt *practiceIt;
 

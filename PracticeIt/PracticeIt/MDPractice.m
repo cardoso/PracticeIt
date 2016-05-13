@@ -171,16 +171,31 @@
     return [self.tasks objectAtIndex:self.currentTaskIndex];
 }
 
--(BOOL)startTask:(MDTask*)task {
-    task.currentTime = 0;
+-(BOOL)startTaskAtIndex:(NSInteger)index {
+    MDTask *task = [self taskAtIndex:index];
     
-    [self.delegate practice:self didStartTask:task];
+    if(task) {
+        task.currentTime = 0;
+        self.currentTaskIndex = index;
     
-    return YES;
+        [self.delegate practice:self didStartTask:task];
+    
+        return YES;
+    }
+    
+    return NO;
 }
 
 -(MDTask *)taskAtIndex:(NSInteger)index{
     return [self.tasks objectAtIndex:index];
+}
+
+-(NSInteger)indexForTask:(MDTask *)task {
+    for(int i = 0; i < [self taskCount]; i++)
+        if(self.tasks[i] == task)
+            return i;
+    
+    return -1;
 }
 
 -(NSInteger)taskCount {
@@ -188,21 +203,21 @@
 }
 
 -(BOOL)removeTaskAtIndex:(NSInteger)index {
-    if(index >= [self.tasks count])
+    if(index >= [self taskCount])
         return NO;
     
     MDTask *task = [self.tasks objectAtIndex:index];
     
-    if([self.delegate practice:self shouldRemoveTask:task]) {
-        [self.delegate practice:self willRemoveTask:task];
-        [self.tasks removeObject:task];
-        return YES;
-    }
+    if(![self.delegate practice:self shouldRemoveTask:task])
+        return NO;
     
-    return NO;
+    [self.delegate practice:self willRemoveTask:task];
+    [self.tasks removeObject:task];
+    
+    return YES;
 }
 
--(BOOL)addTaskWithTitle:(NSString *)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(MPMediaItem*)audio WithTime:(NSTimeInterval)time {
+-(BOOL)addTaskWithTitle:(NSString *)title withTtsMessage:(NSString*)ttsMessage withAudio:(MPMediaItem*)audio withTime:(NSTimeInterval)time {
     
     MDTask *task = [[MDTask alloc] initWithTitle:title WithTTSMessage:ttsMessage WithAudio:audio WithTime:time];
     
@@ -215,6 +230,35 @@
     }
     
     return NO;
+}
+
+-(BOOL)editTaskAtIndex:(NSInteger)index withNewTitle:(NSString*)newTitle withNewTtsMessage:(NSString *)newTtsMessage withNewAudio:(MPMediaItem *)newAudio withNewTime:(NSTimeInterval)newTime {
+    if(index >= [self taskCount])
+        return NO;
+    
+    MDTask *task = [self taskAtIndex:index];
+    
+    task.title = newTitle;
+    task.ttsMessage = newTtsMessage;
+    task.audio = newAudio;
+    task.time = newTime;
+    
+    [self.delegate practice:self didEditTask:task];
+    
+    return YES;
+}
+
+-(BOOL)moveTaskAtIndex:(NSInteger)index toIndex:(NSInteger)targetIndex {
+    
+    if(index >= [self taskCount] || index < 0 || targetIndex >= [self taskCount] || index < 0)
+        return NO;
+    
+    MDTask *task = [self taskAtIndex:index];
+    
+    [self.tasks removeObject:task];
+    [self.tasks insertObject:task atIndex:targetIndex];
+    
+    return TRUE;
 }
 
 #pragma mark - Helper Methods

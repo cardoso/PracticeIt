@@ -27,19 +27,30 @@
     return [self.practices objectAtIndex:index];
 }
 
--(BOOL)removePracticeAtIndex:(NSInteger)index {
-    if(index < [self.practices count]) {
-        [self.practices removeObjectAtIndex:index];
-        
-        [self.delegate onPracticeRemoved];
-        
-        return YES;
-    }
+-(NSInteger)indexForPractice:(MDPractice *)practice {
+    for(NSInteger i = 0; i < [self.practices count]; i++)
+        if(self.practices[i] == practice)
+            return i;
     
-    return NO;
+    return -1;
 }
 
--(MDPractice*)addPracticeWithTitle:(NSString *)title WithDescription:(NSString *)description WithIconName:(NSString *)iconName {
+-(BOOL)removePracticeAtIndex:(NSInteger)index {
+    if(index >= [self.practices count])
+        return NO;
+        
+    MDPractice *practice = [self practiceAtIndex:index];
+        
+    if(![self.delegate practiceIt:self shouldRemovePractice:practice])
+        return NO;
+    
+    [self.delegate practiceIt:self willRemovePractice:practice];
+    [self.practices removeObjectAtIndex:index];
+        
+    return YES;
+}
+
+-(MDPractice*)addPracticeWithTitle:(NSString *)title withDescription:(NSString *)description withIconName:(NSString *)iconName {
     MDPractice *practice = [[MDPractice alloc] init];
     
     practice.title = title;
@@ -48,9 +59,25 @@
     
     [self.practices addObject:practice];
     
-    [self.delegate onPracticeAdded];
+    [self.delegate practiceIt:self didAddPractice:practice];
     
     return practice;
+}
+
+-(BOOL)editPracticeAtIndex:(NSInteger)index withNewTitle:(NSString *)newTitle withNewDescription:(NSString *)newDescription withNewIcon:(NSString *)newIconName {
+    if(index < [self.practices count]) {
+        MDPractice* practice = [self practiceAtIndex:index];
+        
+        practice.title = newTitle;
+        practice.desc = newDescription;
+        practice.iconName = newIconName;
+        
+        [self.delegate practiceIt:self didEditPractice:practice];
+        
+        return YES;
+    }
+    
+    return NO;
 }
 
 -(BOOL)loadData {
@@ -70,7 +97,7 @@
         NSString *desc = [dictPractice objectForKey:@"desc"];
         NSString *iconName = [dictPractice objectForKey:@"iconName"];
         
-        MDPractice *pract = [self addPracticeWithTitle:title WithDescription:desc WithIconName:iconName];
+        MDPractice *pract = [self addPracticeWithTitle:title withDescription:desc withIconName:iconName];
         
         NSArray *arrTasks = [dictPractice objectForKey:@"tasks"];
         

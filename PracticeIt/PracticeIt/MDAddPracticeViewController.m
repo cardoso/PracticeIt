@@ -6,8 +6,9 @@
 //  Copyright © 2016 MatheusDaniel. All rights reserved.
 //
 
-#import "MDAddPracticeViewController.h"
 #import "UITextField+Shake.h"
+
+#import "MDAddPracticeViewController.h"
 
 @interface MDAddPracticeViewController ()
 
@@ -17,6 +18,8 @@
 
 @property NSArray *iconNames;
 @property NSInteger selectedIconIndex;
+
+@property BOOL isEditingPracticeLoaded;
 
 @end
 
@@ -44,10 +47,14 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    if(self.practice) {
-        self.nameTextField.text = self.practice.title;
-        self.descriptionTextView.text = self.practice.desc;
-        [self.iconCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:[self.iconNames indexOfObject:self.practice.iconName] inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionTop];
+    if(self.isEditing && !self.isEditingPracticeLoaded) {
+        MDPractice* practice = [self.practiceIt practiceAtIndex:self.indexOfPracticeToEdit];
+        
+        self.nameTextField.text = practice.title;
+        self.descriptionTextView.text = practice.desc;
+        [self.iconCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:[self.iconNames indexOfObject:practice.iconName] inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionTop];
+        
+        self.isEditingPracticeLoaded = YES;
     }
 }
 
@@ -69,13 +76,11 @@
         [self.nameTextField shake];
     }
     else {
-        if(self.practiceIt) {
-            [self.practiceIt addPracticeWithTitle:self.nameTextField.text WithDescription:self.descriptionTextView.text WithIconName:[self.iconNames objectAtIndex:self.selectedIconIndex]];
+        if(!self.isEditing) {
+            [self.practiceIt addPracticeWithTitle:self.nameTextField.text withDescription:self.descriptionTextView.text withIconName:[self.iconNames objectAtIndex:self.selectedIconIndex]];
         }
-        else if(self.practice) {
-            self.practice.title = self.nameTextField.text;
-            self.practice.desc = self.descriptionTextView.text;
-            self.practice.iconName = [self.iconNames objectAtIndex:self.selectedIconIndex];
+        else {
+            [self.practiceIt editPracticeAtIndex:self.indexOfPracticeToEdit withNewTitle:self.nameTextField.text withNewDescription:self.descriptionTextView.text withNewIcon:[self.iconNames objectAtIndex:self.selectedIconIndex]];
         }
         
         [self dismissViewControllerAnimated:YES completion:nil];

@@ -308,7 +308,7 @@
                                                                 <constraint firstAttribute="height" constant="35" id="Dq0-eK-0SF"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio (click to choose)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBH-cZ-8dK">
@@ -352,7 +352,6 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="72" id="BqQ-Mv-43q"/>
                                                         <constraint firstAttribute="height" constant="24" id="Ebm-P5-i0R"/>
-                                                        <constraint firstAttribute="height" constant="24" id="ckF-bC-1Hm"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -410,11 +409,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="W0X-sC-eTF">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="OCg-Cx-uPy">
-                            <connections>
-                                <action selector="doneButtonPressed:" destination="4Es-OK-pgE" id="Cy3-om-mRP"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IeX-Jy-P3O">
                             <connections>
                                 <action selector="addButtonPressed:" destination="4Es-OK-pgE" id="xEZ-d9-372"/>
@@ -502,7 +496,7 @@
                                     <constraint firstAttribute="height" constant="27" id="Ngf-8T-Iiu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voiced message at start:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbg-ab-MU6">
@@ -522,7 +516,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi9-9C-0Lx">
                                 <rect key="frame" x="20" y="199" width="560" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

@@ -32,11 +32,17 @@
 -(BOOL)nextTask;
 -(BOOL)previousTask;
 
+-(BOOL)startTaskAtIndex:(NSInteger)index;
+
 -(MDTask*)taskAtIndex:(NSInteger)index;
+-(NSInteger)indexForTask:(MDTask*)task;
+
 -(MDTask*)currentTask;
 -(NSInteger)taskCount;
 -(BOOL)removeTaskAtIndex:(NSInteger)index;
--(BOOL)addTaskWithTitle:(NSString *)title WithTTSMessage:(NSString*)ttsMessage WithAudio:(MPMediaItem*)audio WithTime:(NSTimeInterval)time;
+-(BOOL)addTaskWithTitle:(NSString *)title withTtsMessage:(NSString*)ttsMessage withAudio:(MPMediaItem*)audio withTime:(NSTimeInterval)time;
+-(BOOL)editTaskAtIndex:(NSInteger)index withNewTitle:(NSString*)newTitle withNewTtsMessage:(NSString*)newTtsMessage withNewAudio:(MPMediaItem*)newAudio withNewTime:(NSTimeInterval)newTime;
+-(BOOL)moveTaskAtIndex:(NSInteger)index toIndex:(NSInteger)targetIndex;
 
 + (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval;
 

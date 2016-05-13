@@ -9,6 +9,8 @@ target 'PracticeIt' do
   pod 'SWTableViewCell', '~> 0.3.7'
   pod 'UITextField+Shake', '~> 1.1'
   pod 'MZFormSheetPresentationController', '~> 2.4'
+  use_frameworks!
+  pod "TableViewDragger"
 
   target 'PracticeItTests' do
     inherit! :search_paths

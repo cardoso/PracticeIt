@@ -6,8 +6,9 @@
 //  Copyright © 2016 MatheusDaniel. All rights reserved.
 //
 
-#import "MDAddTaskViewController.h"
 #import "UITextField+Shake.h"
+
+#import "MDAddTaskViewController.h"
 
 @interface MDAddTaskViewController ()
 
@@ -18,6 +19,8 @@
 
 @property MPMediaPickerController *audioPicker;
 @property MPMediaItem *pickedAudio;
+
+@property BOOL isEditingTaskLoaded;
 
 @end
 
@@ -33,16 +36,26 @@
     self.titleTextField.delegate = self;
     self.ttsMessageTextField.delegate = self;
     
-    if(self.task) {
-        self.titleTextField.text = self.task.title;
-        self.ttsMessageTextField.text = self.task.ttsMessage;
-        self.audioLabel.text = self.task.audio.title;
-        [self.timeDatePicker setCountDownDuration:self.task.time];
-    }
+    [self.titleTextField becomeFirstResponder];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    [self.titleTextField becomeFirstResponder];
+    if(self.isEditing && !self.isEditingTaskLoaded) {
+        MDTask *task = [self.practice taskAtIndex:self.indexOfTaskToEdit];
+        
+        self.titleTextField.text = task.title;
+        self.ttsMessageTextField.text = task.ttsMessage;
+        self.audioLabel.text = task.audio.title;
+        [self.timeDatePicker setCountDownDuration:task.time];
+        self.pickedAudio = task.audio;
+        
+        self.isEditingTaskLoaded = YES;
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.titleTextField resignFirstResponder];
+    [self.ttsMessageTextField resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,14 +83,12 @@
         [self.titleTextField shake];
     }
     else {
-        if(self.practice) {
-            [self.practice addTaskWithTitle:self.titleTextField.text WithTTSMessage:self.ttsMessageTextField.text WithAudio:self.pickedAudio WithTime:self.timeDatePicker.countDownDuration];
+        
+        if(!self.isEditing) {
+            [self.practice addTaskWithTitle:self.titleTextField.text withTtsMessage:self.ttsMessageTextField.text withAudio:self.pickedAudio withTime:self.timeDatePicker.countDownDuration];
         }
-        else if(self.task) {
-            self.task.title = self.titleTextField.text;
-            self.task.ttsMessage = self.ttsMessageTextField.text;
-            self.task.audio = self.pickedAudio;
-            self.task.time = self.timeDatePicker.countDownDuration;
+        else {
+            [self.practice editTaskAtIndex:self.indexOfTaskToEdit withNewTitle:self.titleTextField.text withNewTtsMessage:self.ttsMessageTextField.text withNewAudio:self.pickedAudio withNewTime:self.timeDatePicker.countDownDuration];
         }
         
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -91,6 +102,10 @@
 
 #pragma mark - UITextFieldDelegate
 
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    [textField resignFirstResponder];
+}
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     if(textField == self.titleTextField) {
         [self.titleTextField resignFirstResponder];
@@ -101,7 +116,7 @@
         [self.ttsMessageTextField resignFirstResponder];
     }
     
-    return YES;
+    return NO;
 }
 
 

@@ -10,10 +10,13 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import "MDPracticeIt.h"
-#import "SWTableViewCell.h"
 
-@interface MDManagePracticeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, MDPracticeDelegate, AVSpeechSynthesizerDelegate>
+#import "SWTableViewCell.h"
+#import "TableViewDragger-Swift.h"
+
+#import "MDPracticeIt.h"
+
+@interface MDManagePracticeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, MDPracticeDelegate, AVSpeechSynthesizerDelegate, TableViewDraggerDelegate, TableViewDraggerDataSource>
 
 @property (weak, nonatomic) MDPracticeIt *practiceIt;
 @property (weak, nonatomic) MDPractice *practice;
