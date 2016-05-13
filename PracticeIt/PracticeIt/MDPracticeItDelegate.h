@@ -10,8 +10,11 @@
 
 @protocol MDPracticeItDelegate <NSObject>
 
--(void)onPracticeAdded;
--(void)onPracticeRemoved;
+-(void)practiceIt:(id)practiceIt didAddPractice:(MDPractice*)practice;
+
+-(BOOL)practiceIt:(id)practiceIt shouldRemovePractice:(MDPractice*)practice;
+-(void)practiceIt:(id)practiceIt willRemovePractice:(MDPractice*)practice;
+
 
 -(void)practiceIt:(id)practiceIt didEditPractice:(MDPractice*)practice;
 

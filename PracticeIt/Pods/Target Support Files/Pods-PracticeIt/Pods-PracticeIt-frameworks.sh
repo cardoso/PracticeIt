@@ -82,3 +82,18 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/MZAppearance/MZAppearance.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/MZFormSheetPresentationController/MZFormSheetPresentationController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SWTableViewCell/SWTableViewCell.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TableViewDragger/TableViewDragger.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/UITextField+Shake/UITextField_Shake.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/MZAppearance/MZAppearance.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/MZFormSheetPresentationController/MZFormSheetPresentationController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SWTableViewCell/SWTableViewCell.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TableViewDragger/TableViewDragger.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/UITextField+Shake/UITextField_Shake.framework"
+fi

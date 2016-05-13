@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1673543209160DB7ACEA3400 /* libPods-PracticeItUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD6E69AB8856202C220B7FC /* libPods-PracticeItUITests.a */; };
-		2E1BD0178457D8838F370AF5 /* libPods-PracticeItTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6DE673A2BA82CE3AE105DD /* libPods-PracticeItTests.a */; };
-		52CDBD3DB3F96BD0029F8D0F /* libPods-PracticeIt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C86A37F7D460E34FF3601BA1 /* libPods-PracticeIt.a */; };
+		76278B2CEFBDC7F310FAE283 /* Pods_PracticeItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83E69B0B0D5B686AB467ED7 /* Pods_PracticeItTests.framework */; };
 		89043C401CD77088002976B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C3F1CD77088002976B1 /* main.m */; };
 		89043C431CD77088002976B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C421CD77088002976B1 /* AppDelegate.m */; };
 		89043C491CD77088002976B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89043C471CD77088002976B1 /* Main.storyboard */; };
@@ -28,6 +26,8 @@
 		89CD82D91CDA30B700F42090 /* MDPractice.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82D81CDA30B700F42090 /* MDPractice.m */; };
 		89CD82DD1CDA404D00F42090 /* MDTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82DC1CDA404D00F42090 /* MDTask.m */; };
 		89EB874F1CDB68DD0026BD6A /* MDAddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EB874E1CDB68DD0026BD6A /* MDAddTaskViewController.m */; };
+		9A656C6FBE6F204696443F5D /* Pods_PracticeIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792A599C56CFC5E6F08F5F97 /* Pods_PracticeIt.framework */; };
+		ED860BF1A8382AE90D9DE9A7 /* Pods_PracticeItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C9A8FDCBC15879F4767B47 /* Pods_PracticeItUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A6DE673A2BA82CE3AE105DD /* libPods-PracticeItTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PracticeItTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B4F2AF36172E3D78971D3E /* Pods-PracticeItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeItUITests/Pods-PracticeItUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5AD6E69AB8856202C220B7FC /* libPods-PracticeItUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PracticeItUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		778A698BA4EDF7584C4264A0 /* Pods-PracticeItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeItUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeItUITests/Pods-PracticeItUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		792A599C56CFC5E6F08F5F97 /* Pods_PracticeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89043C3B1CD77088002976B1 /* PracticeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89043C3F1CD77088002976B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89043C411CD77088002976B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,10 +88,11 @@
 		89EB874D1CDB68DD0026BD6A /* MDAddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAddTaskViewController.h; sourceTree = "<group>"; };
 		89EB874E1CDB68DD0026BD6A /* MDAddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAddTaskViewController.m; sourceTree = "<group>"; };
 		909A70A2F76A3AAA0FFAB914 /* Pods-PracticeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeIt/Pods-PracticeIt.debug.xcconfig"; sourceTree = "<group>"; };
+		B83E69B0B0D5B686AB467ED7 /* Pods_PracticeItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABFC45ADBC91544A05C2BB1 /* Pods-PracticeItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeItTests/Pods-PracticeItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE48488AD432FAA9737C1810 /* Pods-PracticeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeIt/Pods-PracticeIt.release.xcconfig"; sourceTree = "<group>"; };
-		C86A37F7D460E34FF3601BA1 /* libPods-PracticeIt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PracticeIt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7B13B6CFFCF9EA27C6F83D /* Pods-PracticeItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeItTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeItTests/Pods-PracticeItTests.release.xcconfig"; sourceTree = "<group>"; };
+		F4C9A8FDCBC15879F4767B47 /* Pods_PracticeItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52CDBD3DB3F96BD0029F8D0F /* libPods-PracticeIt.a in Frameworks */,
+				9A656C6FBE6F204696443F5D /* Pods_PracticeIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1BD0178457D8838F370AF5 /* libPods-PracticeItTests.a in Frameworks */,
+				76278B2CEFBDC7F310FAE283 /* Pods_PracticeItTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1673543209160DB7ACEA3400 /* libPods-PracticeItUITests.a in Frameworks */,
+				ED860BF1A8382AE90D9DE9A7 /* Pods_PracticeItUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +139,9 @@
 		64359BA02415F655C8D54638 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C86A37F7D460E34FF3601BA1 /* libPods-PracticeIt.a */,
-				0A6DE673A2BA82CE3AE105DD /* libPods-PracticeItTests.a */,
-				5AD6E69AB8856202C220B7FC /* libPods-PracticeItUITests.a */,
+				792A599C56CFC5E6F08F5F97 /* Pods_PracticeIt.framework */,
+				B83E69B0B0D5B686AB467ED7 /* Pods_PracticeItTests.framework */,
+				F4C9A8FDCBC15879F4767B47 /* Pods_PracticeItUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,7 +151,6 @@
 			children = (
 				89043C3D1CD77088002976B1 /* PracticeIt */,
 				89043C5A1CD77088002976B1 /* PracticeItTests */,
-				89043C651CD77088002976B1 /* PracticeItUITests */,
 				89043C3C1CD77088002976B1 /* Products */,
 				3AAB29ADCAC0584EC9B3CFC9 /* Pods */,
 				64359BA02415F655C8D54638 /* Frameworks */,
@@ -205,6 +204,7 @@
 		89043C5A1CD77088002976B1 /* PracticeItTests */ = {
 			isa = PBXGroup;
 			children = (
+				89043C651CD77088002976B1 /* PracticeItUITests */,
 				89043C5B1CD77088002976B1 /* PracticeItTests.m */,
 				89043C5D1CD77088002976B1 /* Info.plist */,
 			);
@@ -217,7 +217,8 @@
 				89043C661CD77088002976B1 /* PracticeItUITests.m */,
 				89043C681CD77088002976B1 /* Info.plist */,
 			);
-			path = PracticeItUITests;
+			name = PracticeItUITests;
+			path = ../PracticeItUITests;
 			sourceTree = "<group>";
 		};
 		89043C7A1CD7746D002976B1 /* ViewControllers */ = {

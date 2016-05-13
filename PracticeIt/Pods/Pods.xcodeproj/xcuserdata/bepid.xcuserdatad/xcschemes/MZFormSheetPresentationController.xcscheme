@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '34440D436B6519A357FFA66228EB4C96'
+               BlueprintIdentifier = '9C21158A7B41D923AD9278EC173670D3'
                BlueprintName = 'MZFormSheetPresentationController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMZFormSheetPresentationController.a'>
+               BuildableName = 'MZFormSheetPresentationController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

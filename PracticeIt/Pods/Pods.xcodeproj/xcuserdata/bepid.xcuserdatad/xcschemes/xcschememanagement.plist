@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TableViewDragger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UITextField+Shake.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1DAC2FF166EBB39D93C76C245CCD170C</key>
+		<key>332057E6C33A447FFE2F54673CAC064F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2D562DCC53CC66CAE00F09A5759B4CE8</key>
+		<key>512B262A71A5C2D4A09CBD9725F015B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34440D436B6519A357FFA66228EB4C96</key>
+		<key>6B794A8F185942142B935C9D6145F505</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F3BCE62B7723AADB8B44A1D59E1EADD</key>
+		<key>7C5E81301AB6601998841A8D3D165631</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A13EC6FBA4EF4C7653DD949A92243810</key>
+		<key>9C21158A7B41D923AD9278EC173670D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF83AECC4E8AB9A213078AE6762568E5</key>
+		<key>D5E7EEB41E84B1DF9BFD573EE7AD1D28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DBA45D7C63D2D1F1D323A4AF3C303580</key>
+		<key>DFB4E2F730A9826B33B067653B48CEDF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFABAFE9408FF95CFC8B3C3770D56837</key>
 		<dict>
 			<key>primary</key>
 			<true/>

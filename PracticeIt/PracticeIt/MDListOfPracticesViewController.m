@@ -9,6 +9,8 @@
 #import "MZFormSheetPresentationViewController.h"
 #import "MZFormSheetPresentationViewControllerSegue.h"
 
+
+
 #import "MDListOfPracticesViewController.h"
 #import "MDAddPracticeViewController.h"
 #import "MDManagePracticeViewController.h"
@@ -56,17 +58,18 @@
         presentationSegue.formSheetPresentationController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleSlideAndBounceFromTop;
         
         presentationSegue.formSheetPresentationController.allowDismissByPanningPresentedView = YES;
-        
-        presentationSegue.formSheetPresentationController.presentationController.shouldDismissOnBackgroundViewTap = YES;
+        presentationSegue.formSheetPresentationController.interactivePanGestureDismissalDirection = MZFormSheetPanGestureDismissDirectionUp | MZFormSheetPanGestureDismissDirectionDown;
         
         presentationSegue.formSheetPresentationController.presentationController.movementActionWhenKeyboardAppears = MZFormSheetActionWhenKeyboardAppearsMoveToTop;
         
         MDAddPracticeViewController *controller = segue.destinationViewController;
         
-        if(sender && [sender isKindOfClass:NSClassFromString(@"NSNumber")])
-            controller.practice = [self.practiceIt practiceAtIndex:[sender longValue]];
-        else
-            controller.practiceIt = self.practiceIt;
+        controller.practiceIt = self.practiceIt;
+        
+        if(sender && [sender isKindOfClass:NSClassFromString(@"NSNumber")]) {
+            controller.isEditing = YES;
+            controller.indexOfPracticeToEdit = [sender integerValue];
+        }
     }
     
     if([segue.identifier isEqualToString:@"segueToManagePractice"]) {
@@ -109,13 +112,27 @@
 
 #pragma mark - MDPracticeItDelegate
 
--(void)onPracticeAdded {
-    [self.tableOfPractices reloadData];
+-(void)practiceIt:(id)practiceIt didAddPractice:(MDPractice *)practice {
+    [self.tableOfPractices beginUpdates];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.practiceIt indexForPractice:practice] inSection:0];
+    [self.tableOfPractices insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    [self.tableOfPractices endUpdates];
     [self.practiceIt saveData];
 }
 
--(void)onPracticeRemoved {
-    [self.tableOfPractices reloadData];
+-(BOOL)practiceIt:(id)practiceIt shouldRemovePractice:(MDPractice *)practice {
+    return YES;
+}
+
+-(void)practiceIt:(id)practiceIt willRemovePractice:(MDPractice *)practice {
+    [self.practiceIt saveData];
+}
+
+-(void)practiceIt:(id)practiceIt didEditPractice:(MDPractice *)practice {
+    [self.tableOfPractices beginUpdates];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.practiceIt indexForPractice:practice] inSection:0];
+    [self.tableOfPractices reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+    [self.tableOfPractices endUpdates];
     [self.practiceIt saveData];
 }
 
@@ -149,6 +166,7 @@
     NSIndexPath *indexPath = [self.tableOfPractices indexPathForCell:cell];
     
     if(index == 0) {
+        [cell hideUtilityButtonsAnimated:YES];
         [self performSegueWithIdentifier:@"segueToAddPractice" sender:[NSNumber numberWithLong:indexPath.row]];
     }
     else if(index == 1) {

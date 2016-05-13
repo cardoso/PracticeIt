@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MZFormSheetPresentationViewController.h"
 #import "MDPracticeIt.h"
 
 @interface MDAddPracticeViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) MDPracticeIt *practiceIt;
-@property (weak, nonatomic) MDPractice *practice;
+
+@property BOOL isEditing;
+@property NSInteger indexOfPracticeToEdit;
 
 @end

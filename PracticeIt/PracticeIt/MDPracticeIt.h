@@ -16,11 +16,12 @@
 @property NSObject<MDPracticeItDelegate> *delegate;
 
 
-
 -(MDPractice*)practiceAtIndex:(NSInteger)index;
--(BOOL)removePracticeAtIndex:(NSInteger)index;
--(MDPractice*)addPracticeWithTitle:(NSString*)title WithDescription:(NSString*)description WithIconName:(NSString*)iconName;
+-(NSInteger)indexForPractice:(MDPractice*)practice;
 
+-(MDPractice*)addPracticeWithTitle:(NSString*)title withDescription:(NSString*)description withIconName:(NSString*)iconName;
+-(BOOL)removePracticeAtIndex:(NSInteger)index;
+-(BOOL)editPracticeAtIndex:(NSInteger)index withNewTitle:(NSString*)newTitle withNewDescription:(NSString*)newDescription withNewIcon:(NSString*)newIconName;
 
 -(BOOL)loadData;
 -(BOOL)saveData;

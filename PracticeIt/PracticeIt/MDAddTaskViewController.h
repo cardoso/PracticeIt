@@ -14,6 +14,7 @@
 @interface MDAddTaskViewController : UIViewController <MPMediaPickerControllerDelegate, UITextFieldDelegate>
 
 @property (weak,nonatomic) MDPractice *practice;
-@property (weak,nonatomic) MDTask *task;
+@property BOOL isEditing;
+@property NSInteger indexOfTaskToEdit;
 
 @end

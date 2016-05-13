@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableOfTasks;
 @property NSIndexPath *lastSelectedTaskIndexPath;
 
-
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *previousButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *startButton;
@@ -28,6 +27,9 @@
 @property (strong, nonatomic) UIBarButtonItem *pauseButton;
 
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+
+@property TableViewDragger *dragger;
+@property BOOL isDragging;
 
 @end
 
@@ -41,6 +43,17 @@
     self.tableOfTasks.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.synthesizer.delegate = self;
+    
+    // Dragger
+    self.dragger = [[TableViewDragger alloc] initWithTableView:self.tableOfTasks];
+    self.dragger.delegate = self;
+    self.dragger.dataSource = self;
+    self.dragger.cellAlpha = 0.7;
+    
+    //self.navigationController.navigationBar.topItem.title = @"Back";
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = @"Back";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
     
     // Create pause button
     self.pauseButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePressed:)];
@@ -79,7 +92,6 @@
 }
 - (IBAction)addButtonPressed:(id)sender {
     //alert
-    
 }
 
 - (IBAction)startPressed:(UIBarButtonItem *)sender {
@@ -112,17 +124,19 @@
         presentationSegue.formSheetPresentationController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleSlideAndBounceFromTop;
         
         presentationSegue.formSheetPresentationController.allowDismissByPanningPresentedView = YES;
-        
-        presentationSegue.formSheetPresentationController.presentationController.shouldDismissOnBackgroundViewTap = YES;
+        presentationSegue.formSheetPresentationController.interactivePanGestureDismissalDirection = MZFormSheetPanGestureDismissDirectionUp | MZFormSheetPanGestureDismissDirectionDown;
         
         presentationSegue.formSheetPresentationController.presentationController.movementActionWhenKeyboardAppears = MZFormSheetActionWhenKeyboardAppearsMoveToTop;
         
         MDAddTaskViewController *controller = segue.destinationViewController;
         
-        if(sender && [sender isKindOfClass:NSClassFromString(@"NSNumber")])
-            controller.task = [self.practice taskAtIndex:[sender longValue]];
-        else
-            controller.practice = self.practice;
+        controller.practice = self.practice;
+        
+        if(sender && [sender isKindOfClass:NSClassFromString(@"NSNumber")]) {
+            controller.indexOfTaskToEdit = [sender integerValue];
+            controller.isEditing = YES;
+        }
+            
     }
 }
 
@@ -173,18 +187,66 @@
     if ([indexPath isEqual:[self.tableOfTasks indexPathForSelectedRow]]) {
         return  160;
     }
-    else return 76;
+    else return 84;
 
 }
 
 #pragma mark TableViewDelegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     [tableView beginUpdates];
     [tableView endUpdates];
     
-    self.lastSelectedTaskIndexPath = indexPath;
+    if(![self.practice isPaused] && ![self.practice isStopped])
+        [self.practice startTaskAtIndex:indexPath.row];
+}
+
+-(NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
+    
+    NSLog(@"asd");
+    
+    return proposedDestinationIndexPath;
+}
+
+#pragma mark - TableViewDraggerDelegate
+
+-(BOOL)dragger:(TableViewDragger *)dragger moveDraggingAtIndexPath:(NSIndexPath *)indexPath newIndexPath:(NSIndexPath *)newIndexPath {
+    [self.tableOfTasks moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+    [self.practice moveTaskAtIndex:indexPath.row toIndex:newIndexPath.row];
+    return YES;
+}
+
+-(void)dragger:(TableViewDragger *)dragger willBeginDraggingAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableOfTasks selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+    [self.tableOfTasks beginUpdates];
+    [self.tableOfTasks endUpdates];
+    
+    self.isDragging = YES;
+}
+
+-(void)dragger:(TableViewDragger *)dragger willEndDraggingAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableOfTasks beginUpdates];
+    [self.tableOfTasks endUpdates];
+}
+
+-(void)dragger:(TableViewDragger *)dragger didEndDraggingAtIndexPath:(NSIndexPath *)indexPath {
+    self.isDragging = NO;
+    
+    //color bug workaround
+    SWTableViewCell *cell = [self.tableOfTasks cellForRowAtIndexPath:indexPath];
+    [self.tableOfTasks reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableOfTasks selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, 160);
+    
+    [UIView setAnimationsEnabled:NO];
+    [self.tableOfTasks beginUpdates];
+    [self.tableOfTasks endUpdates];
+    [UIView setAnimationsEnabled:YES];
+    
+}
+
+-(BOOL)dragger:(TableViewDragger *)dragger shouldDragAtIndexPath:(NSIndexPath *)indexPath {
+    return [self.practice isPaused] || [self.practice isStopped];
 }
 
 #pragma mark MDPracticeDelegate
@@ -206,7 +268,20 @@
 }
 
 -(void)practice:(MDPractice*)practice didAddTask:(MDTask *)task {
-    [self.tableOfTasks reloadData];
+    [self.tableOfTasks beginUpdates];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.practice indexForTask:task] inSection:0];
+    [self.tableOfTasks insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    [self.tableOfTasks endUpdates];
+    
+    [self.practiceIt saveData];
+}
+
+-(void)practice:(id)practice didEditTask:(MDTask *)task {
+    [self.tableOfTasks beginUpdates];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.practice indexForTask:task] inSection:0];
+    [self.tableOfTasks reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+    [self.tableOfTasks endUpdates];
+    
     [self.practiceIt saveData];
 }
 
@@ -230,6 +305,10 @@
 }
 
 -(void)practice:(id)practice didStartTask:(MDTask *)task {
+    [self.tableOfTasks selectRowAtIndexPath:[NSIndexPath indexPathForRow:[self.practice indexForTask:task] inSection:0] animated:YES scrollPosition:UITableViewScrollPositionBottom];
+    [self.tableOfTasks beginUpdates];
+    [self.tableOfTasks endUpdates];
+    
     AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:task.ttsMessage];
     [utterance setRate:0.4f];
     
@@ -295,7 +374,7 @@
 }
 
 -(BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state {
-    return [self.practice isPaused] || [self.practice isStopped];
+    return ([self.practice isPaused] || [self.practice isStopped]) && !self.isDragging;
 }
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
@@ -303,6 +382,7 @@
     NSIndexPath *indexPath = [self.tableOfTasks indexPathForCell:cell];
     
     if(index == 0) {
+        [cell hideUtilityButtonsAnimated:YES];
         [self performSegueWithIdentifier:@"segueToAddTask" sender:[NSNumber numberWithLong:indexPath.row]];
     }
     if(index == 1) {
@@ -313,15 +393,5 @@
         [self.tableOfTasks endUpdates];
     }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
