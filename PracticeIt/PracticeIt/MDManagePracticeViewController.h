@@ -22,4 +22,6 @@
 @property (weak, nonatomic) MDPractice *practice;
 @property (weak, nonatomic) AVSpeechSynthesizer *synthesizer;
 
+-(void)loadPractice:(MDPractice*)practice;
+
 @end

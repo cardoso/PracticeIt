@@ -13,7 +13,7 @@
 #import "MDPracticeIt.h"
 #import "MDPracticeTableViewCell.h"
 
-@interface MDListOfPracticesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, MDPracticeItDelegate, TableViewDraggerDelegate, TableViewDraggerDataSource>
+@interface MDListOfPracticesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, MDPracticeItDelegate, TableViewDraggerDelegate, TableViewDraggerDataSource, UISplitViewControllerDelegate>
 
 @property MDPracticeIt *practiceIt;
 

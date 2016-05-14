@@ -38,8 +38,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = self.practice.title;
-    self.practice.delegate = self;
     self.tableOfTasks.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.synthesizer.delegate = self;
@@ -59,8 +57,8 @@
     self.pauseButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePressed:)];
     [self setToolBarPaused];
     
-    // Reset Practice
-    [self.practice reset];
+    // Load empty practice
+    [self loadPractice:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -75,6 +73,32 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)loadPractice:(MDPractice *)practice {
+    if(practice) {
+        self.practice = practice;
+        self.title = self.practice.title;
+        self.practice.delegate = self;
+    
+        [self setToolBarPaused];
+        [self.practice reset];
+    
+        [self.tableOfTasks reloadData];
+        
+        if([self.practice taskCount] > 0)
+            [self setToolbarEnabled:YES];
+        else [self setToolbarEnabled:NO];
+        
+        [self.navigationItem.rightBarButtonItem setEnabled:YES];
+    }
+    else {
+        self.practice = nil;
+        self.title = @"Select a Practice";
+        [self.tableOfTasks reloadData];
+        [self.navigationItem.rightBarButtonItem setEnabled:NO];
+        [self setToolbarEnabled:NO];
+    }
 }
 
 /*- (BOOL)loseProgressAlert{
@@ -154,6 +178,11 @@
     [self.toolbar setItems:aux animated:YES];
 }
 
+-(void)setToolbarEnabled:(BOOL)enabled {
+    for(UIBarButtonItem *item in self.toolbar.items)
+        item.enabled = enabled;
+}
+
 
 
 #pragma mark TableViewDataSource
@@ -215,6 +244,7 @@
 -(BOOL)dragger:(TableViewDragger *)dragger moveDraggingAtIndexPath:(NSIndexPath *)indexPath newIndexPath:(NSIndexPath *)newIndexPath {
     [self.tableOfTasks moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
     [self.practice moveTaskAtIndex:indexPath.row toIndex:newIndexPath.row];
+    [self.practiceIt saveData];
     return YES;
 }
 
@@ -274,8 +304,10 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.practice indexForTask:task] inSection:0];
     [self.tableOfTasks insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     [self.tableOfTasks endUpdates];
-    
     [self.practiceIt saveData];
+    
+    if([self.practice taskCount] == 1)
+        [self setToolbarEnabled:YES];
 }
 
 -(void)practice:(id)practice didEditTask:(MDTask *)task {
@@ -293,6 +325,9 @@
 
 -(void)practice:(MDPractice*)practice willRemoveTask:(MDTask *)task {
     [self.practice previousTask];
+    
+    if([self.practice taskCount] == 1)
+        [self setToolbarEnabled:NO];
 }
 
 -(void)didTimerTickOnPractice:(MDPractice*)practice {
