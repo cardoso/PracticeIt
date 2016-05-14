@@ -104,6 +104,7 @@
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame: cell.bounds];
     
     ((UIImageView*)([cell viewWithTag:12])).image = [UIImage imageNamed:[self.iconNames objectAtIndex:indexPath.row]];
+    
     cell.layer.borderColor = [UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:1 alpha:1.0].CGColor;
     cell.layer.cornerRadius = 5;
     cell.layer.borderWidth = 0;

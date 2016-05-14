@@ -24,6 +24,10 @@
 
 @property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 
+@property (strong, nonatomic) TableViewDragger *dragger;
+
+@property BOOL isDragging;
+
 @end
 
 @implementation MDListOfPracticesViewController
@@ -38,6 +42,10 @@
     self.tableOfPractices.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
+    
+    self.dragger = [[TableViewDragger alloc] initWithTableView:self.tableOfPractices];
+    self.dragger.delegate = self;
+    self.dragger.dataSource = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -107,6 +115,10 @@
     cell.rightUtilityButtons = [self rightButtonsForPracticeCell];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorWithRed:178.0/255 green:215.0/255 blue:1.0 alpha:1.0];
+    [cell setSelectedBackgroundView:bgColorView];
+    
     return cell;
 }
 
@@ -140,6 +152,39 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"segueToManagePractice" sender:indexPath];
+}
+
+-(NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
+    return proposedDestinationIndexPath;
+}
+
+#pragma mark - TableViewDraggerDelegate
+
+-(BOOL)dragger:(TableViewDragger *)dragger moveDraggingAtIndexPath:(NSIndexPath *)indexPath newIndexPath:(NSIndexPath *)newIndexPath {
+    [self.tableOfPractices moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+    [self.practiceIt movePracticeAtIndex:indexPath.row toIndex:newIndexPath.row];
+    return YES;
+}
+
+-(void)dragger:(TableViewDragger *)dragger willBeginDraggingAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableOfPractices selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+    [self.tableOfPractices beginUpdates];
+    [self.tableOfPractices endUpdates];
+    
+    self.isDragging = YES;
+}
+
+-(void)dragger:(TableViewDragger *)dragger willEndDraggingAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableOfPractices beginUpdates];
+    [self.tableOfPractices endUpdates];
+}
+
+-(void)dragger:(TableViewDragger *)dragger didEndDraggingAtIndexPath:(NSIndexPath *)indexPath {
+    self.isDragging = NO;
+}
+
+-(BOOL)dragger:(TableViewDragger *)dragger shouldDragAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 
 #pragma mark - SWTableViewCell

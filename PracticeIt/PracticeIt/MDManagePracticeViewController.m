@@ -176,6 +176,11 @@
     cell.audioLabel.text = task.audio.title;
     cell.timeProgress.progress = task.currentTime/task.time;
     
+    
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorWithRed:178.0/255 green:215.0/255 blue:1.0 alpha:1.0];
+    [cell setSelectedBackgroundView:bgColorView];
+    
     return cell;
 }
 
@@ -202,9 +207,6 @@
 }
 
 -(NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
-    
-    NSLog(@"asd");
-    
     return proposedDestinationIndexPath;
 }
 
