@@ -37,7 +37,23 @@
     self.iconCollectionView.layer.cornerRadius = 5;
     self.iconCollectionView.layer.borderWidth = 0.5;
     
-    self.iconNames = @[@"icon_clock",@"adhesive-tape",@"archive",@"bar-chart",@"briefcase-1",@"briefcase",@"cabinet",@"cactus",@"calculator",@"circular-chart",@"coffee",@"contract-1",@"contract",@"cutter",@"desk",@"diskette",@"email",@"envelope-1",@"envelope",@"exchange",@"fax",@"file",@"idea",@"lamp"];
+    //self.iconNames = @[@"icon_clock",@"adhesive-tape",@"archive",@"bar-chart",@"briefcase-1",@"briefcase",@"cabinet",@"cactus",@"calculator",@"circular-chart",@"coffee",@"contract-1",@"contract",@"cutter",@"desk",@"diskette",@"email",@"envelope-1",@"envelope",@"exchange",@"fax",@"file",@"idea",@"lamp"];
+    
+    NSString *assetsPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"PracticeIcons"];
+    
+    NSArray* dirs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:assetsPath error:NULL];
+    
+    NSLog(@"%@", dirs);
+    
+    NSMutableArray *mp3Files = [[NSMutableArray alloc] init];
+    [dirs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *filename = (NSString *)obj;
+        [mp3Files addObject:filename];
+        NSLog(@"%@", filename);
+    }];
+    
+    self.iconNames = mp3Files;
+    
     
     self.nameTextField.delegate = self;
     self.descriptionTextView.delegate = self;

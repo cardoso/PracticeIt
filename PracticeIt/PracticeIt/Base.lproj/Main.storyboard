@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="63L-dj-0TF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yoB-w1-5if">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -151,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kum-53-3GQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2293" y="623"/>
+            <point key="canvasLocation" x="2325" y="1330"/>
         </scene>
         <!--Practice It-->
         <scene sceneID="tne-QT-ifu">
@@ -230,12 +230,24 @@
                     <connections>
                         <outlet property="AddBarButton" destination="Q7d-dV-Ka6" id="gLZ-Nj-AAS"/>
                         <outlet property="tableOfPractices" destination="uO7-r3-Qhd" id="B41-DS-5FI"/>
-                        <segue destination="4Es-OK-pgE" kind="show" identifier="segueToManagePractice" id="qed-Yj-iCx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1576" y="1330"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="WbP-tF-yxa">
+            <objects>
+                <splitViewController id="yoB-w1-5if" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="63L-dj-0TF" kind="relationship" relationship="masterViewController" id="Gz8-8o-BC4"/>
+                        <segue destination="LBq-nk-rUw" kind="relationship" relationship="detailViewController" id="z9B-jP-5k0"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Np5-Gp-y9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="171" y="2042"/>
         </scene>
         <!--Manage Practice View Controller-->
         <scene sceneID="TeI-xw-FoO">
@@ -273,7 +285,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ozh-V9-owl"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-gZ-OBm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-gZ-OBm">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -356,7 +368,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the Practice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uld-V6-AXg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uld-V6-AXg">
                                                     <rect key="frame" x="8" y="8" width="584" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -425,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6u-h1-T5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="1350"/>
+            <point key="canvasLocation" x="1576" y="2042"/>
         </scene>
         <!--Add Task View Controller-->
         <scene sceneID="WmY-ML-MOo">
@@ -570,7 +582,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Viz-gA-JJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3141" y="1350"/>
+            <point key="canvasLocation" x="2325" y="2042"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D6L-xb-JGc">
@@ -589,6 +601,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jt2-aL-KSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885" y="1330"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tUw-OY-JDz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LBq-nk-rUw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iDL-3s-CrC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Es-OK-pgE" kind="relationship" relationship="rootViewController" id="RnF-5S-y7u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9M3-Ul-08F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="2042"/>
         </scene>
     </scenes>
     <resources>

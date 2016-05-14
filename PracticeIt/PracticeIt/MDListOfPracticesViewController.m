@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *AddBarButton;
 
 @property (strong,nonatomic) MDAddPracticeViewController *AddView;
+@property (weak, nonatomic) MDManagePracticeViewController *manageView;
 
 @property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 
@@ -46,6 +47,12 @@
     self.dragger = [[TableViewDragger alloc] initWithTableView:self.tableOfPractices];
     self.dragger.delegate = self;
     self.dragger.dataSource = self;
+    
+    self.splitViewController.delegate = self;
+    self.splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
+    
+    self.manageView = (MDManagePracticeViewController*)((UINavigationController*)self.splitViewController.viewControllers[1]).topViewController;
+    self.manageView.practiceIt = self.practiceIt;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -88,6 +95,24 @@
         controller.practice = practice;
         controller.practiceIt = self.practiceIt;
         controller.synthesizer = self.synthesizer;
+    }
+}
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController
+collapseSecondaryViewController:(UIViewController *)secondaryViewController
+  ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]]
+        && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[MDManagePracticeViewController class]]
+        && ([(MDManagePracticeViewController *)[(UINavigationController *)secondaryViewController topViewController] practice] == nil)) {
+        
+        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+        return YES;
+        
+    } else {
+        
+        return NO;
+        
     }
 }
 
@@ -138,6 +163,10 @@
 
 -(void)practiceIt:(id)practiceIt willRemovePractice:(MDPractice *)practice {
     [self.practiceIt saveData];
+    
+    if(practice == self.manageView.practice) {
+        [self.manageView loadPractice:nil];
+    }
 }
 
 -(void)practiceIt:(id)practiceIt didEditPractice:(MDPractice *)practice {
@@ -151,7 +180,14 @@
 #pragma mark - TableViewDelegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"segueToManagePractice" sender:indexPath];
+    //[self performSegueWithIdentifier:@"segueToManagePractice" sender:indexPath];
+    self.manageView.synthesizer = self.synthesizer;
+    [self.manageView loadPractice:[self.practiceIt practiceAtIndex:indexPath.row]];
+    [self.splitViewController showDetailViewController:self.manageView.navigationController sender:self];
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.manageView loadPractice:nil];
 }
 
 -(NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
@@ -163,6 +199,7 @@
 -(BOOL)dragger:(TableViewDragger *)dragger moveDraggingAtIndexPath:(NSIndexPath *)indexPath newIndexPath:(NSIndexPath *)newIndexPath {
     [self.tableOfPractices moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
     [self.practiceIt movePracticeAtIndex:indexPath.row toIndex:newIndexPath.row];
+    [self.practiceIt saveData];
     return YES;
 }
 
