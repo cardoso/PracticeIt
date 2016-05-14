@@ -20,6 +20,10 @@
     return self;
 }
 
+-(NSInteger)practiceCount {
+    return [self.practices count];
+}
+
 -(MDPractice *)practiceAtIndex:(NSInteger)index {
     if(index < 0 || index >= [self.practices count])
         return nil;
@@ -78,6 +82,19 @@
     }
     
     return NO;
+}
+
+-(BOOL)movePracticeAtIndex:(NSInteger)index toIndex:(NSInteger)targetIndex {
+    
+    if(index >= [self practiceCount] || index < 0 || targetIndex >= [self practiceCount] || index < 0)
+        return NO;
+    
+    MDPractice *task = [self practiceAtIndex:index];
+    
+    [self.practices removeObject:task];
+    [self.practices insertObject:task atIndex:targetIndex];
+    
+    return TRUE;
 }
 
 -(BOOL)loadData {
