@@ -285,7 +285,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ozh-V9-owl"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-gZ-OBm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-gZ-OBm">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -299,21 +299,21 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sq-9a-Ibx">
                                                     <rect key="frame" x="8" y="45" width="584" height="75"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tts" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-Bm-1SC">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_chat" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-Bm-1SC">
                                                             <rect key="frame" x="8" y="0.0" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="TZR-fI-DPl"/>
                                                                 <constraint firstAttribute="width" constant="32" id="iMn-ki-qO1"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_audio" translatesAutoresizingMaskIntoConstraints="NO" id="ush-8d-QIY">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="megaphone" translatesAutoresizingMaskIntoConstraints="NO" id="ush-8d-QIY">
                                                             <rect key="frame" x="8" y="43" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="5tw-u7-D3p"/>
                                                                 <constraint firstAttribute="width" constant="32" id="Af2-pD-6k5"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TTS Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD3-ze-jyU">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD3-ze-jyU">
                                                             <rect key="frame" x="48" y="0.0" width="536" height="35"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="35" id="Dq0-eK-0SF"/>
@@ -322,8 +322,8 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio (click to choose)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBH-cZ-8dK">
-                                                            <rect key="frame" x="48" y="43" width="536" height="32"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBH-cZ-8dK">
+                                                            <rect key="frame" x="48" y="40" width="536" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="mXr-Wv-4Vl"/>
                                                             </constraints>
@@ -334,7 +334,7 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="q7r-Bm-1SC" firstAttribute="leading" secondItem="1sq-9a-Ibx" secondAttribute="leading" constant="8" id="2Hf-si-eUG"/>
-                                                        <constraint firstItem="oBH-cZ-8dK" firstAttribute="top" secondItem="VD3-ze-jyU" secondAttribute="bottom" constant="8" id="3Eq-Zp-vDj"/>
+                                                        <constraint firstItem="oBH-cZ-8dK" firstAttribute="top" secondItem="VD3-ze-jyU" secondAttribute="bottom" constant="5" id="3Eq-Zp-vDj"/>
                                                         <constraint firstItem="ush-8d-QIY" firstAttribute="leading" secondItem="1sq-9a-Ibx" secondAttribute="leading" constant="8" id="6jU-Yl-KE2"/>
                                                         <constraint firstItem="oBH-cZ-8dK" firstAttribute="leading" secondItem="ush-8d-QIY" secondAttribute="trailing" constant="8" id="Ezh-ZP-HXT"/>
                                                         <constraint firstItem="ush-8d-QIY" firstAttribute="top" secondItem="q7r-Bm-1SC" secondAttribute="bottom" constant="11" id="MoP-xa-Uaz"/>
@@ -496,20 +496,11 @@
                                     <constraint firstAttribute="width" constant="32" id="lsc-8z-E5j"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="add_music"/>
+                                <state key="normal" backgroundImage="megaphone"/>
                                 <connections>
                                     <action selector="changeAudioPressed:" destination="7Q7-e5-HOj" eventType="touchUpInside" id="6Jk-RO-4zv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixR-50-c6f">
-                                <rect key="frame" x="60" y="159" width="520" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="Ngf-8T-Iiu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voiced message at start:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbg-ab-MU6">
                                 <rect key="frame" x="20" y="94" width="560" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -526,6 +517,15 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi9-9C-0Lx">
                                 <rect key="frame" x="20" y="199" width="560" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio (tap to choose)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixR-50-c6f">
+                                <rect key="frame" x="60" y="158" width="520" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Ngf-8T-Iiu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -559,7 +559,7 @@
                             <constraint firstItem="Yi9-9C-0Lx" firstAttribute="top" secondItem="SDy-lF-CwH" secondAttribute="bottom" constant="8" id="b5N-2U-CAA"/>
                             <constraint firstItem="lgf-GV-Fs5" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="bCv-hd-jAD"/>
                             <constraint firstItem="SDy-lF-CwH" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="8" id="dfG-8B-bLJ"/>
-                            <constraint firstItem="ixR-50-c6f" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="8" id="fjd-kT-p66"/>
+                            <constraint firstItem="ixR-50-c6f" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="7" id="fjd-kT-p66"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9xc-qf-z6S" secondAttribute="trailing" id="jkV-YM-GYz"/>
                             <constraint firstItem="ylA-LM-dOa" firstAttribute="top" secondItem="hbg-ab-MU6" secondAttribute="bottom" constant="8" id="ktS-P5-cYL"/>
                             <constraint firstItem="hbg-ab-MU6" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="tcl-Pe-lXD"/>
@@ -622,8 +622,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add_music" width="512" height="512"/>
-        <image name="icon_audio" width="512" height="512"/>
-        <image name="icon_tts" width="512" height="512"/>
+        <image name="icon_chat" width="512" height="512"/>
+        <image name="megaphone" width="512" height="512"/>
     </resources>
 </document>

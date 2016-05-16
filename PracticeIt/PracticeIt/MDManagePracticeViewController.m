@@ -201,13 +201,13 @@
     cell.timeLabel.text = [MDPractice stringFromTimeInterval:task.time];
     
     
-    cell.ttsMessageLabel.text = task.ttsMessage;
-    cell.audioLabel.text = task.audio.title;
+    cell.ttsMessageLabel.text = ![task.ttsMessage isEqualToString:@""] ? task.ttsMessage : @"No message";
+    cell.audioLabel.text = task.audio.title ? task.audio.title : @"No audio";
     cell.timeProgress.progress = task.currentTime/task.time;
     
     
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor colorWithRed:178.0/255 green:215.0/255 blue:1.0 alpha:1.0];
+    bgColorView.backgroundColor = [UIColor colorWithRed:178.0/255 green:215.0/255 blue:1.0 alpha:0.5];
     [cell setSelectedBackgroundView:bgColorView];
     
     return cell;
