@@ -141,7 +141,7 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor colorWithRed:178.0/255 green:215.0/255 blue:1.0 alpha:1.0];
+    bgColorView.backgroundColor = [UIColor colorWithRed:178.0/255 green:215.0/255 blue:1.0 alpha:0.5];
     [cell setSelectedBackgroundView:bgColorView];
     
     return cell;
@@ -182,6 +182,7 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //[self performSegueWithIdentifier:@"segueToManagePractice" sender:indexPath];
     self.manageView.synthesizer = self.synthesizer;
+    [self.manageView loadViewIfNeeded];
     [self.manageView loadPractice:[self.practiceIt practiceAtIndex:indexPath.row]];
     [self.splitViewController showDetailViewController:self.manageView.navigationController sender:self];
 }
@@ -193,6 +194,8 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 -(NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
     return proposedDestinationIndexPath;
 }
+
+
 
 #pragma mark - TableViewDraggerDelegate
 
@@ -218,6 +221,18 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 
 -(void)dragger:(TableViewDragger *)dragger didEndDraggingAtIndexPath:(NSIndexPath *)indexPath {
     self.isDragging = NO;
+    
+    //color bug workaround
+    SWTableViewCell *cell = [self.tableOfPractices cellForRowAtIndexPath:indexPath];
+    [self.tableOfPractices reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableOfPractices selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, 160);
+    
+    [UIView setAnimationsEnabled:NO];
+    [self.tableOfPractices beginUpdates];
+    [self.tableOfPractices endUpdates];
+    [UIView setAnimationsEnabled:YES];
+    
 }
 
 -(BOOL)dragger:(TableViewDragger *)dragger shouldDragAtIndexPath:(NSIndexPath *)indexPath {
