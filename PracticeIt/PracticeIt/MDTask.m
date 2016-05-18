@@ -17,7 +17,7 @@
         self.title = title;
         self.ttsMessage = ttsMessage;
         self.audio = audio;
-        self.time = (time - fmod(time, 60));
+        self.time = time;
     }
     return self;
 }

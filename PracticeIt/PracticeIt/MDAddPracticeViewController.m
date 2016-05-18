@@ -37,6 +37,10 @@
     self.iconCollectionView.layer.cornerRadius = 5;
     self.iconCollectionView.layer.borderWidth = 0.5;
     
+    self.cancelOutlet.layer.cornerRadius = 5;
+    self.saveOutlet.layer.cornerRadius = 5;
+    
+    
     self.iconNames = @[@"binoculars",@"brain",@"calculator",@"clock",@"coffee-1",@"compass",@"dollar-bill",@"employee",@"exchange",@"flag",@"flask",@"glasses",@"horse",@"idea",@"lifebuoy",@"microscope",@"money-bag",@"mortarboard",@"mountain",@"piggy-bank",@"rocket",@"team"];
     
     

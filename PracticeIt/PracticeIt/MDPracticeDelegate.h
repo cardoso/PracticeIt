@@ -23,6 +23,7 @@
 
 -(BOOL)practice:(id)practice shouldRemoveTask:(MDTask*)task;
 -(void)practice:(id)practice willRemoveTask:(MDTask*)task;
+-(void)practice:(id)practice didRemoveTask:(MDTask*)task;
 
 -(void)practice:(id)practice didEditTask:(MDTask*)task;
 
