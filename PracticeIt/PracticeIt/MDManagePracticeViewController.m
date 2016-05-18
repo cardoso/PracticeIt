@@ -48,11 +48,6 @@
     self.dragger.dataSource = self;
     self.dragger.cellAlpha = 0.7;
     
-    //self.navigationController.navigationBar.topItem.title = @"Back";
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
-    barButton.title = @"Back";
-    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
-    
     // Create pause button
     self.pauseButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePressed:)];
     [self setToolBarPaused];
@@ -99,23 +94,6 @@
         [self.navigationItem.rightBarButtonItem setEnabled:NO];
         [self setToolbarEnabled:NO];
     }
-}
-
-/*- (BOOL)loseProgressAlert{
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert" message:@"This is an alert." preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
-    
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
-}*/
-
-- (IBAction)doneButtonPressed:(id)sender {
-    //alert
-    [self.navigationController popViewControllerAnimated:YES];
-}
-- (IBAction)addButtonPressed:(id)sender {
-    //alert
 }
 
 - (IBAction)startPressed:(UIBarButtonItem *)sender {
@@ -330,6 +308,10 @@
     
     if([self.practice taskCount] == 1)
         [self setToolbarEnabled:NO];
+}
+
+-(void)practice:(id)practice didRemoveTask:(MDTask *)task {
+    [self.practiceIt saveData];
 }
 
 -(void)didTimerTickOnPractice:(MDPractice*)practice {

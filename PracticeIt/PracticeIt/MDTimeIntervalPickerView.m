@@ -47,7 +47,6 @@
 }
 
 -(NSTimeInterval)timeInterval {
-    NSLog(@"%ld", [self seconds] + [self minutes]*60);
     return [self seconds] + [self minutes]*60;
 }
 
@@ -116,9 +115,9 @@
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
     if(component == [self secondsComponent]) {
-        return [NSString stringWithFormat:@"%ld sec", row];
+        return [NSString stringWithFormat:@"%ld sec", (long)row];
     } else if(component == [self minutesComponent]) {
-        return [NSString stringWithFormat:@"%ld min", row];
+        return [NSString stringWithFormat:@"%ld min", (long)row];
     }
     
     return nil;

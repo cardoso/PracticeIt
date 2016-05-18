@@ -16,4 +16,7 @@
 @property BOOL isEditing;
 @property NSInteger indexOfPracticeToEdit;
 
+@property (strong, nonatomic) IBOutlet UIButton *cancelOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *saveOutlet;
+
 @end

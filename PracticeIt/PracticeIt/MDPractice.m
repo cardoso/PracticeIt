@@ -215,6 +215,7 @@
     
     [self.delegate practice:self willRemoveTask:task];
     [self.tasks removeObject:task];
+    [self.delegate practice:self didRemoveTask:task];
     
     return YES;
 }

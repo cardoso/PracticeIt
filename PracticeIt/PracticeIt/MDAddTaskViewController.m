@@ -40,7 +40,10 @@
     
     [self.titleTextField becomeFirstResponder];
     
-    [self.timeIntervalPicker setTimeInterval:1 animated:NO];
+    [self.timeIntervalPicker setTimeInterval:60 animated:NO];
+    
+    self.cancelOutlet.layer.cornerRadius = 5;
+    self.saveOutlet.layer.cornerRadius = 5;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
