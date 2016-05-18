@@ -120,7 +120,8 @@
 
 - (IBAction)startPressed:(UIBarButtonItem *)sender {
     if([self.practice taskCount] > 0) {
-            [self setToolBarStarted];
+        [self setToolBarStarted];
+        [self setToolbarEnabled:YES];
         
         if([self.practice isPaused])
             [self.practice resume];
@@ -130,6 +131,7 @@
 }
 - (void)pausePressed:(UIBarButtonItem *)sender {
     [self setToolBarPaused];
+    [self setToolbarEnabled:YES];
     
     [self.practice pause];
 }
@@ -347,7 +349,7 @@
     [self.tableOfTasks endUpdates];
     
     AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:task.ttsMessage];
-    [utterance setRate:0.4f];
+    [utterance setRate:AVSpeechUtteranceDefaultSpeechRate];
     
     [self.synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
     [self.synthesizer speakUtterance:utterance];

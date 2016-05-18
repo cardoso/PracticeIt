@@ -143,13 +143,15 @@
         return NO;
     }
     
-    if(self.currentTaskIndex == 0){
-        return NO;
-    }
-    
     [self currentTask].currentTime = -1;
     [self timerTick];
+    
     self.currentTaskIndex--;
+    
+    if(self.currentTaskIndex < 0){
+        self.currentTaskIndex = 0;
+    }
+    
     [self currentTask].currentTime = 0;
     
     return YES;
@@ -157,7 +159,7 @@
 
 -(void)startTimer {
     [self.timer invalidate];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(timerTick) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timerTick) userInfo:nil repeats:YES];
 }
 
 -(void)stopTimer {
