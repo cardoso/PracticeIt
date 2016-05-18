@@ -10,12 +10,14 @@
 
 #import "MDAddTaskViewController.h"
 
+#import "MDTimeIntervalPickerView.h"
+
 @interface MDAddTaskViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextField *ttsMessageTextField;
 @property (strong, nonatomic) IBOutlet UILabel *audioLabel;
-@property (strong, nonatomic) IBOutlet UIDatePicker *timeDatePicker;
+@property (strong, nonatomic) IBOutlet MDTimeIntervalPickerView *timeIntervalPicker;
 
 @property MPMediaPickerController *audioPicker;
 @property MPMediaItem *pickedAudio;
@@ -37,6 +39,8 @@
     self.ttsMessageTextField.delegate = self;
     
     [self.titleTextField becomeFirstResponder];
+    
+    [self.timeIntervalPicker setTimeInterval:1 animated:NO];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -45,9 +49,14 @@
         
         self.titleTextField.text = task.title;
         self.ttsMessageTextField.text = task.ttsMessage;
-        self.audioLabel.text = task.audio.title;
-        [self.timeDatePicker setCountDownDuration:task.time];
-        self.pickedAudio = task.audio;
+        [self.timeIntervalPicker setTimeInterval:task.time animated:NO];
+        
+        if(task.audio) {
+            self.audioLabel.text = task.audio.title;
+            self.pickedAudio = task.audio;
+        }
+        else
+            self.audioLabel.text = @"No audio (tap to choose)";
         
         self.isEditingTaskLoaded = YES;
     }
@@ -85,10 +94,10 @@
     else {
         
         if(!self.isEditing) {
-            [self.practice addTaskWithTitle:self.titleTextField.text withTtsMessage:self.ttsMessageTextField.text withAudio:self.pickedAudio withTime:self.timeDatePicker.countDownDuration];
+            [self.practice addTaskWithTitle:self.titleTextField.text withTtsMessage:self.ttsMessageTextField.text withAudio:self.pickedAudio withTime:[self.timeIntervalPicker timeInterval]];
         }
         else {
-            [self.practice editTaskAtIndex:self.indexOfTaskToEdit withNewTitle:self.titleTextField.text withNewTtsMessage:self.ttsMessageTextField.text withNewAudio:self.pickedAudio withNewTime:self.timeDatePicker.countDownDuration];
+            [self.practice editTaskAtIndex:self.indexOfTaskToEdit withNewTitle:self.titleTextField.text withNewTtsMessage:self.ttsMessageTextField.text withNewAudio:self.pickedAudio withNewTime:[self.timeIntervalPicker timeInterval]];
         }
         
         [self dismissViewControllerAnimated:YES completion:nil];

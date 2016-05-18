@@ -270,7 +270,7 @@
     int minutes = ((int)timeInterval - (hours * 3600))/60;
     int seconds = fmod(timeInterval, 60);
     
-    return [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
+    return [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
 }
 
 @end
