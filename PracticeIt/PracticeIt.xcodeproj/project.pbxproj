@@ -20,6 +20,7 @@
 		89043C791CD77455002976B1 /* MDListOfPracticesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C781CD77455002976B1 /* MDListOfPracticesViewController.m */; };
 		89043C7D1CD78026002976B1 /* MDAddPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */; };
 		891B05371CDCB56C001718F8 /* practices.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891B05361CDCB56C001718F8 /* practices.plist */; };
+		8943D55E1CEC8FA300C323DB /* MDTimeIntervalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8943D55D1CEC8FA300C323DB /* MDTimeIntervalPickerView.m */; };
 		89789C6A1CD8D2BA00962098 /* MDTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89789C691CD8D2BA00962098 /* MDTaskTableViewCell.m */; };
 		89789C6E1CD8D34800962098 /* MDManagePracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89789C6D1CD8D34800962098 /* MDManagePracticeViewController.m */; };
 		89CD82D61CDA2FA300F42090 /* MDPracticeIt.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CD82D51CDA2FA300F42090 /* MDPracticeIt.m */; };
@@ -73,6 +74,8 @@
 		89043C7B1CD78026002976B1 /* MDAddPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAddPracticeViewController.h; sourceTree = "<group>"; };
 		89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAddPracticeViewController.m; sourceTree = "<group>"; };
 		891B05361CDCB56C001718F8 /* practices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = practices.plist; sourceTree = "<group>"; };
+		8943D55C1CEC8FA300C323DB /* MDTimeIntervalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTimeIntervalPickerView.h; sourceTree = "<group>"; };
+		8943D55D1CEC8FA300C323DB /* MDTimeIntervalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTimeIntervalPickerView.m; sourceTree = "<group>"; };
 		89789C681CD8D2BA00962098 /* MDTaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTaskTableViewCell.h; sourceTree = "<group>"; };
 		89789C691CD8D2BA00962098 /* MDTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTaskTableViewCell.m; sourceTree = "<group>"; };
 		89789C6C1CD8D34800962098 /* MDManagePracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDManagePracticeViewController.h; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 		89043C3D1CD77088002976B1 /* PracticeIt */ = {
 			isa = PBXGroup;
 			children = (
+				8943D55C1CEC8FA300C323DB /* MDTimeIntervalPickerView.h */,
+				8943D55D1CEC8FA300C323DB /* MDTimeIntervalPickerView.m */,
 				89043C7A1CD7746D002976B1 /* ViewControllers */,
 				89789C6B1CD8D2CB00962098 /* TableViewCells */,
 				89043C411CD77088002976B1 /* AppDelegate.h */,
@@ -516,6 +521,7 @@
 				89043C791CD77455002976B1 /* MDListOfPracticesViewController.m in Sources */,
 				89043C401CD77088002976B1 /* main.m in Sources */,
 				89043C7D1CD78026002976B1 /* MDAddPracticeViewController.m in Sources */,
+				8943D55E1CEC8FA300C323DB /* MDTimeIntervalPickerView.m in Sources */,
 				89043C4C1CD77088002976B1 /* PracticeIt.xcdatamodeld in Sources */,
 				89CD82D61CDA2FA300F42090 /* MDPracticeIt.m in Sources */,
 				89CD82D91CDA30B700F42090 /* MDPractice.m in Sources */,

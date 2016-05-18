@@ -50,6 +50,8 @@
     
     [self.delegate practiceIt:self willRemovePractice:practice];
     [self.practices removeObjectAtIndex:index];
+    
+    [self saveData];
         
     return YES;
 }
