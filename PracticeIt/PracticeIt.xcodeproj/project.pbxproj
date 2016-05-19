@@ -20,6 +20,7 @@
 		89043C791CD77455002976B1 /* MDListOfPracticesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C781CD77455002976B1 /* MDListOfPracticesViewController.m */; };
 		89043C7D1CD78026002976B1 /* MDAddPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */; };
 		890FB6CB1CEDE67400F831B6 /* icons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 890FB6CA1CEDE67400F831B6 /* icons.plist */; };
+		890FB6D11CEE0CA300F831B6 /* MDMediaPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FB6D01CEE0CA300F831B6 /* MDMediaPickerController.m */; };
 		891B05371CDCB56C001718F8 /* practices.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891B05361CDCB56C001718F8 /* practices.plist */; };
 		8943D55E1CEC8FA300C323DB /* MDTimeIntervalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8943D55D1CEC8FA300C323DB /* MDTimeIntervalPickerView.m */; };
 		89789C6A1CD8D2BA00962098 /* MDTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89789C691CD8D2BA00962098 /* MDTaskTableViewCell.m */; };
@@ -75,6 +76,8 @@
 		89043C7B1CD78026002976B1 /* MDAddPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAddPracticeViewController.h; sourceTree = "<group>"; };
 		89043C7C1CD78026002976B1 /* MDAddPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAddPracticeViewController.m; sourceTree = "<group>"; };
 		890FB6CA1CEDE67400F831B6 /* icons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = icons.plist; sourceTree = "<group>"; };
+		890FB6CF1CEE0CA300F831B6 /* MDMediaPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMediaPickerController.h; sourceTree = "<group>"; };
+		890FB6D01CEE0CA300F831B6 /* MDMediaPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMediaPickerController.m; sourceTree = "<group>"; };
 		891B05361CDCB56C001718F8 /* practices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = practices.plist; sourceTree = "<group>"; };
 		8943D55C1CEC8FA300C323DB /* MDTimeIntervalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDTimeIntervalPickerView.h; sourceTree = "<group>"; };
 		8943D55D1CEC8FA300C323DB /* MDTimeIntervalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDTimeIntervalPickerView.m; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				89CD82DB1CDA404D00F42090 /* MDTask.h */,
 				89CD82DC1CDA404D00F42090 /* MDTask.m */,
 				89043C471CD77088002976B1 /* Main.storyboard */,
+				890FB6CF1CEE0CA300F831B6 /* MDMediaPickerController.h */,
+				890FB6D01CEE0CA300F831B6 /* MDMediaPickerController.m */,
 				891B05361CDCB56C001718F8 /* practices.plist */,
 				890FB6CA1CEDE67400F831B6 /* icons.plist */,
 				89043C4D1CD77088002976B1 /* Assets.xcassets */,
@@ -532,6 +537,7 @@
 				89789C6E1CD8D34800962098 /* MDManagePracticeViewController.m in Sources */,
 				89CD82DD1CDA404D00F42090 /* MDTask.m in Sources */,
 				89789C6A1CD8D2BA00962098 /* MDTaskTableViewCell.m in Sources */,
+				890FB6D11CEE0CA300F831B6 /* MDMediaPickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

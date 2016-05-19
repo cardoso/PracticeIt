@@ -12,6 +12,8 @@
 
 #import "MDTimeIntervalPickerView.h"
 
+#import "MDMediaPickerController.h"
+
 @interface MDAddTaskViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
@@ -19,7 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *audioLabel;
 @property (strong, nonatomic) IBOutlet MDTimeIntervalPickerView *timeIntervalPicker;
 
-@property MPMediaPickerController *audioPicker;
+@property MDMediaPickerController *audioPicker;
 @property MPMediaItem *pickedAudio;
 
 @property BOOL isEditingTaskLoaded;
@@ -32,7 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.audioPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeAnyAudio];
+    self.audioPicker = [[MDMediaPickerController alloc] initWithMediaTypes:MPMediaTypeAnyAudio];
     self.audioPicker.delegate = self;
     
     self.titleTextField.delegate = self;
