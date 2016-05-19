@@ -17,6 +17,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"icons.plist"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+    {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"icons" ofType:@"plist"];
+    }
+    
+    NSArray *iconNames = [NSArray arrayWithContentsOfFile:plistPath];
+    
+    for(NSString *iconName in iconNames) {
+        UIImage *image = [UIImage imageNamed:iconName];
+        
+        CGImageRef ref = image.CGImage;
+        size_t width = CGImageGetWidth(ref);
+        size_t height = CGImageGetHeight(ref);
+        CGColorSpaceRef space = CGColorSpaceCreateDeviceRGB();
+        CGContextRef context = CGBitmapContextCreate(NULL, width, height, 8, width * 4, space, kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedFirst);
+        CGColorSpaceRelease(space);
+        CGContextDrawImage(context, CGRectMake(0, 0, width, height), ref);
+        CGContextRelease(context);
+    }
+    
     return YES;
 }
 
