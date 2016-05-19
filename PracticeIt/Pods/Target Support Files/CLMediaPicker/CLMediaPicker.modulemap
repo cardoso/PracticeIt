@@ -1,0 +1,6 @@
+framework module CLMediaPicker {
+  umbrella header "CLMediaPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

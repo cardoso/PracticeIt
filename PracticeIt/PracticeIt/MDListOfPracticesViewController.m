@@ -54,7 +54,7 @@
     self.manageView = (MDManagePracticeViewController*)((UINavigationController*)self.splitViewController.viewControllers[1]).topViewController;
     self.manageView.practiceIt = self.practiceIt;
     
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
