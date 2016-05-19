@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="2325" y="1330"/>
         </scene>
-        <!--Practice It-->
+        <!--Back-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MDListOfPracticesViewController" sceneMemberID="viewController">
+                <viewController title="Back" id="BYZ-38-t0r" customClass="MDListOfPracticesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -240,6 +240,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Practice It" id="mh9-BY-2z3">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="iYt-bO-bqE"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q7d-dV-Ka6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>

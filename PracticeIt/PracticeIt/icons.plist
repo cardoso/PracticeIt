@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>binoculars</string>
+	<string>brain</string>
+	<string>calculator</string>
+	<string>clock</string>
+	<string>coffee-1</string>
+	<string>compass</string>
+	<string>dollar-bill</string>
+	<string>employee</string>
+	<string>exchange</string>
+	<string>flag</string>
+	<string>flask</string>
+	<string>glasses</string>
+	<string>horse</string>
+	<string>idea</string>
+	<string>lifebuoy</string>
+	<string>microscope</string>
+	<string>money-bag</string>
+	<string>mortarboard</string>
+	<string>mountain</string>
+	<string>piggy-bank</string>
+	<string>rocket</string>
+	<string>team</string>
+</array>
+</plist>

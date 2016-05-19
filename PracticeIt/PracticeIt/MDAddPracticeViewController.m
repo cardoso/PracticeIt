@@ -41,23 +41,40 @@
     self.saveOutlet.layer.cornerRadius = 5;
     
     
-    self.iconNames = @[@"binoculars",@"brain",@"calculator",@"clock",@"coffee-1",@"compass",@"dollar-bill",@"employee",@"exchange",@"flag",@"flask",@"glasses",@"horse",@"idea",@"lifebuoy",@"microscope",@"money-bag",@"mortarboard",@"mountain",@"piggy-bank",@"rocket",@"team"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"icons.plist"];
     
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+    {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"icons" ofType:@"plist"];
+    }
+    
+    self.iconNames = [NSArray arrayWithContentsOfFile:plistPath];
     
     self.nameTextField.delegate = self;
     self.descriptionTextView.delegate = self;
     
     [self.nameTextField becomeFirstResponder];
-
 }
 
--(void)viewWillAppear:(BOOL)animated {
+-(void)viewDidLayoutSubviews {
     if(self.isEditing && !self.isEditingPracticeLoaded) {
         MDPractice* practice = [self.practiceIt practiceAtIndex:self.indexOfPracticeToEdit];
         
         self.nameTextField.text = practice.title;
         self.descriptionTextView.text = practice.desc;
-        [self.iconCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:[self.iconNames indexOfObject:practice.iconName] inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionTop];
+        
+        for(NSInteger i = 0; i < self.iconNames.count; i++) {
+            NSString *iconName = [self.iconNames objectAtIndex:i];
+            
+            if([practice.iconName isEqualToString:iconName]) {
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+                [self.iconCollectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+                
+                self.selectedIconIndex = i;
+            }
+        }
         
         self.isEditingPracticeLoaded = YES;
     }
@@ -112,7 +129,11 @@
     
     cell.layer.borderColor = [UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:1 alpha:1.0].CGColor;
     cell.layer.cornerRadius = 5;
-    cell.layer.borderWidth = 0;
+    
+    if(self.selectedIconIndex == indexPath.row)
+        cell.layer.borderWidth = 2;
+    else
+        cell.layer.borderWidth = 0;
     
     return cell;
 }
@@ -125,6 +146,9 @@
     
     oldSelectedCell.layer.borderWidth = 0;
     selectedCell.layer.borderWidth = 2;
+    
+    
+    NSLog(@"%@ %@", oldSelectedCell, selectedCell);
     
     self.selectedIconIndex = indexPath.row;
 }
