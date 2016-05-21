@@ -54,6 +54,8 @@
     
     // Load empty practice
     [self loadPractice:nil];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -82,8 +84,8 @@
         [self.tableOfTasks reloadData];
         
         if([self.practice taskCount] > 0)
-            [self setToolbarEnabled:YES];
-        else [self setToolbarEnabled:NO];
+            [self setStartPauseEnabled:YES];
+        else [self setStartPauseEnabled:NO];
         
         [self.navigationItem.rightBarButtonItem setEnabled:YES];
     }
@@ -92,14 +94,14 @@
         self.title = @"Select a Practice";
         [self.tableOfTasks reloadData];
         [self.navigationItem.rightBarButtonItem setEnabled:NO];
-        [self setToolbarEnabled:NO];
+        [self setStartPauseEnabled:NO];
     }
 }
 
 - (IBAction)startPressed:(UIBarButtonItem *)sender {
     if([self.practice taskCount] > 0) {
         [self setToolBarStarted];
-        [self setToolbarEnabled:YES];
+        [self setStartPauseEnabled:YES];
         
         if([self.practice isPaused])
             [self.practice resume];
@@ -109,7 +111,7 @@
 }
 - (void)pausePressed:(UIBarButtonItem *)sender {
     [self setToolBarPaused];
-    [self setToolbarEnabled:YES];
+    [self setStartPauseEnabled:YES];
     
     [self.practice pause];
 }
@@ -148,6 +150,9 @@
     NSMutableArray *aux = [self.toolbar.items mutableCopy];
     [aux replaceObjectAtIndex:3 withObject:self.startButton];
     
+    self.previousButton.enabled = NO;
+    self.nextButton.enabled = NO;
+    
     [self.toolbar setItems:aux animated:YES];
 }
 
@@ -155,12 +160,15 @@
     NSMutableArray *aux = [self.toolbar.items mutableCopy];
     [aux replaceObjectAtIndex:3 withObject:self.pauseButton];
     
+    self.previousButton.enabled = YES;
+    self.nextButton.enabled = YES;
+    
     [self.toolbar setItems:aux animated:YES];
 }
 
--(void)setToolbarEnabled:(BOOL)enabled {
-    for(UIBarButtonItem *item in self.toolbar.items)
-        item.enabled = enabled;
+-(void)setStartPauseEnabled:(BOOL)enabled {
+    self.startButton.enabled = enabled;
+    self.pauseButton.enabled = enabled;
 }
 
 
@@ -287,7 +295,7 @@
     [self.practiceIt saveData];
     
     if([self.practice taskCount] == 1)
-        [self setToolbarEnabled:YES];
+        [self setStartPauseEnabled:YES];
 }
 
 -(void)practice:(id)practice didEditTask:(MDTask *)task {
@@ -307,7 +315,7 @@
     [self.practice previousTask];
     
     if([self.practice taskCount] == 1)
-        [self setToolbarEnabled:NO];
+        [self setStartPauseEnabled:NO];
 }
 
 -(void)practice:(id)practice didRemoveTask:(MDTask *)task {
@@ -349,6 +357,7 @@
 -(void)practice:(id)practice willFinishTask:(MDTask *)task {
     [self.audioPlayer stop];
     self.audioPlayer = nil;
+    [self.synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
 }
 
 -(void)didStartPractice:(MDPractice*)practice {

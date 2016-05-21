@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5E7EEB41E84B1DF9BFD573EE7AD1D28"
+               BlueprintIdentifier = "52AC2D79F5AC952DCED9F55F7F22C5FC"
                BuildableName = "UITextField_Shake.framework"
                BlueprintName = "UITextField+Shake"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5E7EEB41E84B1DF9BFD573EE7AD1D28"
+            BlueprintIdentifier = "52AC2D79F5AC952DCED9F55F7F22C5FC"
             BuildableName = "UITextField_Shake.framework"
             BlueprintName = "UITextField+Shake"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '38F24EDBE67CF7330EF6CA1924D5DE9A'
-               BlueprintName = 'CLMediaPicker-CLMediaPickerLocalization'
+               BlueprintIdentifier = 'A7F56A69BE1373742F9A495EEB52F4D6'
+               BlueprintName = 'MarqueeLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'CLMediaPickerLocalization.bundle'>
+               BuildableName = 'MarqueeLabel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

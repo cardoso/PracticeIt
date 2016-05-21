@@ -1,4 +1,7 @@
 PODS:
+  - MarqueeLabel (2.7.2):
+    - MarqueeLabel/ObjC (= 2.7.2)
+  - MarqueeLabel/ObjC (2.7.2)
   - MZAppearance (1.1.6)
   - MZFormSheetPresentationController (2.4.0):
     - MZAppearance
@@ -7,18 +10,20 @@ PODS:
   - UITextField+Shake (1.1.2)
 
 DEPENDENCIES:
+  - MarqueeLabel
   - MZFormSheetPresentationController (~> 2.4)
   - SWTableViewCell (~> 0.3.7)
   - TableViewDragger
   - UITextField+Shake (~> 1.1)
 
 SPEC CHECKSUMS:
+  MarqueeLabel: 26ecbdd54105dcb282cd3b56452f891d524b233b
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
   MZFormSheetPresentationController: 3b9b6d76adc9f81c2defd0bb59e0f3dc2431e41e
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   TableViewDragger: 244876a4cd385316f177b7cb750e587bfe6ef4a5
   UITextField+Shake: 47cc0429dafb3da580686339ad2da091249a8ea2
 
-PODFILE CHECKSUM: 638cb3e46a0782ffe9073608baaaa1fab37c03c8
+PODFILE CHECKSUM: b652dd7f56c16da29e26f0262a7ee0e97ddb2295
 
 COCOAPODS: 1.0.0.rc.1

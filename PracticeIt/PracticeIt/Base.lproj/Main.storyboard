@@ -285,7 +285,7 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="sAY-5Q-rhn"/>
-                                    <barButtonItem systemItem="rewind" id="aKy-dg-el3">
+                                    <barButtonItem enabled="NO" systemItem="rewind" id="aKy-dg-el3">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="previousPressed:" destination="4Es-OK-pgE" id="pmf-5h-tWr"/>
@@ -299,7 +299,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3Mz-By-5GT"/>
-                                    <barButtonItem systemItem="fastForward" id="ch8-9y-IrI">
+                                    <barButtonItem enabled="NO" systemItem="fastForward" id="ch8-9y-IrI">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="nextPressed:" destination="4Es-OK-pgE" id="C81-cN-gJg"/>
@@ -534,15 +534,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio (tap to choose)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixR-50-c6f">
-                                <rect key="frame" x="60" y="158" width="520" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="Ngf-8T-Iiu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1o-ji-hag" customClass="MDTimeIntervalPickerView">
                                 <rect key="frame" x="40" y="218" width="520" height="52"/>
                                 <constraints>
@@ -564,6 +555,40 @@
                                     <action selector="savePressed:" destination="7Q7-e5-HOj" eventType="touchUpInside" id="iff-yu-LNi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tF-Pb-8Lq">
+                                <rect key="frame" x="548" y="159" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="WYA-Nq-v3f"/>
+                                    <constraint firstAttribute="width" constant="32" id="sp2-VI-tRN"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="x_button"/>
+                                <connections>
+                                    <action selector="removeAudioPressed:" destination="7Q7-e5-HOj" eventType="touchUpInside" id="4BK-9z-biP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixR-50-c6f" customClass="MarqueeLabel">
+                                <rect key="frame" x="60" y="161" width="480" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Ngf-8T-Iiu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="marqueeType">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="labelize" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -577,26 +602,28 @@
                             <constraint firstItem="Y1o-ji-hag" firstAttribute="top" secondItem="Yi9-9C-0Lx" secondAttribute="bottom" constant="-1" id="B5B-A1-mAA"/>
                             <constraint firstItem="ylA-LM-dOa" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="EKY-aX-Sre"/>
                             <constraint firstItem="9xc-qf-z6S" firstAttribute="top" secondItem="Y1o-ji-hag" secondAttribute="bottom" constant="-2" id="Fej-rk-92N"/>
+                            <constraint firstItem="2tF-Pb-8Lq" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="8" id="Fl9-Lw-a6x"/>
                             <constraint firstItem="9xc-qf-z6S" firstAttribute="centerX" secondItem="bwQ-Qe-0Fd" secondAttribute="centerX" id="IXq-6u-ggU"/>
                             <constraint firstItem="hbg-ab-MU6" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="K0D-hs-9vd"/>
                             <constraint firstItem="Yi9-9C-0Lx" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="K57-D2-1EB"/>
                             <constraint firstItem="EUU-yB-04c" firstAttribute="top" secondItem="9xc-qf-z6S" secondAttribute="bottom" constant="8" id="LXQ-q1-0Da"/>
                             <constraint firstItem="2ev-x0-Row" firstAttribute="top" secondItem="Lcq-ZJ-Xna" secondAttribute="bottom" constant="8" id="Ld7-um-JEH"/>
-                            <constraint firstItem="ixR-50-c6f" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="Loc-mh-Vht"/>
                             <constraint firstItem="Y1o-ji-hag" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" constant="20" id="OWL-LL-F9g"/>
                             <constraint firstItem="Yi9-9C-0Lx" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="OtC-MT-Shz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y1o-ji-hag" secondAttribute="trailing" constant="20" id="RGp-6p-To3"/>
                             <constraint firstItem="2ev-x0-Row" firstAttribute="leading" secondItem="bwQ-Qe-0Fd" secondAttribute="leadingMargin" id="S5B-Bw-NiS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="EUU-yB-04c" secondAttribute="leading" id="ST4-ES-PX1"/>
+                            <constraint firstItem="2tF-Pb-8Lq" firstAttribute="leading" secondItem="ixR-50-c6f" secondAttribute="trailing" constant="8" id="Tw7-D3-8dd"/>
                             <constraint firstItem="EUU-yB-04c" firstAttribute="top" secondItem="Y1o-ji-hag" secondAttribute="bottom" constant="-2" id="YBM-SD-CrY"/>
                             <constraint firstItem="ixR-50-c6f" firstAttribute="leading" secondItem="SDy-lF-CwH" secondAttribute="trailing" constant="8" id="Zi5-im-PbV"/>
                             <constraint firstItem="Yi9-9C-0Lx" firstAttribute="top" secondItem="SDy-lF-CwH" secondAttribute="bottom" constant="8" id="b5N-2U-CAA"/>
                             <constraint firstItem="lgf-GV-Fs5" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="bCv-hd-jAD"/>
                             <constraint firstItem="SDy-lF-CwH" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="8" id="dfG-8B-bLJ"/>
-                            <constraint firstItem="ixR-50-c6f" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="7" id="fjd-kT-p66"/>
+                            <constraint firstItem="ixR-50-c6f" firstAttribute="top" secondItem="ylA-LM-dOa" secondAttribute="bottom" constant="10" id="fjd-kT-p66"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9xc-qf-z6S" secondAttribute="trailing" id="jkV-YM-GYz"/>
                             <constraint firstItem="ylA-LM-dOa" firstAttribute="top" secondItem="hbg-ab-MU6" secondAttribute="bottom" constant="6" id="ktS-P5-cYL"/>
                             <constraint firstItem="hbg-ab-MU6" firstAttribute="trailing" secondItem="bwQ-Qe-0Fd" secondAttribute="trailingMargin" id="tcl-Pe-lXD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2tF-Pb-8Lq" secondAttribute="trailing" id="w4A-bA-YjV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -606,9 +633,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="audioLabel" destination="ixR-50-c6f" id="apb-mR-2v3"/>
                         <outlet property="cancelOutlet" destination="EUU-yB-04c" id="P8B-L7-MKd"/>
+                        <outlet property="removeAudioButton" destination="2tF-Pb-8Lq" id="Vgi-Gd-DxG"/>
                         <outlet property="saveOutlet" destination="9xc-qf-z6S" id="LJC-Bi-4KQ"/>
                         <outlet property="timeIntervalPicker" destination="Y1o-ji-hag" id="mlc-2V-870"/>
                         <outlet property="titleTextField" destination="lgf-GV-Fs5" id="cA4-6X-wh8"/>
@@ -667,5 +697,6 @@
     <resources>
         <image name="icon_chat" width="512" height="512"/>
         <image name="megaphone" width="512" height="512"/>
+        <image name="x_button" width="128" height="128"/>
     </resources>
 </document>
