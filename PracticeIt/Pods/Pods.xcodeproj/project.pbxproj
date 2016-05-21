@@ -7,112 +7,112 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021517BF60E015E852B54792A30AA9FC /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D387473145E3F185F9AD0F0B718A5F /* MZTransition.m */; };
-		0669F6A41BEF5A1AF7C1F6A01E7B0E53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
-		0ABDB587C9EBCE01C35B69D1C3F33E61 /* MZFormSheetPresentationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C470C6F2A4F79162F7129494FC3B211 /* MZFormSheetPresentationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		021517BF60E015E852B54792A30AA9FC /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B7C1F92AF7D4BEE12076A51BD96FC9 /* MZTransition.m */; };
+		06D133FAD9017910F550F8D4BA8EC124 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B78949DA7A170E136C2E39387F95DB /* SWCellScrollView.m */; };
+		0ABDB587C9EBCE01C35B69D1C3F33E61 /* MZFormSheetPresentationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8889DBEF8928E44318895D0048FB7019 /* MZFormSheetPresentationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C5D667D1C275A1DE746EFD40EA2D4C7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD68164776882B01FF070878E74C00F /* QuartzCore.framework */; };
-		0D7892A5BBFEFEC63C490D869027926F /* TableViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443B693EBDC898EDDDFDA74C29752FEF /* TableViewDragger.swift */; };
-		14D9A46D660F8DDC350D0E246386DFEB /* SWTableViewCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D198C368226A5A53BAD5EBE098611C1 /* SWTableViewCell-dummy.m */; };
-		16B613F9E9FFC8E5D5530292F2AF7811 /* MZFormSheetPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E7273D4A3321DC52A450C1D11BA31C /* MZFormSheetPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		178923D881A4F9A50A98E78D2804F3DF /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C079238EE66CE26235E32E7EC2494C /* MZAppearance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		17B86C714524EAA79F6AB8F855833700 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 205CF0B97C471E60FE6D37FF4FB61461 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m */; };
-		187555025D0DA78D7F1F5A4FB6E807F0 /* MZFormSheetPresentationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BA08161DFD8D6503D3556F6E054F /* MZFormSheetPresentationController-dummy.m */; };
-		19EA04796405E16F9DA0D8370BA25469 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414F1B85B15F622E5D1C30C69B70968 /* UIScrollViewExtension.swift */; };
-		1E8D70DCFE9F90E6C4D6A1AF5787EAC4 /* MZFormSheetPresentationViewControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 55822BD59CBA5015F9501103B4F60DD2 /* MZFormSheetPresentationViewControllerAnimator.m */; };
+		14233DF3EDD69A1DB4636B68315922AE /* TableViewDragger.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C342A519F6DE53C063BA9C5941A23E /* TableViewDragger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16B613F9E9FFC8E5D5530292F2AF7811 /* MZFormSheetPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = D672972CF8EA93C5AB254AB4652AFED4 /* MZFormSheetPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		178923D881A4F9A50A98E78D2804F3DF /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = B44A25BAF592DB40B87222D40A671553 /* MZAppearance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		17B86C714524EAA79F6AB8F855833700 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855D5C687043329C7394560A1D83CC8 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m */; };
+		187555025D0DA78D7F1F5A4FB6E807F0 /* MZFormSheetPresentationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B38A66E4DA179650EFDDFAE68CCEE908 /* MZFormSheetPresentationController-dummy.m */; };
+		1E8D70DCFE9F90E6C4D6A1AF5787EAC4 /* MZFormSheetPresentationViewControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFA44321CE11146FC4C00A3A65C33D /* MZFormSheetPresentationViewControllerAnimator.m */; };
+		267D78D649B534510904A74ADF9075B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
 		28310D052AD303F5973D313ED0DCD953 /* Pods-PracticeItTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C09EE3E729529735C0262FA15CD93014 /* Pods-PracticeItTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		284E709DE2C2C77AE7979DBA315D8AB8 /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB9C7B3BF6FA59DA18BFDCB9B9FCA84 /* NSMutableArray+SWUtilityButtons.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B5A42F1FA843213B1E591A12CF060CE /* MZFormSheetPresentationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6324B217737DEEB55D220CAB74DECB6C /* MZFormSheetPresentationController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D4567B941997658BF5EA6B55319AB6D /* TableViewDragger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85AD0DC7A0FFA2B90CEC5E9BEF477B51 /* TableViewDragger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CD3DBD321121782B9DE0E948ED8674A /* SWLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61EC82DB6A0E0090D5B15499E2086690 /* SWLongPressGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40632C408207BBE7E258C4820084F73F /* MZFormSheetPresentationViewControllerSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = D2D3D123CA2CD4761805FBFFB44093FA /* MZFormSheetPresentationViewControllerSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B5A42F1FA843213B1E591A12CF060CE /* MZFormSheetPresentationController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DE229FF05F6CB06C7FCC7D7A27AD80A /* MZFormSheetPresentationController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BBF4F351EEE0C59D58727F56EB2F643 /* MarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1C4A254A33A8DA2211D794571A6F /* MarqueeLabel-dummy.m */; };
+		3825AD00FAB91C96FB9A7B433F639FF4 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C81D748E0E73C2815647E2BF090585 /* NSMutableArray+SWUtilityButtons.m */; };
+		3E23A1BCE375B06FD36C40AE0BB7BC3C /* SWTableViewCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F8EC8CAD9E8D3FBE0DA597B75AF4F /* SWTableViewCell-dummy.m */; };
+		40632C408207BBE7E258C4820084F73F /* MZFormSheetPresentationViewControllerSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 80ECD10EC5A6A603C725697DEEABB91B /* MZFormSheetPresentationViewControllerSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41C5C5B044B66E6B761534935415A00F /* Pods-PracticeItTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4703F08D20B7EDF0A5FE8ED3807EAA45 /* Pods-PracticeItTests-dummy.m */; };
-		42414F85567B80F55ECBE78785E0AAC9 /* Pods-PracticeIt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A15EF90972931E3D473662DBA5E51B /* Pods-PracticeIt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45B193AD4CF8F1C16F96B3FFCF3BF80F /* MZAppearance-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CC8E71478A0CEC7183541910CAE53B /* MZAppearance-dummy.m */; };
+		45B193AD4CF8F1C16F96B3FFCF3BF80F /* MZAppearance-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE715B4F410ABC922DD888642DAF21C3 /* MZAppearance-dummy.m */; };
 		464C44F9EC3E8776DC0247D3D3A0E195 /* Pods-PracticeItUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9755F7CED8CD83CEE1F7A4703E4B4CDB /* Pods-PracticeItUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4870396047312C0E5C007CCBAABB9CA8 /* UITextField+Shake-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E811EAEE58F8997DC583A002D180304A /* UITextField+Shake-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B54C51E3F91327AB0E871D4A406A427 /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E874622C93D91A469EFB0188E65A6E3 /* UITextField+Shake.m */; };
-		4BE8398D1A70CBF3D1172BE7B6067A49 /* MZTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E78B15789C2C58404BED7EC7E4C8D8 /* MZTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D9E9C254FE5CD95AF195223E15C0B25 /* SWUtilityButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = E265E574DD7762B8FE70DEBFBD821EE1 /* SWUtilityButtonView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4ECC785594EE55621130E4453B2D68AD /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1177CC5699A49D0F987CA6F403007 /* UIViewController+TargetViewController.m */; };
+		4BE8398D1A70CBF3D1172BE7B6067A49 /* MZTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = E04C959DC8F8A3F70FC51492AEA2E2BB /* MZTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D9618F7377FD2F8C44674D9449CF9F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
+		4ECC785594EE55621130E4453B2D68AD /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD43C875C9F30BF3FA5AD2465225F4 /* UIViewController+TargetViewController.m */; };
 		53B592C119B0133964FA5D2E2D3E067A /* Pods-PracticeItUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD56120C8754DFA18674CA66735A938 /* Pods-PracticeItUITests-dummy.m */; };
-		55AD3D708138ACAA02E3C81129403553 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0570A10FFB3093FDAAC4CC81A81968D0 /* SWCellScrollView.m */; };
 		560468690DFD91CDF4B6F5E82A276F2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
-		598946A32B99ED65C0EAD549682D7005 /* MZAppearance-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 463C7C793B45D5822F5B9CD494C36291 /* MZAppearance-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		59C83A4ADD95F9E427A75F577297EFA4 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A1B238EDB1A94C8C6466183C1D54B9 /* NSMutableArray+SWUtilityButtons.m */; };
-		5BBC6EC5509D9FE528BF635DBCD002FE /* MZFormSheetContentSizingNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61D5C25230E1A55637DA97466A39E67 /* MZFormSheetContentSizingNavigationController.m */; };
-		5DC2BB5905364B1B0D48F09F86158606 /* MZFormSheetPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E1B7D1A00F1D7C3CEFB0BDA90F3511 /* MZFormSheetPresentationViewController.m */; };
-		694B4B9AF28D7F7ACD04118A67BB43BD /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB4D7D8514218E9962FC76629CA267 /* SWLongPressGestureRecognizer.m */; };
-		6E9CBA6321B6700FE24CCA1564A5F6B4 /* TableViewDragger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63C6590947A85331E946B3EBE322EF /* TableViewDragger-dummy.m */; };
-		71D581F4DDAA2C214334A7117BE0B7EC /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 227B75451D0794C4E237AC7E50B49A9B /* NSInvocation+Copy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		71F4130AE93B0B3DC71EB4C76E939733 /* UITextField+Shake.h in Headers */ = {isa = PBXBuildFile; fileRef = E72A72F4A94E3E2C216CEC6AF50AE92F /* UITextField+Shake.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7289DFB8664A5EE9B1E08A057F3946E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
-		76DEF04F243056E40F9EBF7087B3D4D8 /* MZFormSheetContentSizingNavigationControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E55EAE9C3DF23F46DE64CE2B2C2774F /* MZFormSheetContentSizingNavigationControllerAnimator.m */; };
-		76FCBF8180FB678D10BFBF8201679D4D /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E35128657C9FE95394A6CF85C91582 /* SWTableViewCell.m */; };
-		7783CA2EA10C76BCCF8750BF797AAF49 /* MZFormSheetPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5592B08C378BE8C23758947075B8E0 /* MZFormSheetPresentationController.m */; };
-		781402357AF73F08A534B1B6BF2457C2 /* SWTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D64FA66CBEFC3623D35C0EE97BC533 /* SWTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E17262C88C4E66FD44534286A70EFAA /* MZMethodSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AA5B7C06501E8D68DA727D92D0F7857 /* MZMethodSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FDEA4E74DE7674D4E913BB8E0ED7F49 /* MZFormSheetPresentationContentSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = BB7F703C7C98B2F3BEB922E0FB4E2D33 /* MZFormSheetPresentationContentSizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80C1BE1446EA3D6C233C5608E97DBE99 /* MZFormSheetPresentationViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = B29C5C40DAD2BD4C0DD38068743CC209 /* MZFormSheetPresentationViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		578AB42AB0CACEAC1732667C5D624AA5 /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9575A162759456B563C21EA19905C798 /* SWCellScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		598946A32B99ED65C0EAD549682D7005 /* MZAppearance-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2F8AC54CC17ED63CE33730F51D9CCA1 /* MZAppearance-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BA3C30C68F09F86A3433444E81B68CA /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F48A85D00CA929E6DCB49750C5F524 /* UIScrollViewExtension.swift */; };
+		5BBC6EC5509D9FE528BF635DBCD002FE /* MZFormSheetContentSizingNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC08AF10F540F76DC0D73A3584A74122 /* MZFormSheetContentSizingNavigationController.m */; };
+		5DC2BB5905364B1B0D48F09F86158606 /* MZFormSheetPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB628F5AEF46E85C4755B7DCF11CAAD /* MZFormSheetPresentationViewController.m */; };
+		62A63680C0E926C11C085560B0552C72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407668641FE1D5BFF4A271627C790B4A /* UIKit.framework */; };
+		6614268B3CB25771F74E07BD4F4FF0FB /* UITextField+Shake.h in Headers */ = {isa = PBXBuildFile; fileRef = 42AE2C68A0B307FBD0CCB398E4431336 /* UITextField+Shake.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6789AA56FC348A0138599CCFDDC7B812 /* TableViewDragger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E07A232EE2D13BA0E3C33981740A2F3D /* TableViewDragger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		692CAA67C8AFF0AC8A8DF3DCBE3DE9A2 /* Pods-PracticeIt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9346B1465F8133B3FCD3CF20A94914A /* Pods-PracticeIt-dummy.m */; };
+		6B59774127AB4404DDF1E7C777671608 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
+		71A141A32666E36EC930F32A8A0FC802 /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 79FD7A4079CDA05574BCB4BC31B5B9DC /* NSMutableArray+SWUtilityButtons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71D581F4DDAA2C214334A7117BE0B7EC /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D33012B5811796402E28071759C51 /* NSInvocation+Copy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		728214D210DAE4793DC85FFE6276EAE5 /* MarqueeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 541B86FD59AD78AEB62A084E011405A4 /* MarqueeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75353F3045ECCDE7A2D964540C7E07ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407668641FE1D5BFF4A271627C790B4A /* UIKit.framework */; };
+		76DEF04F243056E40F9EBF7087B3D4D8 /* MZFormSheetContentSizingNavigationControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B16EA049E040347352324893A79F945B /* MZFormSheetContentSizingNavigationControllerAnimator.m */; };
+		7783CA2EA10C76BCCF8750BF797AAF49 /* MZFormSheetPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9265C44D918B38A3A2A7D27EDC305EB1 /* MZFormSheetPresentationController.m */; };
+		790A553FBBAE93ED79A4761E18FBC09F /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA3AD26E8393D4722629468CD04E324 /* UITextField+Shake.m */; };
+		7E17262C88C4E66FD44534286A70EFAA /* MZMethodSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0718F04C5DC57F4A0E08882296489190 /* MZMethodSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FDEA4E74DE7674D4E913BB8E0ED7F49 /* MZFormSheetPresentationContentSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EC7FCA4F4AF0523FE38E225C325130 /* MZFormSheetPresentationContentSizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80C1BE1446EA3D6C233C5608E97DBE99 /* MZFormSheetPresentationViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B806BFC8C113A719A0CC732D39A6FA /* MZFormSheetPresentationViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		827CFB2FF907B088AC9018A9CBB95783 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD68164776882B01FF070878E74C00F /* QuartzCore.framework */; };
-		832E6DC58F1629F40AA1C9D4D3DB9975 /* SWTableViewCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 665EDD7EAE5B578753B4B0B5AFF28A62 /* SWTableViewCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		869AB6EF81AD1BFE6CB83262C73B8E8F /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC96F1B2D28AE8D7E1F60D83E2BAE91 /* SWCellScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88BC91A32C4407800D2B8CA38C3F8364 /* MZMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC634BCD5523EEEB7EB4F403E97444E /* MZMethodSwizzler.m */; };
-		89AF91E353666146B5FCB59443C56CA2 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB728DBE2957A6F5D8FF449BF76D19F /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DA627351FF65CD97A3FA0E23992D3FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
-		8DFA0FD3797683AD739466CD15263E0A /* TableViewDraggerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85FD19BA591793701CAFA8C7990187 /* TableViewDraggerCell.swift */; };
-		8EDFB1A62FFEC6BA8A6A14123393424C /* UIViewController+TargetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A61DEC177602DDD2FD49C06DC1A8FDE /* UIViewController+TargetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93B35A7DB1EC69FEF3F923D6A9B47EF2 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 726F467250AAF3D4CDB3EE9C6FCB00F0 /* SWUtilityButtonTapGestureRecognizer.m */; };
-		948746285B76C7812BA6C481DC2F5ED8 /* MZFormSheetPresentationViewControllerInteractiveTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F528153DEC770D35E3ECD08DAF5DBA62 /* MZFormSheetPresentationViewControllerInteractiveTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96415346FCACBA0561B631755CF6B402 /* MZBlurEffectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CC59C5F3DA1B527935A1595A69A5F8 /* MZBlurEffectAdapter.m */; };
-		A2B66223CE293AE05B9162E1A2EFF69F /* MZAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 14419C79D51BCB87D1B579057CC43E16 /* MZAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88BC91A32C4407800D2B8CA38C3F8364 /* MZMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = D1559DEA202DCCC8EFA9F82AC169B849 /* MZMethodSwizzler.m */; };
+		89AF91E353666146B5FCB59443C56CA2 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F691978915349E23339CB11158B669 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EDFB1A62FFEC6BA8A6A14123393424C /* UIViewController+TargetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A02F3406FFD220CD4B19AD6B847813A5 /* UIViewController+TargetViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922FA6F642BC7EA297CDD285BA19D3C1 /* SWTableViewCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FB3C7D7825D832898C34E8F384539F1 /* SWTableViewCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		948746285B76C7812BA6C481DC2F5ED8 /* MZFormSheetPresentationViewControllerInteractiveTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7C4F4C97E59B63A0FF83869775469 /* MZFormSheetPresentationViewControllerInteractiveTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9604D5AA9C8FDAD16E75E0DE922AD5B7 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55622D5391338425AE774F424797ADF /* SWUtilityButtonTapGestureRecognizer.m */; };
+		96415346FCACBA0561B631755CF6B402 /* MZBlurEffectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1BA7F989B99A002FF26F979A6F57CC /* MZBlurEffectAdapter.m */; };
+		9B0860FE112908A70CB9B190F387FBE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
+		A2B66223CE293AE05B9162E1A2EFF69F /* MZAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 243143638851A805984C115ACCC34225 /* MZAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9346F46616AB06F60ED7E156B0CD0FB /* TableViewDraggerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144317B0F2B22CA17DA0949C4AA6C330 /* TableViewDraggerCell.swift */; };
+		A98643A2EFF5051D89E10CACE16F58F1 /* Pods-PracticeIt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A15EF90972931E3D473662DBA5E51B /* Pods-PracticeIt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACE968640ED4934EC5D09D835B18171C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
-		C7F161228EA8DF465A51CBA811522847 /* SWUtilityButtonTapGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A13C67D323A152DA50D371B9F00FE136 /* SWUtilityButtonTapGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6715A1F3AC579B9FD6113041A89145E /* SWLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 09DA30DEC396B9C0A13174A4CD6CD039 /* SWLongPressGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3AFC50EEFB36732C599D052CD25E824 /* MarqueeLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88128549C76FDFE042FBB43113FC0283 /* MarqueeLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6E7E1A32607A37815D38029B4E2A12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
-		CD0DCE16D8D0C26BD576BF55FFC4333E /* MZFormSheetPresentationViewControllerInteractiveAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CAE720920C40D9FD237DFE636F47CC /* MZFormSheetPresentationViewControllerInteractiveAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDDD2C33CC60B07D96B78407EBBF032C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407668641FE1D5BFF4A271627C790B4A /* UIKit.framework */; };
-		CDF3B0E0542704AD69608CEB3760B9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
-		CED118100EF2A353129E25CB63A8E5EC /* MZFormSheetContentSizingNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F23A0D4122771BE0FB42994B772B347 /* MZFormSheetContentSizingNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF1629C3A165E9C642F22A5E12C16665 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F3FF4B754435B643E2D15D2E73F91 /* SWUtilityButtonView.m */; };
-		CFD074F5A936B2DB52B9BFC031F7E2C3 /* TableViewDragger.h in Headers */ = {isa = PBXBuildFile; fileRef = 86EE5CB5340F8D9BAEAFFDC20E00A1B4 /* TableViewDragger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3AB91BB5548F192BCEF3A623AD8C4AA /* UITextField+Shake-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6A080D462C579F7B24DD044CA9C3D /* UITextField+Shake-dummy.m */; };
-		E51E47B720934D4535B3E18D73550896 /* MZFormSheetPresentationViewControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A5B981054963B1A7DB503554AB86CE /* MZFormSheetPresentationViewControllerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD0DCE16D8D0C26BD576BF55FFC4333E /* MZFormSheetPresentationViewControllerInteractiveAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = E3CD3ACDE1091FBC0AB0490BDC81E3B1 /* MZFormSheetPresentationViewControllerInteractiveAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CED118100EF2A353129E25CB63A8E5EC /* MZFormSheetContentSizingNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 72715F920CEA86C43504E3298C607451 /* MZFormSheetContentSizingNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0492AAEC3387BE63BAEF24BE0C5C3DA /* SWTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1DBB5403971EB91225BBDE8C9398AF /* SWTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4FD24D37D485505D8377BDB11AB5E7E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD68164776882B01FF070878E74C00F /* QuartzCore.framework */; };
+		D63F13CF4335E9BA5802EA0F21F3BC9F /* UITextField+Shake-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D234AB89E3751F673FB14B2073E7CC9 /* UITextField+Shake-dummy.m */; };
+		DCAF32DF814D774BB513370487731B99 /* TableViewDragger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B2AE5F2E254AD99487BBF1127492B5 /* TableViewDragger-dummy.m */; };
+		DDB442B3BC43330C55EC945AA9DDE049 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
+		E43B7731C9C57A262F2B5AE87977EF88 /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB5D1F4B078C3F92E8CB20D29C2E999 /* MarqueeLabel.m */; };
+		E51E47B720934D4535B3E18D73550896 /* MZFormSheetPresentationViewControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DA2F210CE76FC88705562D50E4166F /* MZFormSheetPresentationViewControllerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55A8729C4A376CBBD8324279A2A6C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */; };
-		E586145C10ED88699EBB2E414D931C3D /* MZFormSheetContentSizingNavigationControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F11F31E7DCF91F8937E97BD7AAF370 /* MZFormSheetContentSizingNavigationControllerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF1FD0C0547B02A2005E8D774C4B302B /* Pods-PracticeIt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9346B1465F8133B3FCD3CF20A94914A /* Pods-PracticeIt-dummy.m */; };
-		F43D6C385DB340909B5EED4AFF54C8D4 /* MZBlurEffectAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BD82C0B86F6FEAC01C9D7DA00BB9DCD /* MZBlurEffectAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F98E25BDF8CFFC958C59822710491887 /* NSInvocation+Copy.h in Headers */ = {isa = PBXBuildFile; fileRef = 12AB5ADBA93B33B6555714C4A737DD17 /* NSInvocation+Copy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E586145C10ED88699EBB2E414D931C3D /* MZFormSheetContentSizingNavigationControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9428AFC2E8A825BFBFE00136D7F1CE /* MZFormSheetContentSizingNavigationControllerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6E24B7B6BD65593F3A98AB1A43781BD /* SWUtilityButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 424CA2ACD2179CF0648E8EF2C9DFCC18 /* SWUtilityButtonView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7A034360FA53FD881E7F96A001F2239 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B00357BAB1E4FA68ABD548FFB2E429 /* SWLongPressGestureRecognizer.m */; };
+		E7B169DC2EA7F3526C0B7CC48F09C894 /* UITextField+Shake-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A8E8449020A951CCB2095FE81ACA1D /* UITextField+Shake-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F17DEBC36CF613451DA0D77494EA886F /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6280F70D59E20A6CEC3BDAE1E234408D /* SWUtilityButtonView.m */; };
+		F43D6C385DB340909B5EED4AFF54C8D4 /* MZBlurEffectAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = D07F6AC004E93AE0FDE3B26628412AA2 /* MZBlurEffectAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4E1F85DD855444C3A9714BAC4BF78DB /* SWUtilityButtonTapGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC9CE59E938B94F64D3786E502A9BD9 /* SWUtilityButtonTapGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7536278B7866B83D6CFEDC9FC85D5CF /* TableViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA17DEE314816ECE3C6B82683159F1 /* TableViewDragger.swift */; };
+		F98E25BDF8CFFC958C59822710491887 /* NSInvocation+Copy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BCB05E6851ED030562D3EB79CAF1C86 /* NSInvocation+Copy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA6B19CC967D7BBF82DB09AB1E5032D9 /* MZAppearance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF853F08A8AF065E3F8839B7B24C3EBB /* MZAppearance.framework */; };
-		FA88FAA467BB2C87C08B03D4689B67CB /* MZFormSheetPresentationViewControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = E286B9230FF32805436D7EEC3790E1EB /* MZFormSheetPresentationViewControllerSegue.m */; };
+		FA88FAA467BB2C87C08B03D4689B67CB /* MZFormSheetPresentationViewControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 758F680B907686DE43E21D8FD57F3A41 /* MZFormSheetPresentationViewControllerSegue.m */; };
+		FE8B8D0DAD1D8D4EC938912A3553A133 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A9110B9209583246177CD8DCD8E1D /* SWTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1DB537D4E149F9640780C45528DEF8B2 /* PBXContainerItemProxy */ = {
+		4C09D1EC69E201D14205703D011F25BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD59EFE42FF0B078A6FA93836096CF54;
+			remoteInfo = TableViewDragger;
+		};
+		56D5CE4966F40E6F0AF61C8962DFB1B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39A334E75511748DB30833FA4E57A176;
+			remoteInfo = SWTableViewCell;
+		};
+		8CA73C21E1B2C43C591997DDEF2383FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FFABAFE9408FF95CFC8B3C3770D56837;
 			remoteInfo = MZAppearance;
-		};
-		6404B4C04E5EC2C1D8FC33A1D291962D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D5E7EEB41E84B1DF9BFD573EE7AD1D28;
-			remoteInfo = "UITextField+Shake";
-		};
-		70E7050A2EF2636882404FC60965007A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C21158A7B41D923AD9278EC173670D3;
-			remoteInfo = MZFormSheetPresentationController;
-		};
-		9EED1C264A02C1CA62619165EA881E84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 332057E6C33A447FFE2F54673CAC064F;
-			remoteInfo = SWTableViewCell;
 		};
 		C34ECFB9DE746913FA880E317AD4ADCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -121,146 +121,196 @@
 			remoteGlobalIDString = FFABAFE9408FF95CFC8B3C3770D56837;
 			remoteInfo = MZAppearance;
 		};
-		DE189EB9DFB157672EECC185B9583AF4 /* PBXContainerItemProxy */ = {
+		CAFD60BAD902D7D3FE28A9B5B12FD322 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 512B262A71A5C2D4A09CBD9725F015B3;
-			remoteInfo = TableViewDragger;
+			remoteGlobalIDString = 9C21158A7B41D923AD9278EC173670D3;
+			remoteInfo = MZFormSheetPresentationController;
+		};
+		DAA680BC6F8E416930D2CDB8DDCE7E09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7F56A69BE1373742F9A495EEB52F4D6;
+			remoteInfo = MarqueeLabel;
+		};
+		F1E844F8D854738CB4516EBB15F2AD90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52AC2D79F5AC952DCED9F55F7F22C5FC;
+			remoteInfo = "UITextField+Shake";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E35128657C9FE95394A6CF85C91582 /* SWTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWTableViewCell.m; path = SWTableViewCell/PodFiles/SWTableViewCell.m; sourceTree = "<group>"; };
-		032A2816DC468327110902C794474A1C /* UITextField+Shake.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UITextField+Shake.modulemap"; sourceTree = "<group>"; };
-		0570A10FFB3093FDAAC4CC81A81968D0 /* SWCellScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWCellScrollView.m; path = SWTableViewCell/PodFiles/SWCellScrollView.m; sourceTree = "<group>"; };
-		10E1B7D1A00F1D7C3CEFB0BDA90F3511 /* MZFormSheetPresentationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationViewController.m; path = MZFormSheetPresentationController/MZFormSheetPresentationViewController.m; sourceTree = "<group>"; };
+		02A8E8449020A951CCB2095FE81ACA1D /* UITextField+Shake-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake-umbrella.h"; sourceTree = "<group>"; };
+		0718F04C5DC57F4A0E08882296489190 /* MZMethodSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZMethodSwizzler.h; path = MZFormSheetPresentationController/MZMethodSwizzler.h; sourceTree = "<group>"; };
+		09DA30DEC396B9C0A13174A4CD6CD039 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWLongPressGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		09F48A85D00CA929E6DCB49750C5F524 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewExtension.swift; path = TableViewDragger/UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		10C81D748E0E73C2815647E2BF090585 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SWUtilityButtons.m"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
 		11564E41ADBD46AC28B9CF64646EC402 /* Pods-PracticeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PracticeIt.debug.xcconfig"; sourceTree = "<group>"; };
-		12AB5ADBA93B33B6555714C4A737DD17 /* NSInvocation+Copy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Copy.h"; path = "MZAppearance/NSInvocation+Copy.h"; sourceTree = "<group>"; };
-		13F556F8E5AB5DBC21578C043C45E4FC /* TableViewDragger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TableViewDragger.modulemap; sourceTree = "<group>"; };
-		14419C79D51BCB87D1B579057CC43E16 /* MZAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZAppearance.h; path = MZAppearance/MZAppearance.h; sourceTree = "<group>"; };
-		1693E6BCFE276304F1F43A9F2280B1A9 /* TableViewDragger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TableViewDragger-prefix.pch"; sourceTree = "<group>"; };
+		144317B0F2B22CA17DA0949C4AA6C330 /* TableViewDraggerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableViewDraggerCell.swift; path = TableViewDragger/TableViewDraggerCell.swift; sourceTree = "<group>"; };
+		153B17103BF0B7FB6882108DB25E81B5 /* UITextField+Shake.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextField+Shake.xcconfig"; sourceTree = "<group>"; };
+		1855D5C687043329C7394560A1D83CC8 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationViewControllerInteractiveAnimator.m; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerInteractiveAnimator.m; sourceTree = "<group>"; };
 		1B877151FE844AF56D51D1CC6558277B /* Pods-PracticeItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PracticeItTests.release.xcconfig"; sourceTree = "<group>"; };
-		1BD82C0B86F6FEAC01C9D7DA00BB9DCD /* MZBlurEffectAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZBlurEffectAdapter.h; path = MZFormSheetPresentationController/MZBlurEffectAdapter.h; sourceTree = "<group>"; };
+		1BCB05E6851ED030562D3EB79CAF1C86 /* NSInvocation+Copy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Copy.h"; path = "MZAppearance/NSInvocation+Copy.h"; sourceTree = "<group>"; };
 		1BF9A670313D206A8E17FB41D1DDC374 /* Pods-PracticeItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PracticeItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1CBC1EEF85FA592E4F41E1C38B6299FF /* Pods-PracticeItTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PracticeItTests-resources.sh"; sourceTree = "<group>"; };
-		1DF8336B32B7B6B026C2245BE676566D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E55EAE9C3DF23F46DE64CE2B2C2774F /* MZFormSheetContentSizingNavigationControllerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetContentSizingNavigationControllerAnimator.m; path = MZFormSheetPresentationController/MZFormSheetContentSizingNavigationControllerAnimator.m; sourceTree = "<group>"; };
-		1F0CCA22832638C9262F74A7BC3AE973 /* MZAppearance.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MZAppearance.xcconfig; sourceTree = "<group>"; };
-		205CF0B97C471E60FE6D37FF4FB61461 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationViewControllerInteractiveAnimator.m; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerInteractiveAnimator.m; sourceTree = "<group>"; };
-		227B75451D0794C4E237AC7E50B49A9B /* NSInvocation+Copy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Copy.m"; path = "MZAppearance/NSInvocation+Copy.m"; sourceTree = "<group>"; };
-		27C6A080D462C579F7B24DD044CA9C3D /* UITextField+Shake-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake-dummy.m"; sourceTree = "<group>"; };
+		214A9110B9209583246177CD8DCD8E1D /* SWTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWTableViewCell.m; path = SWTableViewCell/PodFiles/SWTableViewCell.m; sourceTree = "<group>"; };
+		22EC7FCA4F4AF0523FE38E225C325130 /* MZFormSheetPresentationContentSizing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationContentSizing.h; path = MZFormSheetPresentationController/MZFormSheetPresentationContentSizing.h; sourceTree = "<group>"; };
+		243143638851A805984C115ACCC34225 /* MZAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZAppearance.h; path = MZAppearance/MZAppearance.h; sourceTree = "<group>"; };
+		24F691978915349E23339CB11158B669 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MZFormSheetPresentationController Swift Example-Bridging-Header.h"; path = "MZFormSheetPresentationController/MZFormSheetPresentationController Swift Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		26B806BFC8C113A719A0CC732D39A6FA /* MZFormSheetPresentationViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerAnimatedTransitioning.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
 		292E99DF07412EFC924F7BE426DB970A /* Pods-PracticeItUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PracticeItUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2CC634BCD5523EEEB7EB4F403E97444E /* MZMethodSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZMethodSwizzler.m; path = MZFormSheetPresentationController/MZMethodSwizzler.m; sourceTree = "<group>"; };
-		2DB9C7B3BF6FA59DA18BFDCB9B9FCA84 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SWUtilityButtons.h"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
-		2F74BA08161DFD8D6503D3556F6E054F /* MZFormSheetPresentationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MZFormSheetPresentationController-dummy.m"; sourceTree = "<group>"; };
-		31BF50517C14ED44388633921C059902 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29749319FA9E74B4BC6B9D5E5228DF1E /* UITextField_Shake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITextField_Shake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D234AB89E3751F673FB14B2073E7CC9 /* UITextField+Shake-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake-dummy.m"; sourceTree = "<group>"; };
+		34D855E10CC17E2351906D53EF8394EE /* MZAppearance-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZAppearance-prefix.pch"; sourceTree = "<group>"; };
 		36CFB6989A1A250E1BA95F111A937D44 /* Pods-PracticeItTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PracticeItTests.modulemap"; sourceTree = "<group>"; };
 		393D4516359940D83C93AD730266CED5 /* Pods-PracticeIt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PracticeIt.modulemap"; sourceTree = "<group>"; };
-		3A61DEC177602DDD2FD49C06DC1A8FDE /* UIViewController+TargetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TargetViewController.h"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.h"; sourceTree = "<group>"; };
+		39CEF4DB31FE22C174F08F3A2804E823 /* MarqueeLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.xcconfig; sourceTree = "<group>"; };
+		3AB5D1F4B078C3F92E8CB20D29C2E999 /* MarqueeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MarqueeLabel.m; path = Sources/ObjC/MarqueeLabel.m; sourceTree = "<group>"; };
 		3C7F385B9D46DC8CDC7A9F8B317CFAF8 /* Pods-PracticeItTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PracticeItTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3EE1177CC5699A49D0F987CA6F403007 /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TargetViewController.m"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
 		407668641FE1D5BFF4A271627C790B4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		443B693EBDC898EDDDFDA74C29752FEF /* TableViewDragger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableViewDragger.swift; path = TableViewDragger/TableViewDragger.swift; sourceTree = "<group>"; };
-		463C7C793B45D5822F5B9CD494C36291 /* MZAppearance-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZAppearance-umbrella.h"; sourceTree = "<group>"; };
+		40F8489F086126E3AD3819D422C437F1 /* TableViewDragger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TableViewDragger.modulemap; sourceTree = "<group>"; };
+		424CA2ACD2179CF0648E8EF2C9DFCC18 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonView.h; path = SWTableViewCell/PodFiles/SWUtilityButtonView.h; sourceTree = "<group>"; };
+		42AE2C68A0B307FBD0CCB398E4431336 /* UITextField+Shake.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+Shake.h"; path = "Source/UITextField+Shake.h"; sourceTree = "<group>"; };
+		433D33012B5811796402E28071759C51 /* NSInvocation+Copy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Copy.m"; path = "MZAppearance/NSInvocation+Copy.m"; sourceTree = "<group>"; };
+		4469EC3D3B06F67D5537435840F1A74A /* Pods_PracticeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4703F08D20B7EDF0A5FE8ED3807EAA45 /* Pods-PracticeItTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PracticeItTests-dummy.m"; sourceTree = "<group>"; };
-		470578BFF82F66054448A569F03C1FDA /* TableViewDragger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TableViewDragger.xcconfig; sourceTree = "<group>"; };
 		48B8CCAEC219729051E77E07FA06B4E8 /* Pods-PracticeItUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PracticeItUITests.modulemap"; sourceTree = "<group>"; };
-		48CC8E71478A0CEC7183541910CAE53B /* MZAppearance-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MZAppearance-dummy.m"; sourceTree = "<group>"; };
+		4BA7C4F4C97E59B63A0FF83869775469 /* MZFormSheetPresentationViewControllerInteractiveTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerInteractiveTransitioning.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerInteractiveTransitioning.h; sourceTree = "<group>"; };
 		4EC93AA72A46D968299440975E9F13A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51CAE720920C40D9FD237DFE636F47CC /* MZFormSheetPresentationViewControllerInteractiveAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerInteractiveAnimator.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerInteractiveAnimator.h; sourceTree = "<group>"; };
-		51CC59C5F3DA1B527935A1595A69A5F8 /* MZBlurEffectAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZBlurEffectAdapter.m; path = MZFormSheetPresentationController/MZBlurEffectAdapter.m; sourceTree = "<group>"; };
-		55822BD59CBA5015F9501103B4F60DD2 /* MZFormSheetPresentationViewControllerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationViewControllerAnimator.m; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerAnimator.m; sourceTree = "<group>"; };
+		4F9428AFC2E8A825BFBFE00136D7F1CE /* MZFormSheetContentSizingNavigationControllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetContentSizingNavigationControllerAnimator.h; path = MZFormSheetPresentationController/MZFormSheetContentSizingNavigationControllerAnimator.h; sourceTree = "<group>"; };
+		517E8E90C7B0119A8ABCB5F66CCFF60F /* SWTableViewCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWTableViewCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53BA17DEE314816ECE3C6B82683159F1 /* TableViewDragger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableViewDragger.swift; path = TableViewDragger/TableViewDragger.swift; sourceTree = "<group>"; };
+		53D78DD71396EDD9DA08375F3C4386D5 /* Pods_PracticeItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		541B86FD59AD78AEB62A084E011405A4 /* MarqueeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MarqueeLabel.h; path = Sources/ObjC/MarqueeLabel.h; sourceTree = "<group>"; };
+		548F8EC8CAD9E8D3FBE0DA597B75AF4F /* SWTableViewCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWTableViewCell-dummy.m"; sourceTree = "<group>"; };
+		5A9D8BEC232FD2DF61F95B80E1612AEB /* Pods_PracticeItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1DBB5403971EB91225BBDE8C9398AF /* SWTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWTableViewCell.h; path = SWTableViewCell/PodFiles/SWTableViewCell.h; sourceTree = "<group>"; };
 		5E01683D7B6E2927B436D5B810DE6604 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FC9CE59E938B94F64D3786E502A9BD9 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonTapGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
 		60A15EF90972931E3D473662DBA5E51B /* Pods-PracticeIt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PracticeIt-umbrella.h"; sourceTree = "<group>"; };
-		61EC82DB6A0E0090D5B15499E2086690 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWLongPressGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
-		6324B217737DEEB55D220CAB74DECB6C /* MZFormSheetPresentationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZFormSheetPresentationController-umbrella.h"; sourceTree = "<group>"; };
-		665EDD7EAE5B578753B4B0B5AFF28A62 /* SWTableViewCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWTableViewCell-umbrella.h"; sourceTree = "<group>"; };
-		666710577D418201F473A278D77ECCEA /* UITextField_Shake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITextField_Shake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AA5B7C06501E8D68DA727D92D0F7857 /* MZMethodSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZMethodSwizzler.h; path = MZFormSheetPresentationController/MZMethodSwizzler.h; sourceTree = "<group>"; };
+		6280F70D59E20A6CEC3BDAE1E234408D /* SWUtilityButtonView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonView.m; path = SWTableViewCell/PodFiles/SWUtilityButtonView.m; sourceTree = "<group>"; };
+		638AE70FBB0EFFD42FD034660CD1F820 /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
+		65600CFDEBCF872F20B1C149BFE33FF4 /* SWTableViewCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWTableViewCell.xcconfig; sourceTree = "<group>"; };
+		69476AF11DA01DDBB2DB4DE041BD2912 /* TableViewDragger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TableViewDragger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69BD6A712100C52117AD8C4773CBB3F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BD56120C8754DFA18674CA66735A938 /* Pods-PracticeItUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PracticeItUITests-dummy.m"; sourceTree = "<group>"; };
-		6CC96F1B2D28AE8D7E1F60D83E2BAE91 /* SWCellScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWCellScrollView.h; path = SWTableViewCell/PodFiles/SWCellScrollView.h; sourceTree = "<group>"; };
-		6D2B1377E655395C0BD339E8D9B0C747 /* SWTableViewCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWTableViewCell-prefix.pch"; sourceTree = "<group>"; };
-		6F23A0D4122771BE0FB42994B772B347 /* MZFormSheetContentSizingNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetContentSizingNavigationController.h; path = MZFormSheetPresentationController/MZFormSheetContentSizingNavigationController.h; sourceTree = "<group>"; };
-		70DA1A42081F0C564A9519A7EDEA4F60 /* MZFormSheetPresentationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZFormSheetPresentationController-prefix.pch"; sourceTree = "<group>"; };
-		726F467250AAF3D4CDB3EE9C6FCB00F0 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonTapGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
-		74D387473145E3F185F9AD0F0B718A5F /* MZTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZTransition.m; path = MZFormSheetPresentationController/MZTransition.m; sourceTree = "<group>"; };
+		6FB3C7D7825D832898C34E8F384539F1 /* SWTableViewCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWTableViewCell-umbrella.h"; sourceTree = "<group>"; };
+		70C845BE36EB73A5B68A5CBF594F7128 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		720D0256749BD76C3F5F3BCFE6287505 /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
+		72715F920CEA86C43504E3298C607451 /* MZFormSheetContentSizingNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetContentSizingNavigationController.h; path = MZFormSheetPresentationController/MZFormSheetContentSizingNavigationController.h; sourceTree = "<group>"; };
+		758F680B907686DE43E21D8FD57F3A41 /* MZFormSheetPresentationViewControllerSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationViewControllerSegue.m; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerSegue.m; sourceTree = "<group>"; };
+		76C53BB5DCE658551175E4919F58E68B /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C148F8E16148BA6707C8172C755D3E /* Pods-PracticeIt-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PracticeIt-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7F85FD19BA591793701CAFA8C7990187 /* TableViewDraggerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableViewDraggerCell.swift; path = TableViewDragger/TableViewDraggerCell.swift; sourceTree = "<group>"; };
-		81A5B981054963B1A7DB503554AB86CE /* MZFormSheetPresentationViewControllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerAnimator.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerAnimator.h; sourceTree = "<group>"; };
+		79FD7A4079CDA05574BCB4BC31B5B9DC /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SWUtilityButtons.h"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		80ECD10EC5A6A603C725697DEEABB91B /* MZFormSheetPresentationViewControllerSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerSegue.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerSegue.h; sourceTree = "<group>"; };
 		83FF659F2C6B91D682777E2E8ED163BA /* Pods-PracticeIt-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PracticeIt-acknowledgements.plist"; sourceTree = "<group>"; };
-		84AB4D7D8514218E9962FC76629CA267 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWLongPressGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
-		85AD0DC7A0FFA2B90CEC5E9BEF477B51 /* TableViewDragger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TableViewDragger-umbrella.h"; sourceTree = "<group>"; };
-		863D532BAC0667490836087E957B63C4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86EE5CB5340F8D9BAEAFFDC20E00A1B4 /* TableViewDragger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TableViewDragger.h; path = TableViewDragger/TableViewDragger.h; sourceTree = "<group>"; };
-		8C470C6F2A4F79162F7129494FC3B211 /* MZFormSheetPresentationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewController.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewController.h; sourceTree = "<group>"; };
-		8CAAAD2A6BF1C6F332F496CA239E0226 /* SWTableViewCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWTableViewCell.xcconfig; sourceTree = "<group>"; };
+		88128549C76FDFE042FBB43113FC0283 /* MarqueeLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-umbrella.h"; sourceTree = "<group>"; };
+		8889DBEF8928E44318895D0048FB7019 /* MZFormSheetPresentationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewController.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewController.h; sourceTree = "<group>"; };
+		8A1BA7F989B99A002FF26F979A6F57CC /* MZBlurEffectAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZBlurEffectAdapter.m; path = MZFormSheetPresentationController/MZBlurEffectAdapter.m; sourceTree = "<group>"; };
+		8DE229FF05F6CB06C7FCC7D7A27AD80A /* MZFormSheetPresentationController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZFormSheetPresentationController-umbrella.h"; sourceTree = "<group>"; };
 		8DF09BA6EAB8F743822DB79DE2F849EC /* Pods-PracticeItUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PracticeItUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8F71F389BF8C48BA8D35EFA2C58EF77E /* Pods_PracticeIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		90D7BC19B993B8894FF9CE99CB354BDF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9265C44D918B38A3A2A7D27EDC305EB1 /* MZFormSheetPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationController.m; path = MZFormSheetPresentationController/MZFormSheetPresentationController.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93EDB799387F25BBE86173028261624A /* UITextField+Shake-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake-prefix.pch"; sourceTree = "<group>"; };
+		9575A162759456B563C21EA19905C798 /* SWCellScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWCellScrollView.h; path = SWTableViewCell/PodFiles/SWCellScrollView.h; sourceTree = "<group>"; };
+		96DD43C875C9F30BF3FA5AD2465225F4 /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TargetViewController.m"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
 		9755F7CED8CD83CEE1F7A4703E4B4CDB /* Pods-PracticeItUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PracticeItUITests-umbrella.h"; sourceTree = "<group>"; };
-		9834532C86B10630B66D597C8681A879 /* UITextField+Shake.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextField+Shake.xcconfig"; sourceTree = "<group>"; };
-		98A1B238EDB1A94C8C6466183C1D54B9 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SWUtilityButtons.m"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
-		9A1A1C3E57E004C298790C82071A903B /* MZFormSheetPresentationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZFormSheetPresentationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D198C368226A5A53BAD5EBE098611C1 /* SWTableViewCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWTableViewCell-dummy.m"; sourceTree = "<group>"; };
+		97B00357BAB1E4FA68ABD548FFB2E429 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWLongPressGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		9B13916BFDE3844A70A060C91982B7A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD87D03D33E2104ACD371609EC40D9D /* SWTableViewCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWTableViewCell.modulemap; sourceTree = "<group>"; };
 		9DD68164776882B01FF070878E74C00F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		9E874622C93D91A469EFB0188E65A6E3 /* UITextField+Shake.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Shake.m"; path = "Source/UITextField+Shake.m"; sourceTree = "<group>"; };
 		9FDB1A0A483F22AEC80E247AC230742F /* Pods-PracticeIt-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PracticeIt-frameworks.sh"; sourceTree = "<group>"; };
-		A13C67D323A152DA50D371B9F00FE136 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonTapGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		A02F3406FFD220CD4B19AD6B847813A5 /* UIViewController+TargetViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TargetViewController.h"; path = "MZFormSheetPresentationController/UIViewController+TargetViewController.h"; sourceTree = "<group>"; };
+		A128258FA42CCCDBC859663F97079B26 /* SWTableViewCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWTableViewCell-prefix.pch"; sourceTree = "<group>"; };
+		A1295CD454D8482D69F2A180E4F9367B /* MZAppearance.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MZAppearance.xcconfig; sourceTree = "<group>"; };
 		A1A85470BB3A3EA3BFA74361DDC7AC85 /* Pods-PracticeItTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PracticeItTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A69C13C988D17ED9EA96B91A96DAF887 /* Pods_PracticeItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25D44391179D746C2FD532427BBC31D /* MZFormSheetPresentationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MZFormSheetPresentationController.modulemap; sourceTree = "<group>"; };
+		A284CA3D8CC864DDC030A010AD80102E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4CA1C4A254A33A8DA2211D794571A6F /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
+		A4DA2F210CE76FC88705562D50E4166F /* MZFormSheetPresentationViewControllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerAnimator.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerAnimator.h; sourceTree = "<group>"; };
 		A6F36F0EE18E539027D4317B8FFC172A /* Pods-PracticeItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PracticeItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9346B1465F8133B3FCD3CF20A94914A /* Pods-PracticeIt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PracticeIt-dummy.m"; sourceTree = "<group>"; };
-		ABADCD8036B85F5E887503408D85DC78 /* SWTableViewCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWTableViewCell.modulemap; sourceTree = "<group>"; };
-		B1425800D33E188665592A2A6A7CDE1A /* MZFormSheetPresentationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MZFormSheetPresentationController.xcconfig; sourceTree = "<group>"; };
-		B29C5C40DAD2BD4C0DD38068743CC209 /* MZFormSheetPresentationViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerAnimatedTransitioning.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
-		B5D64FA66CBEFC3623D35C0EE97BC533 /* SWTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWTableViewCell.h; path = SWTableViewCell/PodFiles/SWTableViewCell.h; sourceTree = "<group>"; };
-		BB7F703C7C98B2F3BEB922E0FB4E2D33 /* MZFormSheetPresentationContentSizing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationContentSizing.h; path = MZFormSheetPresentationController/MZFormSheetPresentationContentSizing.h; sourceTree = "<group>"; };
-		BD5592B08C378BE8C23758947075B8E0 /* MZFormSheetPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationController.m; path = MZFormSheetPresentationController/MZFormSheetPresentationController.m; sourceTree = "<group>"; };
+		A9B7C1F92AF7D4BEE12076A51BD96FC9 /* MZTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZTransition.m; path = MZFormSheetPresentationController/MZTransition.m; sourceTree = "<group>"; };
+		ADA3AD26E8393D4722629468CD04E324 /* UITextField+Shake.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Shake.m"; path = "Source/UITextField+Shake.m"; sourceTree = "<group>"; };
+		AE1FF56F4457E59E89546360C5FA7CEE /* TableViewDragger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TableViewDragger-prefix.pch"; sourceTree = "<group>"; };
+		B16EA049E040347352324893A79F945B /* MZFormSheetContentSizingNavigationControllerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetContentSizingNavigationControllerAnimator.m; path = MZFormSheetPresentationController/MZFormSheetContentSizingNavigationControllerAnimator.m; sourceTree = "<group>"; };
+		B38A66E4DA179650EFDDFAE68CCEE908 /* MZFormSheetPresentationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MZFormSheetPresentationController-dummy.m"; sourceTree = "<group>"; };
+		B44A25BAF592DB40B87222D40A671553 /* MZAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZAppearance.m; path = MZAppearance/MZAppearance.m; sourceTree = "<group>"; };
+		BAE2CB14CE107E24B50152F77274F8FE /* UITextField+Shake.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UITextField+Shake.modulemap"; sourceTree = "<group>"; };
 		BDFCA69D6132D3045F72584619035753 /* Pods-PracticeItUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PracticeItUITests-frameworks.sh"; sourceTree = "<group>"; };
 		C09EE3E729529735C0262FA15CD93014 /* Pods-PracticeItTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PracticeItTests-umbrella.h"; sourceTree = "<group>"; };
-		C188D471D3AE6A4FDB9319D258D9C608 /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C61D5C25230E1A55637DA97466A39E67 /* MZFormSheetContentSizingNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetContentSizingNavigationController.m; path = MZFormSheetPresentationController/MZFormSheetContentSizingNavigationController.m; sourceTree = "<group>"; };
-		CA4D7621DBA2CF361049B45440A7D031 /* TableViewDragger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TableViewDragger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBB728DBE2957A6F5D8FF449BF76D19F /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MZFormSheetPresentationController Swift Example-Bridging-Header.h"; path = "MZFormSheetPresentationController/MZFormSheetPresentationController Swift Example-Bridging-Header.h"; sourceTree = "<group>"; };
-		CCFF8F8FF4072EC513F4943DF351D32B /* MZFormSheetPresentationController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MZFormSheetPresentationController.modulemap; sourceTree = "<group>"; };
+		C1BEC4E20904303AE5BD913EE682CC7E /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F8AC54CC17ED63CE33730F51D9CCA1 /* MZAppearance-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZAppearance-umbrella.h"; sourceTree = "<group>"; };
+		C4391648DCCF314FE8C2BEE617414693 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07F6AC004E93AE0FDE3B26628412AA2 /* MZBlurEffectAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZBlurEffectAdapter.h; path = MZFormSheetPresentationController/MZBlurEffectAdapter.h; sourceTree = "<group>"; };
 		D105B03873E19AC361053C1D81FF613F /* Pods-PracticeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PracticeIt.release.xcconfig"; sourceTree = "<group>"; };
-		D1F11F31E7DCF91F8937E97BD7AAF370 /* MZFormSheetContentSizingNavigationControllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetContentSizingNavigationControllerAnimator.h; path = MZFormSheetPresentationController/MZFormSheetContentSizingNavigationControllerAnimator.h; sourceTree = "<group>"; };
-		D2D3D123CA2CD4761805FBFFB44093FA /* MZFormSheetPresentationViewControllerSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerSegue.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerSegue.h; sourceTree = "<group>"; };
-		D2E7273D4A3321DC52A450C1D11BA31C /* MZFormSheetPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationController.h; path = MZFormSheetPresentationController/MZFormSheetPresentationController.h; sourceTree = "<group>"; };
+		D1559DEA202DCCC8EFA9F82AC169B849 /* MZMethodSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZMethodSwizzler.m; path = MZFormSheetPresentationController/MZMethodSwizzler.m; sourceTree = "<group>"; };
 		D3893313D6F2E5BE2D7458EE85D77929 /* Pods-PracticeItTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PracticeItTests-frameworks.sh"; sourceTree = "<group>"; };
-		D414F1B85B15F622E5D1C30C69B70968 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewExtension.swift; path = TableViewDragger/UIScrollViewExtension.swift; sourceTree = "<group>"; };
-		D773DA9E435C720B73B41590A266283C /* MZAppearance.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MZAppearance.modulemap; sourceTree = "<group>"; };
-		D8977DBA82AD648138C836B717801642 /* SWTableViewCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWTableViewCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B78949DA7A170E136C2E39387F95DB /* SWCellScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWCellScrollView.m; path = SWTableViewCell/PodFiles/SWCellScrollView.m; sourceTree = "<group>"; };
+		D672972CF8EA93C5AB254AB4652AFED4 /* MZFormSheetPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationController.h; path = MZFormSheetPresentationController/MZFormSheetPresentationController.h; sourceTree = "<group>"; };
+		DC08AF10F540F76DC0D73A3584A74122 /* MZFormSheetContentSizingNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetContentSizingNavigationController.m; path = MZFormSheetPresentationController/MZFormSheetContentSizingNavigationController.m; sourceTree = "<group>"; };
+		DCB628F5AEF46E85C4755B7DCF11CAAD /* MZFormSheetPresentationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationViewController.m; path = MZFormSheetPresentationController/MZFormSheetPresentationViewController.m; sourceTree = "<group>"; };
+		DE715B4F410ABC922DD888642DAF21C3 /* MZAppearance-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MZAppearance-dummy.m"; sourceTree = "<group>"; };
 		DF853F08A8AF065E3F8839B7B24C3EBB /* MZAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF97A2695776DEB4C9A05A10D06EE087 /* Pods-PracticeIt-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PracticeIt-resources.sh"; sourceTree = "<group>"; };
-		E265E574DD7762B8FE70DEBFBD821EE1 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonView.h; path = SWTableViewCell/PodFiles/SWUtilityButtonView.h; sourceTree = "<group>"; };
-		E2801ED40628AE083DCB1824CB0A18C1 /* MZAppearance-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZAppearance-prefix.pch"; sourceTree = "<group>"; };
-		E286B9230FF32805436D7EEC3790E1EB /* MZFormSheetPresentationViewControllerSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationViewControllerSegue.m; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerSegue.m; sourceTree = "<group>"; };
+		E04C959DC8F8A3F70FC51492AEA2E2BB /* MZTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZTransition.h; path = MZFormSheetPresentationController/MZTransition.h; sourceTree = "<group>"; };
+		E07A232EE2D13BA0E3C33981740A2F3D /* TableViewDragger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TableViewDragger-umbrella.h"; sourceTree = "<group>"; };
+		E3C342A519F6DE53C063BA9C5941A23E /* TableViewDragger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TableViewDragger.h; path = TableViewDragger/TableViewDragger.h; sourceTree = "<group>"; };
+		E3CD3ACDE1091FBC0AB0490BDC81E3B1 /* MZFormSheetPresentationViewControllerInteractiveAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerInteractiveAnimator.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerInteractiveAnimator.h; sourceTree = "<group>"; };
 		E4E019A0A7E62CB458AF5D50B2BB8E5D /* Pods-PracticeItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PracticeItUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E5440CA1475398B3B3D243413C613FB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E72A72F4A94E3E2C216CEC6AF50AE92F /* UITextField+Shake.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+Shake.h"; path = "Source/UITextField+Shake.h"; sourceTree = "<group>"; };
-		E811EAEE58F8997DC583A002D180304A /* UITextField+Shake-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake-umbrella.h"; sourceTree = "<group>"; };
+		E518D984A1B5EDBFE32CF418BFA600D2 /* MZFormSheetPresentationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZFormSheetPresentationController-prefix.pch"; sourceTree = "<group>"; };
+		E55622D5391338425AE774F424797ADF /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonTapGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
 		EA27B01A07E032AAE18B8A41A26172DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EC9AC406A8181598488FF33CF33507A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDF1C8EA11B1AC18EB9EC1076310DB45 /* Pods_PracticeItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE84CC57F7E01668060163A63244E22 /* Pods-PracticeItUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PracticeItUITests-resources.sh"; sourceTree = "<group>"; };
-		F4C079238EE66CE26235E32E7EC2494C /* MZAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZAppearance.m; path = MZAppearance/MZAppearance.m; sourceTree = "<group>"; };
-		F528153DEC770D35E3ECD08DAF5DBA62 /* MZFormSheetPresentationViewControllerInteractiveTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZFormSheetPresentationViewControllerInteractiveTransitioning.h; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerInteractiveTransitioning.h; sourceTree = "<group>"; };
-		F9E78B15789C2C58404BED7EC7E4C8D8 /* MZTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZTransition.h; path = MZFormSheetPresentationController/MZTransition.h; sourceTree = "<group>"; };
-		FA1F3FF4B754435B643E2D15D2E73F91 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonView.m; path = SWTableViewCell/PodFiles/SWUtilityButtonView.m; sourceTree = "<group>"; };
-		FA63C6590947A85331E946B3EBE322EF /* TableViewDragger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TableViewDragger-dummy.m"; sourceTree = "<group>"; };
+		F00E77D541F55E2F7986AA035A2445F2 /* MZFormSheetPresentationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZFormSheetPresentationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31463CD6D9C809341F0FC2B5523D9DB /* UITextField+Shake-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake-prefix.pch"; sourceTree = "<group>"; };
+		F43779A0613D0CFFC6D03BA675544684 /* MZFormSheetPresentationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MZFormSheetPresentationController.xcconfig; sourceTree = "<group>"; };
+		F5FD70C5D6A0807E292F884268D1D0DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B2AE5F2E254AD99487BBF1127492B5 /* TableViewDragger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TableViewDragger-dummy.m"; sourceTree = "<group>"; };
+		FAEFA44321CE11146FC4C00A3A65C33D /* MZFormSheetPresentationViewControllerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZFormSheetPresentationViewControllerAnimator.m; path = MZFormSheetPresentationController/MZFormSheetPresentationViewControllerAnimator.m; sourceTree = "<group>"; };
+		FD763DFE185ABFD45B41BBE8099C16E1 /* MZAppearance.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MZAppearance.modulemap; sourceTree = "<group>"; };
+		FE6825938157EA4B3235D63323189E56 /* TableViewDragger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TableViewDragger.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1DCAA73DE145C88D73A9A503105FEF28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B59774127AB4404DDF1E7C777671608 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2133E124EE80E09BAFD4A684EE7262BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ACE968640ED4934EC5D09D835B18171C /* Foundation.framework in Frameworks */,
 				827CFB2FF907B088AC9018A9CBB95783 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265C4791346348551B0F9D8D451EEB53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB442B3BC43330C55EC945AA9DDE049 /* Foundation.framework in Frameworks */,
+				D4FD24D37D485505D8377BDB11AB5E7E /* QuartzCore.framework in Frameworks */,
+				75353F3045ECCDE7A2D964540C7E07ED /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC86C7CA113B58A44EFD5E86FDE46D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9618F7377FD2F8C44674D9449CF9F3 /* Foundation.framework in Frameworks */,
+				62A63680C0E926C11C085560B0552C72 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +322,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59C255648439C1D7E79882FF7BA3A7D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7289DFB8664A5EE9B1E08A057F3946E2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		83B3E80E1EA55A7391168E6958F1CC96 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,20 +330,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9E04A7E062DBFF07FF4E7AA94397A32 /* Frameworks */ = {
+		9E494B9D6A026970F47212E84683F761 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0669F6A41BEF5A1AF7C1F6A01E7B0E53 /* Foundation.framework in Frameworks */,
-				CDDD2C33CC60B07D96B78407EBBF032C /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BA3AC5A7DDF47E1D9A37A60B995FD03A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDF3B0E0542704AD69608CEB3760B9E1 /* Foundation.framework in Frameworks */,
+				9B0860FE112908A70CB9B190F387FBE8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,55 +348,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3CD3A2EBA16AACDAB24FE944BB6EE43 /* Frameworks */ = {
+		E16E79F32EB10BB789ABA9A6D3D6F2BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DA627351FF65CD97A3FA0E23992D3FD /* Foundation.framework in Frameworks */,
+				267D78D649B534510904A74ADF9075B9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		010141E6F399BC8F2D091F034658D12C /* Pods */ = {
+		00CCF9E0B37446BDC2224325855E983A /* UITextField+Shake */ = {
 			isa = PBXGroup;
 			children = (
-				25F4ECB36FA491F7652EC454F46BBBE9 /* MZAppearance */,
-				DD438F9119DDBE8BCEC1642FF12FAD97 /* MZFormSheetPresentationController */,
-				7F2F3F4ACA581C2A76893EF5ED9388F9 /* SWTableViewCell */,
-				2E1DF670CD06F851B11D29C86CE616BD /* TableViewDragger */,
-				7F5418F88CE7ACB387F00ACC156ECD8A /* UITextField+Shake */,
+				42AE2C68A0B307FBD0CCB398E4431336 /* UITextField+Shake.h */,
+				ADA3AD26E8393D4722629468CD04E324 /* UITextField+Shake.m */,
+				9B86D48D438FCD494C0CE28E70C4484E /* Support Files */,
 			);
-			name = Pods;
+			path = "UITextField+Shake";
 			sourceTree = "<group>";
 		};
-		027100A71724DF8914CD027F78C91115 /* Support Files */ = {
+		03ED733D7C9306528084F90B206CAB56 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1DF8336B32B7B6B026C2245BE676566D /* Info.plist */,
-				D773DA9E435C720B73B41590A266283C /* MZAppearance.modulemap */,
-				1F0CCA22832638C9262F74A7BC3AE973 /* MZAppearance.xcconfig */,
-				48CC8E71478A0CEC7183541910CAE53B /* MZAppearance-dummy.m */,
-				E2801ED40628AE083DCB1824CB0A18C1 /* MZAppearance-prefix.pch */,
-				463C7C793B45D5822F5B9CD494C36291 /* MZAppearance-umbrella.h */,
+				C4391648DCCF314FE8C2BEE617414693 /* Info.plist */,
+				720D0256749BD76C3F5F3BCFE6287505 /* MarqueeLabel.modulemap */,
+				39CEF4DB31FE22C174F08F3A2804E823 /* MarqueeLabel.xcconfig */,
+				A4CA1C4A254A33A8DA2211D794571A6F /* MarqueeLabel-dummy.m */,
+				638AE70FBB0EFFD42FD034660CD1F820 /* MarqueeLabel-prefix.pch */,
+				88128549C76FDFE042FBB43113FC0283 /* MarqueeLabel-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MZAppearance";
+			path = "../Target Support Files/MarqueeLabel";
 			sourceTree = "<group>";
 		};
-		02D3EC5801E0445A61174A796BD95306 /* Support Files */ = {
+		0E6F8B85F431575779F0F690680B0AEA /* TableViewDragger */ = {
 			isa = PBXGroup;
 			children = (
-				863D532BAC0667490836087E957B63C4 /* Info.plist */,
-				ABADCD8036B85F5E887503408D85DC78 /* SWTableViewCell.modulemap */,
-				8CAAAD2A6BF1C6F332F496CA239E0226 /* SWTableViewCell.xcconfig */,
-				9D198C368226A5A53BAD5EBE098611C1 /* SWTableViewCell-dummy.m */,
-				6D2B1377E655395C0BD339E8D9B0C747 /* SWTableViewCell-prefix.pch */,
-				665EDD7EAE5B578753B4B0B5AFF28A62 /* SWTableViewCell-umbrella.h */,
+				E3C342A519F6DE53C063BA9C5941A23E /* TableViewDragger.h */,
+				53BA17DEE314816ECE3C6B82683159F1 /* TableViewDragger.swift */,
+				144317B0F2B22CA17DA0949C4AA6C330 /* TableViewDraggerCell.swift */,
+				09F48A85D00CA929E6DCB49750C5F524 /* UIScrollViewExtension.swift */,
+				C7BDAE6B17E10B1F637CA77933927C7F /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SWTableViewCell";
+			path = TableViewDragger;
 			sourceTree = "<group>";
 		};
 		13A7F455DE81A23E99FB93C4483783B4 /* Targets Support Files */ = {
@@ -376,28 +405,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		25F4ECB36FA491F7652EC454F46BBBE9 /* MZAppearance */ = {
+		26E9B3ED8634CDA81FB8CEE672062D28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14419C79D51BCB87D1B579057CC43E16 /* MZAppearance.h */,
-				F4C079238EE66CE26235E32E7EC2494C /* MZAppearance.m */,
-				12AB5ADBA93B33B6555714C4A737DD17 /* NSInvocation+Copy.h */,
-				227B75451D0794C4E237AC7E50B49A9B /* NSInvocation+Copy.m */,
-				027100A71724DF8914CD027F78C91115 /* Support Files */,
+				76C53BB5DCE658551175E4919F58E68B /* MarqueeLabel.framework */,
+				C1BEC4E20904303AE5BD913EE682CC7E /* MZAppearance.framework */,
+				F00E77D541F55E2F7986AA035A2445F2 /* MZFormSheetPresentationController.framework */,
+				4469EC3D3B06F67D5537435840F1A74A /* Pods_PracticeIt.framework */,
+				53D78DD71396EDD9DA08375F3C4386D5 /* Pods_PracticeItTests.framework */,
+				5A9D8BEC232FD2DF61F95B80E1612AEB /* Pods_PracticeItUITests.framework */,
+				517E8E90C7B0119A8ABCB5F66CCFF60F /* SWTableViewCell.framework */,
+				69476AF11DA01DDBB2DB4DE041BD2912 /* TableViewDragger.framework */,
+				29749319FA9E74B4BC6B9D5E5228DF1E /* UITextField_Shake.framework */,
 			);
-			path = MZAppearance;
-			sourceTree = "<group>";
-		};
-		2E1DF670CD06F851B11D29C86CE616BD /* TableViewDragger */ = {
-			isa = PBXGroup;
-			children = (
-				86EE5CB5340F8D9BAEAFFDC20E00A1B4 /* TableViewDragger.h */,
-				443B693EBDC898EDDDFDA74C29752FEF /* TableViewDragger.swift */,
-				7F85FD19BA591793701CAFA8C7990187 /* TableViewDraggerCell.swift */,
-				D414F1B85B15F622E5D1C30C69B70968 /* UIScrollViewExtension.swift */,
-				A180BDCD112EB5A09F2DD2B6C83C9BE7 /* Support Files */,
-			);
-			path = TableViewDragger;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		4948E0FD597A695B22868E9AA5E18C29 /* Pods-PracticeItUITests */ = {
@@ -418,6 +439,15 @@
 			path = "Target Support Files/Pods-PracticeItUITests";
 			sourceTree = "<group>";
 		};
+		4D79D12D14483AB349F3D7B9677D5DD3 /* MarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				781F5B8E7EBB21C681B21ADBDDD5CCAF /* ObjC */,
+				03ED733D7C9306528084F90B206CAB56 /* Support Files */,
+			);
+			path = MarqueeLabel;
+			sourceTree = "<group>";
+		};
 		5EECBFFF946E7B5D216B5CC1F740C055 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,18 +457,93 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		729282DF9B90ED6952D4C80E21647340 /* Support Files */ = {
+		615C5142A14F0D821AFB0290CC126589 /* MZAppearance */ = {
 			isa = PBXGroup;
 			children = (
-				90D7BC19B993B8894FF9CE99CB354BDF /* Info.plist */,
-				032A2816DC468327110902C794474A1C /* UITextField+Shake.modulemap */,
-				9834532C86B10630B66D597C8681A879 /* UITextField+Shake.xcconfig */,
-				27C6A080D462C579F7B24DD044CA9C3D /* UITextField+Shake-dummy.m */,
-				93EDB799387F25BBE86173028261624A /* UITextField+Shake-prefix.pch */,
-				E811EAEE58F8997DC583A002D180304A /* UITextField+Shake-umbrella.h */,
+				243143638851A805984C115ACCC34225 /* MZAppearance.h */,
+				B44A25BAF592DB40B87222D40A671553 /* MZAppearance.m */,
+				1BCB05E6851ED030562D3EB79CAF1C86 /* NSInvocation+Copy.h */,
+				433D33012B5811796402E28071759C51 /* NSInvocation+Copy.m */,
+				67EB11FE305DE750A0AF285EA30009FE /* Support Files */,
+			);
+			path = MZAppearance;
+			sourceTree = "<group>";
+		};
+		67EB11FE305DE750A0AF285EA30009FE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5FD70C5D6A0807E292F884268D1D0DC /* Info.plist */,
+				FD763DFE185ABFD45B41BBE8099C16E1 /* MZAppearance.modulemap */,
+				A1295CD454D8482D69F2A180E4F9367B /* MZAppearance.xcconfig */,
+				DE715B4F410ABC922DD888642DAF21C3 /* MZAppearance-dummy.m */,
+				34D855E10CC17E2351906D53EF8394EE /* MZAppearance-prefix.pch */,
+				C2F8AC54CC17ED63CE33730F51D9CCA1 /* MZAppearance-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/UITextField+Shake";
+			path = "../Target Support Files/MZAppearance";
+			sourceTree = "<group>";
+		};
+		6E5D3CAF56A60A5182618C03E0CA5582 /* MZFormSheetPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				D07F6AC004E93AE0FDE3B26628412AA2 /* MZBlurEffectAdapter.h */,
+				8A1BA7F989B99A002FF26F979A6F57CC /* MZBlurEffectAdapter.m */,
+				72715F920CEA86C43504E3298C607451 /* MZFormSheetContentSizingNavigationController.h */,
+				DC08AF10F540F76DC0D73A3584A74122 /* MZFormSheetContentSizingNavigationController.m */,
+				4F9428AFC2E8A825BFBFE00136D7F1CE /* MZFormSheetContentSizingNavigationControllerAnimator.h */,
+				B16EA049E040347352324893A79F945B /* MZFormSheetContentSizingNavigationControllerAnimator.m */,
+				22EC7FCA4F4AF0523FE38E225C325130 /* MZFormSheetPresentationContentSizing.h */,
+				D672972CF8EA93C5AB254AB4652AFED4 /* MZFormSheetPresentationController.h */,
+				9265C44D918B38A3A2A7D27EDC305EB1 /* MZFormSheetPresentationController.m */,
+				24F691978915349E23339CB11158B669 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */,
+				8889DBEF8928E44318895D0048FB7019 /* MZFormSheetPresentationViewController.h */,
+				DCB628F5AEF46E85C4755B7DCF11CAAD /* MZFormSheetPresentationViewController.m */,
+				26B806BFC8C113A719A0CC732D39A6FA /* MZFormSheetPresentationViewControllerAnimatedTransitioning.h */,
+				A4DA2F210CE76FC88705562D50E4166F /* MZFormSheetPresentationViewControllerAnimator.h */,
+				FAEFA44321CE11146FC4C00A3A65C33D /* MZFormSheetPresentationViewControllerAnimator.m */,
+				E3CD3ACDE1091FBC0AB0490BDC81E3B1 /* MZFormSheetPresentationViewControllerInteractiveAnimator.h */,
+				1855D5C687043329C7394560A1D83CC8 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m */,
+				4BA7C4F4C97E59B63A0FF83869775469 /* MZFormSheetPresentationViewControllerInteractiveTransitioning.h */,
+				80ECD10EC5A6A603C725697DEEABB91B /* MZFormSheetPresentationViewControllerSegue.h */,
+				758F680B907686DE43E21D8FD57F3A41 /* MZFormSheetPresentationViewControllerSegue.m */,
+				0718F04C5DC57F4A0E08882296489190 /* MZMethodSwizzler.h */,
+				D1559DEA202DCCC8EFA9F82AC169B849 /* MZMethodSwizzler.m */,
+				E04C959DC8F8A3F70FC51492AEA2E2BB /* MZTransition.h */,
+				A9B7C1F92AF7D4BEE12076A51BD96FC9 /* MZTransition.m */,
+				A02F3406FFD220CD4B19AD6B847813A5 /* UIViewController+TargetViewController.h */,
+				96DD43C875C9F30BF3FA5AD2465225F4 /* UIViewController+TargetViewController.m */,
+				D94637BD900724BDB4E7ED72B1AD4E78 /* Support Files */,
+			);
+			path = MZFormSheetPresentationController;
+			sourceTree = "<group>";
+		};
+		7207BAEF2DF596D89F7B3782EB17FAE1 /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				79FD7A4079CDA05574BCB4BC31B5B9DC /* NSMutableArray+SWUtilityButtons.h */,
+				10C81D748E0E73C2815647E2BF090585 /* NSMutableArray+SWUtilityButtons.m */,
+				9575A162759456B563C21EA19905C798 /* SWCellScrollView.h */,
+				D5B78949DA7A170E136C2E39387F95DB /* SWCellScrollView.m */,
+				09DA30DEC396B9C0A13174A4CD6CD039 /* SWLongPressGestureRecognizer.h */,
+				97B00357BAB1E4FA68ABD548FFB2E429 /* SWLongPressGestureRecognizer.m */,
+				5B1DBB5403971EB91225BBDE8C9398AF /* SWTableViewCell.h */,
+				214A9110B9209583246177CD8DCD8E1D /* SWTableViewCell.m */,
+				5FC9CE59E938B94F64D3786E502A9BD9 /* SWUtilityButtonTapGestureRecognizer.h */,
+				E55622D5391338425AE774F424797ADF /* SWUtilityButtonTapGestureRecognizer.m */,
+				424CA2ACD2179CF0648E8EF2C9DFCC18 /* SWUtilityButtonView.h */,
+				6280F70D59E20A6CEC3BDAE1E234408D /* SWUtilityButtonView.m */,
+				8AC056872423F7638AA2DD1921142374 /* Support Files */,
+			);
+			path = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+		781F5B8E7EBB21C681B21ADBDDD5CCAF /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				541B86FD59AD78AEB62A084E011405A4 /* MarqueeLabel.h */,
+				3AB5D1F4B078C3F92E8CB20D29C2E999 /* MarqueeLabel.m */,
+			);
+			name = ObjC;
 			sourceTree = "<group>";
 		};
 		785C7734D6AA933BFB298C33ABFEDDE2 /* iOS */ = {
@@ -456,40 +561,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				5EECBFFF946E7B5D216B5CC1F740C055 /* Frameworks */,
-				010141E6F399BC8F2D091F034658D12C /* Pods */,
-				B3F169517748730C4B75A447CE96A61B /* Products */,
+				EE4BA9E3CD6C08128DAEE2128B5DD30D /* Pods */,
+				26E9B3ED8634CDA81FB8CEE672062D28 /* Products */,
 				13A7F455DE81A23E99FB93C4483783B4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7F2F3F4ACA581C2A76893EF5ED9388F9 /* SWTableViewCell */ = {
+		8AC056872423F7638AA2DD1921142374 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2DB9C7B3BF6FA59DA18BFDCB9B9FCA84 /* NSMutableArray+SWUtilityButtons.h */,
-				98A1B238EDB1A94C8C6466183C1D54B9 /* NSMutableArray+SWUtilityButtons.m */,
-				6CC96F1B2D28AE8D7E1F60D83E2BAE91 /* SWCellScrollView.h */,
-				0570A10FFB3093FDAAC4CC81A81968D0 /* SWCellScrollView.m */,
-				61EC82DB6A0E0090D5B15499E2086690 /* SWLongPressGestureRecognizer.h */,
-				84AB4D7D8514218E9962FC76629CA267 /* SWLongPressGestureRecognizer.m */,
-				B5D64FA66CBEFC3623D35C0EE97BC533 /* SWTableViewCell.h */,
-				00E35128657C9FE95394A6CF85C91582 /* SWTableViewCell.m */,
-				A13C67D323A152DA50D371B9F00FE136 /* SWUtilityButtonTapGestureRecognizer.h */,
-				726F467250AAF3D4CDB3EE9C6FCB00F0 /* SWUtilityButtonTapGestureRecognizer.m */,
-				E265E574DD7762B8FE70DEBFBD821EE1 /* SWUtilityButtonView.h */,
-				FA1F3FF4B754435B643E2D15D2E73F91 /* SWUtilityButtonView.m */,
-				02D3EC5801E0445A61174A796BD95306 /* Support Files */,
+				70C845BE36EB73A5B68A5CBF594F7128 /* Info.plist */,
+				9BD87D03D33E2104ACD371609EC40D9D /* SWTableViewCell.modulemap */,
+				65600CFDEBCF872F20B1C149BFE33FF4 /* SWTableViewCell.xcconfig */,
+				548F8EC8CAD9E8D3FBE0DA597B75AF4F /* SWTableViewCell-dummy.m */,
+				A128258FA42CCCDBC859663F97079B26 /* SWTableViewCell-prefix.pch */,
+				6FB3C7D7825D832898C34E8F384539F1 /* SWTableViewCell-umbrella.h */,
 			);
-			path = SWTableViewCell;
-			sourceTree = "<group>";
-		};
-		7F5418F88CE7ACB387F00ACC156ECD8A /* UITextField+Shake */ = {
-			isa = PBXGroup;
-			children = (
-				E72A72F4A94E3E2C216CEC6AF50AE92F /* UITextField+Shake.h */,
-				9E874622C93D91A469EFB0188E65A6E3 /* UITextField+Shake.m */,
-				729282DF9B90ED6952D4C80E21647340 /* Support Files */,
-			);
-			path = "UITextField+Shake";
+			name = "Support Files";
+			path = "../Target Support Files/SWTableViewCell";
 			sourceTree = "<group>";
 		};
 		96AEC47AB068FBABE7281F09BC663366 /* Pods-PracticeIt */ = {
@@ -510,81 +599,59 @@
 			path = "Target Support Files/Pods-PracticeIt";
 			sourceTree = "<group>";
 		};
-		A180BDCD112EB5A09F2DD2B6C83C9BE7 /* Support Files */ = {
+		9B86D48D438FCD494C0CE28E70C4484E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E5440CA1475398B3B3D243413C613FB3 /* Info.plist */,
-				13F556F8E5AB5DBC21578C043C45E4FC /* TableViewDragger.modulemap */,
-				470578BFF82F66054448A569F03C1FDA /* TableViewDragger.xcconfig */,
-				FA63C6590947A85331E946B3EBE322EF /* TableViewDragger-dummy.m */,
-				1693E6BCFE276304F1F43A9F2280B1A9 /* TableViewDragger-prefix.pch */,
-				85AD0DC7A0FFA2B90CEC5E9BEF477B51 /* TableViewDragger-umbrella.h */,
+				A284CA3D8CC864DDC030A010AD80102E /* Info.plist */,
+				BAE2CB14CE107E24B50152F77274F8FE /* UITextField+Shake.modulemap */,
+				153B17103BF0B7FB6882108DB25E81B5 /* UITextField+Shake.xcconfig */,
+				2D234AB89E3751F673FB14B2073E7CC9 /* UITextField+Shake-dummy.m */,
+				F31463CD6D9C809341F0FC2B5523D9DB /* UITextField+Shake-prefix.pch */,
+				02A8E8449020A951CCB2095FE81ACA1D /* UITextField+Shake-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UITextField+Shake";
+			sourceTree = "<group>";
+		};
+		C7BDAE6B17E10B1F637CA77933927C7F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B13916BFDE3844A70A060C91982B7A9 /* Info.plist */,
+				40F8489F086126E3AD3819D422C437F1 /* TableViewDragger.modulemap */,
+				FE6825938157EA4B3235D63323189E56 /* TableViewDragger.xcconfig */,
+				F9B2AE5F2E254AD99487BBF1127492B5 /* TableViewDragger-dummy.m */,
+				AE1FF56F4457E59E89546360C5FA7CEE /* TableViewDragger-prefix.pch */,
+				E07A232EE2D13BA0E3C33981740A2F3D /* TableViewDragger-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/TableViewDragger";
 			sourceTree = "<group>";
 		};
-		B3F169517748730C4B75A447CE96A61B /* Products */ = {
+		D94637BD900724BDB4E7ED72B1AD4E78 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C188D471D3AE6A4FDB9319D258D9C608 /* MZAppearance.framework */,
-				9A1A1C3E57E004C298790C82071A903B /* MZFormSheetPresentationController.framework */,
-				8F71F389BF8C48BA8D35EFA2C58EF77E /* Pods_PracticeIt.framework */,
-				EDF1C8EA11B1AC18EB9EC1076310DB45 /* Pods_PracticeItTests.framework */,
-				A69C13C988D17ED9EA96B91A96DAF887 /* Pods_PracticeItUITests.framework */,
-				D8977DBA82AD648138C836B717801642 /* SWTableViewCell.framework */,
-				CA4D7621DBA2CF361049B45440A7D031 /* TableViewDragger.framework */,
-				666710577D418201F473A278D77ECCEA /* UITextField_Shake.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CB17A1B88C30F6E5A0CB4C36EF99BFE0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				31BF50517C14ED44388633921C059902 /* Info.plist */,
-				CCFF8F8FF4072EC513F4943DF351D32B /* MZFormSheetPresentationController.modulemap */,
-				B1425800D33E188665592A2A6A7CDE1A /* MZFormSheetPresentationController.xcconfig */,
-				2F74BA08161DFD8D6503D3556F6E054F /* MZFormSheetPresentationController-dummy.m */,
-				70DA1A42081F0C564A9519A7EDEA4F60 /* MZFormSheetPresentationController-prefix.pch */,
-				6324B217737DEEB55D220CAB74DECB6C /* MZFormSheetPresentationController-umbrella.h */,
+				69BD6A712100C52117AD8C4773CBB3F8 /* Info.plist */,
+				A25D44391179D746C2FD532427BBC31D /* MZFormSheetPresentationController.modulemap */,
+				F43779A0613D0CFFC6D03BA675544684 /* MZFormSheetPresentationController.xcconfig */,
+				B38A66E4DA179650EFDDFAE68CCEE908 /* MZFormSheetPresentationController-dummy.m */,
+				E518D984A1B5EDBFE32CF418BFA600D2 /* MZFormSheetPresentationController-prefix.pch */,
+				8DE229FF05F6CB06C7FCC7D7A27AD80A /* MZFormSheetPresentationController-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MZFormSheetPresentationController";
 			sourceTree = "<group>";
 		};
-		DD438F9119DDBE8BCEC1642FF12FAD97 /* MZFormSheetPresentationController */ = {
+		EE4BA9E3CD6C08128DAEE2128B5DD30D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1BD82C0B86F6FEAC01C9D7DA00BB9DCD /* MZBlurEffectAdapter.h */,
-				51CC59C5F3DA1B527935A1595A69A5F8 /* MZBlurEffectAdapter.m */,
-				6F23A0D4122771BE0FB42994B772B347 /* MZFormSheetContentSizingNavigationController.h */,
-				C61D5C25230E1A55637DA97466A39E67 /* MZFormSheetContentSizingNavigationController.m */,
-				D1F11F31E7DCF91F8937E97BD7AAF370 /* MZFormSheetContentSizingNavigationControllerAnimator.h */,
-				1E55EAE9C3DF23F46DE64CE2B2C2774F /* MZFormSheetContentSizingNavigationControllerAnimator.m */,
-				BB7F703C7C98B2F3BEB922E0FB4E2D33 /* MZFormSheetPresentationContentSizing.h */,
-				D2E7273D4A3321DC52A450C1D11BA31C /* MZFormSheetPresentationController.h */,
-				BD5592B08C378BE8C23758947075B8E0 /* MZFormSheetPresentationController.m */,
-				CBB728DBE2957A6F5D8FF449BF76D19F /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */,
-				8C470C6F2A4F79162F7129494FC3B211 /* MZFormSheetPresentationViewController.h */,
-				10E1B7D1A00F1D7C3CEFB0BDA90F3511 /* MZFormSheetPresentationViewController.m */,
-				B29C5C40DAD2BD4C0DD38068743CC209 /* MZFormSheetPresentationViewControllerAnimatedTransitioning.h */,
-				81A5B981054963B1A7DB503554AB86CE /* MZFormSheetPresentationViewControllerAnimator.h */,
-				55822BD59CBA5015F9501103B4F60DD2 /* MZFormSheetPresentationViewControllerAnimator.m */,
-				51CAE720920C40D9FD237DFE636F47CC /* MZFormSheetPresentationViewControllerInteractiveAnimator.h */,
-				205CF0B97C471E60FE6D37FF4FB61461 /* MZFormSheetPresentationViewControllerInteractiveAnimator.m */,
-				F528153DEC770D35E3ECD08DAF5DBA62 /* MZFormSheetPresentationViewControllerInteractiveTransitioning.h */,
-				D2D3D123CA2CD4761805FBFFB44093FA /* MZFormSheetPresentationViewControllerSegue.h */,
-				E286B9230FF32805436D7EEC3790E1EB /* MZFormSheetPresentationViewControllerSegue.m */,
-				6AA5B7C06501E8D68DA727D92D0F7857 /* MZMethodSwizzler.h */,
-				2CC634BCD5523EEEB7EB4F403E97444E /* MZMethodSwizzler.m */,
-				F9E78B15789C2C58404BED7EC7E4C8D8 /* MZTransition.h */,
-				74D387473145E3F185F9AD0F0B718A5F /* MZTransition.m */,
-				3A61DEC177602DDD2FD49C06DC1A8FDE /* UIViewController+TargetViewController.h */,
-				3EE1177CC5699A49D0F987CA6F403007 /* UIViewController+TargetViewController.m */,
-				CB17A1B88C30F6E5A0CB4C36EF99BFE0 /* Support Files */,
+				4D79D12D14483AB349F3D7B9677D5DD3 /* MarqueeLabel */,
+				615C5142A14F0D821AFB0290CC126589 /* MZAppearance */,
+				6E5D3CAF56A60A5182618C03E0CA5582 /* MZFormSheetPresentationController */,
+				7207BAEF2DF596D89F7B3782EB17FAE1 /* SWTableViewCell */,
+				0E6F8B85F431575779F0F690680B0AEA /* TableViewDragger */,
+				00CCF9E0B37446BDC2224325855E983A /* UITextField+Shake */,
 			);
-			path = MZFormSheetPresentationController;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F856922E43C3C9E9D63F69B4A699B724 /* Pods-PracticeItTests */ = {
@@ -631,6 +698,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AB84F801F028F62DDE1A64FD65FAE8E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3AFC50EEFB36732C599D052CD25E824 /* MarqueeLabel-umbrella.h in Headers */,
+				728214D210DAE4793DC85FFE6276EAE5 /* MarqueeLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59EF66E21BA61568371B30EAC170DB1A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,35 +715,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		684577C39F3B4BA4350A1F46698FD885 /* Headers */ = {
+		8434FFD596470FC8D1C08C61A97139AA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4870396047312C0E5C007CCBAABB9CA8 /* UITextField+Shake-umbrella.h in Headers */,
-				71F4130AE93B0B3DC71EB4C76E939733 /* UITextField+Shake.h in Headers */,
+				71A141A32666E36EC930F32A8A0FC802 /* NSMutableArray+SWUtilityButtons.h in Headers */,
+				578AB42AB0CACEAC1732667C5D624AA5 /* SWCellScrollView.h in Headers */,
+				B6715A1F3AC579B9FD6113041A89145E /* SWLongPressGestureRecognizer.h in Headers */,
+				922FA6F642BC7EA297CDD285BA19D3C1 /* SWTableViewCell-umbrella.h in Headers */,
+				D0492AAEC3387BE63BAEF24BE0C5C3DA /* SWTableViewCell.h in Headers */,
+				F4E1F85DD855444C3A9714BAC4BF78DB /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
+				E6E24B7B6BD65593F3A98AB1A43781BD /* SWUtilityButtonView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		749C6D737350CD359C39FFE71A72F2C9 /* Headers */ = {
+		8CA6A8DC9970FC66F8D6D3402FBE1816 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				284E709DE2C2C77AE7979DBA315D8AB8 /* NSMutableArray+SWUtilityButtons.h in Headers */,
-				869AB6EF81AD1BFE6CB83262C73B8E8F /* SWCellScrollView.h in Headers */,
-				3CD3DBD321121782B9DE0E948ED8674A /* SWLongPressGestureRecognizer.h in Headers */,
-				832E6DC58F1629F40AA1C9D4D3DB9975 /* SWTableViewCell-umbrella.h in Headers */,
-				781402357AF73F08A534B1B6BF2457C2 /* SWTableViewCell.h in Headers */,
-				C7F161228EA8DF465A51CBA811522847 /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
-				4D9E9C254FE5CD95AF195223E15C0B25 /* SWUtilityButtonView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A042B773B9CFCDC45E80D9F1268187BB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D4567B941997658BF5EA6B55319AB6D /* TableViewDragger-umbrella.h in Headers */,
-				CFD074F5A936B2DB52B9BFC031F7E2C3 /* TableViewDragger.h in Headers */,
+				6789AA56FC348A0138599CCFDDC7B812 /* TableViewDragger-umbrella.h in Headers */,
+				14233DF3EDD69A1DB4636B68315922AE /* TableViewDragger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,11 +746,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9C457E988D81C968AFE9779299103FB /* Headers */ = {
+		B48104750A3ACB9B68CB57E675971891 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42414F85567B80F55ECBE78785E0AAC9 /* Pods-PracticeIt-umbrella.h in Headers */,
+				E7B169DC2EA7F3526C0B7CC48F09C894 /* UITextField+Shake-umbrella.h in Headers */,
+				6614268B3CB25771F74E07BD4F4FF0FB /* UITextField+Shake.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54A20398AE86B940687F8F7E3380CF8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98643A2EFF5051D89E10CACE16F58F1 /* Pods-PracticeIt-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,13 +776,36 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		332057E6C33A447FFE2F54673CAC064F /* SWTableViewCell */ = {
+		2E3A8B3FC37F6106DA3B3DA7EE52D470 /* Pods-PracticeIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB53FB09265A88497643CCBE534EE81B /* Build configuration list for PBXNativeTarget "SWTableViewCell" */;
+			buildConfigurationList = 6B121CEFBDFC68FD73C0C6BCD04DD223 /* Build configuration list for PBXNativeTarget "Pods-PracticeIt" */;
 			buildPhases = (
-				9DEAD1E5CF5DADB221B995B373D526CC /* Sources */,
-				BA3AC5A7DDF47E1D9A37A60B995FD03A /* Frameworks */,
-				749C6D737350CD359C39FFE71A72F2C9 /* Headers */,
+				F3F90305C0DD301488FD30EA9BB90A69 /* Sources */,
+				9E494B9D6A026970F47212E84683F761 /* Frameworks */,
+				C54A20398AE86B940687F8F7E3380CF8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E675A2D429E23582ADAD05DB0B7631C9 /* PBXTargetDependency */,
+				4A1A3C7F6693BC59848D499DEC567A57 /* PBXTargetDependency */,
+				39D564983B88EC9BDE3EAFDA2C00498D /* PBXTargetDependency */,
+				3861497C890221B1F82D45019FE9E83C /* PBXTargetDependency */,
+				A52FF983EEB2221A391388C4FA48DC12 /* PBXTargetDependency */,
+				DFFA44EE1FA6E59CED13F36DC78B94AC /* PBXTargetDependency */,
+			);
+			name = "Pods-PracticeIt";
+			productName = "Pods-PracticeIt";
+			productReference = 4469EC3D3B06F67D5537435840F1A74A /* Pods_PracticeIt.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		39A334E75511748DB30833FA4E57A176 /* SWTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB565FCDACE8ACF51C8264F7A46E69C0 /* Build configuration list for PBXNativeTarget "SWTableViewCell" */;
+			buildPhases = (
+				CB3649F3119C0E2FBC3A44259B5F9CB2 /* Sources */,
+				1DCAA73DE145C88D73A9A503105FEF28 /* Frameworks */,
+				8434FFD596470FC8D1C08C61A97139AA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -714,24 +813,24 @@
 			);
 			name = SWTableViewCell;
 			productName = SWTableViewCell;
-			productReference = D8977DBA82AD648138C836B717801642 /* SWTableViewCell.framework */;
+			productReference = 517E8E90C7B0119A8ABCB5F66CCFF60F /* SWTableViewCell.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		512B262A71A5C2D4A09CBD9725F015B3 /* TableViewDragger */ = {
+		52AC2D79F5AC952DCED9F55F7F22C5FC /* UITextField+Shake */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBF4A698C33A7F56F3E4B80A824534ED /* Build configuration list for PBXNativeTarget "TableViewDragger" */;
+			buildConfigurationList = 02E78B8527223CEF4997ED556C3284DE /* Build configuration list for PBXNativeTarget "UITextField+Shake" */;
 			buildPhases = (
-				207F4A87EFA7315F6CE17EC2F5C68CC0 /* Sources */,
-				B9E04A7E062DBFF07FF4E7AA94397A32 /* Frameworks */,
-				A042B773B9CFCDC45E80D9F1268187BB /* Headers */,
+				20CD9B064E79804C55FDB73BA9D00AF0 /* Sources */,
+				E16E79F32EB10BB789ABA9A6D3D6F2BA /* Frameworks */,
+				B48104750A3ACB9B68CB57E675971891 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TableViewDragger;
-			productName = TableViewDragger;
-			productReference = CA4D7621DBA2CF361049B45440A7D031 /* TableViewDragger.framework */;
+			name = "UITextField+Shake";
+			productName = "UITextField+Shake";
+			productReference = 29749319FA9E74B4BC6B9D5E5228DF1E /* UITextField_Shake.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6B794A8F185942142B935C9D6145F505 /* Pods-PracticeItTests */ = {
@@ -748,29 +847,7 @@
 			);
 			name = "Pods-PracticeItTests";
 			productName = "Pods-PracticeItTests";
-			productReference = EDF1C8EA11B1AC18EB9EC1076310DB45 /* Pods_PracticeItTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7C5E81301AB6601998841A8D3D165631 /* Pods-PracticeIt */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A653B764534FFACEBFF0BA96C1C10062 /* Build configuration list for PBXNativeTarget "Pods-PracticeIt" */;
-			buildPhases = (
-				23D034EB2E7FE0D28D0D098F0A9B10FD /* Sources */,
-				59C255648439C1D7E79882FF7BA3A7D2 /* Frameworks */,
-				C9C457E988D81C968AFE9779299103FB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				29F94072E12E001F2BF0FA09A2027731 /* PBXTargetDependency */,
-				30FDAAF2BC607B5277D8247C65DB9657 /* PBXTargetDependency */,
-				71DE1B4326874E44C54511E574192442 /* PBXTargetDependency */,
-				CCC06AB3E67FA5F876DBA0A99D460389 /* PBXTargetDependency */,
-				77B86DABF939FBD3562FD18D66DA38BE /* PBXTargetDependency */,
-			);
-			name = "Pods-PracticeIt";
-			productName = "Pods-PracticeIt";
-			productReference = 8F71F389BF8C48BA8D35EFA2C58EF77E /* Pods_PracticeIt.framework */;
+			productReference = 53D78DD71396EDD9DA08375F3C4386D5 /* Pods_PracticeItTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9C21158A7B41D923AD9278EC173670D3 /* MZFormSheetPresentationController */ = {
@@ -788,24 +865,41 @@
 			);
 			name = MZFormSheetPresentationController;
 			productName = MZFormSheetPresentationController;
-			productReference = 9A1A1C3E57E004C298790C82071A903B /* MZFormSheetPresentationController.framework */;
+			productReference = F00E77D541F55E2F7986AA035A2445F2 /* MZFormSheetPresentationController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5E7EEB41E84B1DF9BFD573EE7AD1D28 /* UITextField+Shake */ = {
+		A7F56A69BE1373742F9A495EEB52F4D6 /* MarqueeLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12880283CF578310277C1463A2198E2B /* Build configuration list for PBXNativeTarget "UITextField+Shake" */;
+			buildConfigurationList = FC573E17B9E82AEECF44665A3394E642 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */;
 			buildPhases = (
-				D1DF3B6E98E00B4FBEAF3499783D5B42 /* Sources */,
-				F3CD3A2EBA16AACDAB24FE944BB6EE43 /* Frameworks */,
-				684577C39F3B4BA4350A1F46698FD885 /* Headers */,
+				E2AD079AB7FE8AA560EFCC0CEB59D59A /* Sources */,
+				265C4791346348551B0F9D8D451EEB53 /* Frameworks */,
+				3AB84F801F028F62DDE1A64FD65FAE8E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "UITextField+Shake";
-			productName = "UITextField+Shake";
-			productReference = 666710577D418201F473A278D77ECCEA /* UITextField_Shake.framework */;
+			name = MarqueeLabel;
+			productName = MarqueeLabel;
+			productReference = 76C53BB5DCE658551175E4919F58E68B /* MarqueeLabel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD59EFE42FF0B078A6FA93836096CF54 /* TableViewDragger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57E03C819FC4CEE5D8F6567F5A37EA36 /* Build configuration list for PBXNativeTarget "TableViewDragger" */;
+			buildPhases = (
+				F30761F9CA7B331AD9D606FABC2F1040 /* Sources */,
+				3BC86C7CA113B58A44EFD5E86FDE46D2 /* Frameworks */,
+				8CA6A8DC9970FC66F8D6D3402FBE1816 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableViewDragger;
+			productName = TableViewDragger;
+			productReference = 69476AF11DA01DDBB2DB4DE041BD2912 /* TableViewDragger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DFB4E2F730A9826B33B067653B48CEDF /* Pods-PracticeItUITests */ = {
@@ -822,7 +916,7 @@
 			);
 			name = "Pods-PracticeItUITests";
 			productName = "Pods-PracticeItUITests";
-			productReference = A69C13C988D17ED9EA96B91A96DAF887 /* Pods_PracticeItUITests.framework */;
+			productReference = 5A9D8BEC232FD2DF61F95B80E1612AEB /* Pods_PracticeItUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FFABAFE9408FF95CFC8B3C3770D56837 /* MZAppearance */ = {
@@ -839,7 +933,7 @@
 			);
 			name = MZAppearance;
 			productName = MZAppearance;
-			productReference = C188D471D3AE6A4FDB9319D258D9C608 /* MZAppearance.framework */;
+			productReference = C1BEC4E20904303AE5BD913EE682CC7E /* MZAppearance.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -859,18 +953,19 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B3F169517748730C4B75A447CE96A61B /* Products */;
+			productRefGroup = 26E9B3ED8634CDA81FB8CEE672062D28 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A7F56A69BE1373742F9A495EEB52F4D6 /* MarqueeLabel */,
 				FFABAFE9408FF95CFC8B3C3770D56837 /* MZAppearance */,
 				9C21158A7B41D923AD9278EC173670D3 /* MZFormSheetPresentationController */,
-				7C5E81301AB6601998841A8D3D165631 /* Pods-PracticeIt */,
+				2E3A8B3FC37F6106DA3B3DA7EE52D470 /* Pods-PracticeIt */,
 				6B794A8F185942142B935C9D6145F505 /* Pods-PracticeItTests */,
 				DFB4E2F730A9826B33B067653B48CEDF /* Pods-PracticeItUITests */,
-				332057E6C33A447FFE2F54673CAC064F /* SWTableViewCell */,
-				512B262A71A5C2D4A09CBD9725F015B3 /* TableViewDragger */,
-				D5E7EEB41E84B1DF9BFD573EE7AD1D28 /* UITextField+Shake */,
+				39A334E75511748DB30833FA4E57A176 /* SWTableViewCell */,
+				DD59EFE42FF0B078A6FA93836096CF54 /* TableViewDragger */,
+				52AC2D79F5AC952DCED9F55F7F22C5FC /* UITextField+Shake */,
 			);
 		};
 /* End PBXProject section */
@@ -884,22 +979,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		207F4A87EFA7315F6CE17EC2F5C68CC0 /* Sources */ = {
+		20CD9B064E79804C55FDB73BA9D00AF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E9CBA6321B6700FE24CCA1564A5F6B4 /* TableViewDragger-dummy.m in Sources */,
-				0D7892A5BBFEFEC63C490D869027926F /* TableViewDragger.swift in Sources */,
-				8DFA0FD3797683AD739466CD15263E0A /* TableViewDraggerCell.swift in Sources */,
-				19EA04796405E16F9DA0D8370BA25469 /* UIScrollViewExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23D034EB2E7FE0D28D0D098F0A9B10FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF1FD0C0547B02A2005E8D774C4B302B /* Pods-PracticeIt-dummy.m in Sources */,
+				D63F13CF4335E9BA5802EA0F21F3BC9F /* UITextField+Shake-dummy.m in Sources */,
+				790A553FBBAE93ED79A4761E18FBC09F /* UITextField+Shake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -921,26 +1006,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DEAD1E5CF5DADB221B995B373D526CC /* Sources */ = {
+		CB3649F3119C0E2FBC3A44259B5F9CB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59C83A4ADD95F9E427A75F577297EFA4 /* NSMutableArray+SWUtilityButtons.m in Sources */,
-				55AD3D708138ACAA02E3C81129403553 /* SWCellScrollView.m in Sources */,
-				694B4B9AF28D7F7ACD04118A67BB43BD /* SWLongPressGestureRecognizer.m in Sources */,
-				14D9A46D660F8DDC350D0E246386DFEB /* SWTableViewCell-dummy.m in Sources */,
-				76FCBF8180FB678D10BFBF8201679D4D /* SWTableViewCell.m in Sources */,
-				93B35A7DB1EC69FEF3F923D6A9B47EF2 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
-				CF1629C3A165E9C642F22A5E12C16665 /* SWUtilityButtonView.m in Sources */,
+				3825AD00FAB91C96FB9A7B433F639FF4 /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				06D133FAD9017910F550F8D4BA8EC124 /* SWCellScrollView.m in Sources */,
+				E7A034360FA53FD881E7F96A001F2239 /* SWLongPressGestureRecognizer.m in Sources */,
+				3E23A1BCE375B06FD36C40AE0BB7BC3C /* SWTableViewCell-dummy.m in Sources */,
+				FE8B8D0DAD1D8D4EC938912A3553A133 /* SWTableViewCell.m in Sources */,
+				9604D5AA9C8FDAD16E75E0DE922AD5B7 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
+				F17DEBC36CF613451DA0D77494EA886F /* SWUtilityButtonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1DF3B6E98E00B4FBEAF3499783D5B42 /* Sources */ = {
+		E2AD079AB7FE8AA560EFCC0CEB59D59A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3AB91BB5548F192BCEF3A623AD8C4AA /* UITextField+Shake-dummy.m in Sources */,
-				4B54C51E3F91327AB0E871D4A406A427 /* UITextField+Shake.m in Sources */,
+				2BBF4F351EEE0C59D58727F56EB2F643 /* MarqueeLabel-dummy.m in Sources */,
+				E43B7731C9C57A262F2B5AE87977EF88 /* MarqueeLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,32 +1048,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F30761F9CA7B331AD9D606FABC2F1040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCAF32DF814D774BB513370487731B99 /* TableViewDragger-dummy.m in Sources */,
+				F7536278B7866B83D6CFEDC9FC85D5CF /* TableViewDragger.swift in Sources */,
+				A9346F46616AB06F60ED7E156B0CD0FB /* TableViewDraggerCell.swift in Sources */,
+				5BA3C30C68F09F86A3433444E81B68CA /* UIScrollViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F90305C0DD301488FD30EA9BB90A69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				692CAA67C8AFF0AC8A8DF3DCBE3DE9A2 /* Pods-PracticeIt-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		29F94072E12E001F2BF0FA09A2027731 /* PBXTargetDependency */ = {
+		3861497C890221B1F82D45019FE9E83C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MZAppearance;
-			target = FFABAFE9408FF95CFC8B3C3770D56837 /* MZAppearance */;
-			targetProxy = 1DB537D4E149F9640780C45528DEF8B2 /* PBXContainerItemProxy */;
+			name = SWTableViewCell;
+			target = 39A334E75511748DB30833FA4E57A176 /* SWTableViewCell */;
+			targetProxy = 56D5CE4966F40E6F0AF61C8962DFB1B4 /* PBXContainerItemProxy */;
 		};
-		30FDAAF2BC607B5277D8247C65DB9657 /* PBXTargetDependency */ = {
+		39D564983B88EC9BDE3EAFDA2C00498D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MarqueeLabel;
+			target = A7F56A69BE1373742F9A495EEB52F4D6 /* MarqueeLabel */;
+			targetProxy = DAA680BC6F8E416930D2CDB8DDCE7E09 /* PBXContainerItemProxy */;
+		};
+		4A1A3C7F6693BC59848D499DEC567A57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MZFormSheetPresentationController;
 			target = 9C21158A7B41D923AD9278EC173670D3 /* MZFormSheetPresentationController */;
-			targetProxy = 70E7050A2EF2636882404FC60965007A /* PBXContainerItemProxy */;
+			targetProxy = CAFD60BAD902D7D3FE28A9B5B12FD322 /* PBXContainerItemProxy */;
 		};
-		71DE1B4326874E44C54511E574192442 /* PBXTargetDependency */ = {
+		A52FF983EEB2221A391388C4FA48DC12 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SWTableViewCell;
-			target = 332057E6C33A447FFE2F54673CAC064F /* SWTableViewCell */;
-			targetProxy = 9EED1C264A02C1CA62619165EA881E84 /* PBXContainerItemProxy */;
-		};
-		77B86DABF939FBD3562FD18D66DA38BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UITextField+Shake";
-			target = D5E7EEB41E84B1DF9BFD573EE7AD1D28 /* UITextField+Shake */;
-			targetProxy = 6404B4C04E5EC2C1D8FC33A1D291962D /* PBXContainerItemProxy */;
+			name = TableViewDragger;
+			target = DD59EFE42FF0B078A6FA93836096CF54 /* TableViewDragger */;
+			targetProxy = 4C09D1EC69E201D14205703D011F25BB /* PBXContainerItemProxy */;
 		};
 		C24D83747205B8494CA99A1611E1D247 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -996,18 +1100,24 @@
 			target = FFABAFE9408FF95CFC8B3C3770D56837 /* MZAppearance */;
 			targetProxy = C34ECFB9DE746913FA880E317AD4ADCD /* PBXContainerItemProxy */;
 		};
-		CCC06AB3E67FA5F876DBA0A99D460389 /* PBXTargetDependency */ = {
+		DFFA44EE1FA6E59CED13F36DC78B94AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TableViewDragger;
-			target = 512B262A71A5C2D4A09CBD9725F015B3 /* TableViewDragger */;
-			targetProxy = DE189EB9DFB157672EECC185B9583AF4 /* PBXContainerItemProxy */;
+			name = "UITextField+Shake";
+			target = 52AC2D79F5AC952DCED9F55F7F22C5FC /* UITextField+Shake */;
+			targetProxy = F1E844F8D854738CB4516EBB15F2AD90 /* PBXContainerItemProxy */;
+		};
+		E675A2D429E23582ADAD05DB0B7631C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MZAppearance;
+			target = FFABAFE9408FF95CFC8B3C3770D56837 /* MZAppearance */;
+			targetProxy = 8CA73C21E1B2C43C591997DDEF2383FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0752F808BC820BC843D4BCB72DE9A6C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F0CCA22832638C9262F74A7BC3AE973 /* MZAppearance.xcconfig */;
+			baseConfigurationReference = A1295CD454D8482D69F2A180E4F9367B /* MZAppearance.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1034,9 +1144,42 @@
 			};
 			name = Release;
 		};
-		260F0CB503B5C5C913396D9BC821BB4E /* Debug */ = {
+		126298E1AB2C232490939F9C66E4C741 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 470578BFF82F66054448A569F03C1FDA /* TableViewDragger.xcconfig */;
+			baseConfigurationReference = D105B03873E19AC361053C1D81FF613F /* Pods-PracticeIt.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PracticeIt/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PracticeIt/Pods-PracticeIt.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PracticeIt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		23517F82AF2FEBF2580A458AB3A6888F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 153B17103BF0B7FB6882108DB25E81B5 /* UITextField+Shake.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1047,17 +1190,16 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TableViewDragger/TableViewDragger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TableViewDragger/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/UITextField+Shake/UITextField+Shake-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextField+Shake/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TableViewDragger/TableViewDragger.modulemap";
+				MODULEMAP_FILE = "Target Support Files/UITextField+Shake/UITextField+Shake.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TableViewDragger;
+				PRODUCT_NAME = UITextField_Shake;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1097,38 +1239,9 @@
 			};
 			name = Release;
 		};
-		2A25979E63BDCD2FD91183AA55EE8273 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CAAAD2A6BF1C6F332F496CA239E0226 /* SWTableViewCell.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWTableViewCell/SWTableViewCell-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWTableViewCell/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SWTableViewCell/SWTableViewCell.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SWTableViewCell;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		42B5C3E429B3D108B8E149FFE282541A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1425800D33E188665592A2A6A7CDE1A /* MZFormSheetPresentationController.xcconfig */;
+			baseConfigurationReference = F43779A0613D0CFFC6D03BA675544684 /* MZFormSheetPresentationController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1149,40 +1262,6 @@
 				PRODUCT_NAME = MZFormSheetPresentationController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6A2F04734172D02CD08AC97EEF7AD2BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11564E41ADBD46AC28B9CF64646EC402 /* Pods-PracticeIt.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PracticeIt/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PracticeIt/Pods-PracticeIt.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PracticeIt;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1296,38 +1375,9 @@
 			};
 			name = Debug;
 		};
-		79D2C16C3CC4A73F54A0BB3F391B2913 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9834532C86B10630B66D597C8681A879 /* UITextField+Shake.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UITextField+Shake/UITextField+Shake-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UITextField+Shake/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UITextField+Shake/UITextField+Shake.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = UITextField_Shake;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		83B6C2255D756113925BEA9D041C308B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F0CCA22832638C9262F74A7BC3AE973 /* MZAppearance.xcconfig */;
+			baseConfigurationReference = A1295CD454D8482D69F2A180E4F9367B /* MZAppearance.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1354,9 +1404,43 @@
 			};
 			name = Debug;
 		};
-		BB6190697823DE2CC4F574DA408346E9 /* Release */ = {
+		86412937A858F5D82217B3360F0791BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 470578BFF82F66054448A569F03C1FDA /* TableViewDragger.xcconfig */;
+			baseConfigurationReference = 11564E41ADBD46AC28B9CF64646EC402 /* Pods-PracticeIt.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PracticeIt/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PracticeIt/Pods-PracticeIt.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PracticeIt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8CA2868B7727951A175C7F47AC1626C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE6825938157EA4B3235D63323189E56 /* TableViewDragger.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1382,6 +1466,152 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		A0F070B5C9BA06837F4A3F83EA1B10AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CEF4DB31FE22C174F08F3A2804E823 /* MarqueeLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MarqueeLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A58E0178AA83E13D116D5914FE95A22A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65600CFDEBCF872F20B1C149BFE33FF4 /* SWTableViewCell.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWTableViewCell/SWTableViewCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWTableViewCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SWTableViewCell/SWTableViewCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SWTableViewCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A81604BAD8E7926E431BFC4EFFC1ECC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE6825938157EA4B3235D63323189E56 /* TableViewDragger.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TableViewDragger/TableViewDragger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TableViewDragger/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TableViewDragger/TableViewDragger.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TableViewDragger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B6D11CAB34C58DE89E10E2F2FF249D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 153B17103BF0B7FB6882108DB25E81B5 /* UITextField+Shake.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITextField+Shake/UITextField+Shake-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextField+Shake/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITextField+Shake/UITextField+Shake.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UITextField_Shake;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BE95AB95F75A3524D69EB796557946BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CEF4DB31FE22C174F08F3A2804E823 /* MarqueeLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MarqueeLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C0CCEA32BF6C138A5554FA5059B22B1D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1422,7 +1652,7 @@
 		};
 		C26C14C6CB7E1FD6F842749B05255483 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1425800D33E188665592A2A6A7CDE1A /* MZFormSheetPresentationController.xcconfig */;
+			baseConfigurationReference = F43779A0613D0CFFC6D03BA675544684 /* MZFormSheetPresentationController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1449,71 +1679,9 @@
 			};
 			name = Release;
 		};
-		DD7783041AE71F4D75F15A84535A0E10 /* Release */ = {
+		DAFEBA7D629AD04013F781ADA48483A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9834532C86B10630B66D597C8681A879 /* UITextField+Shake.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UITextField+Shake/UITextField+Shake-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UITextField+Shake/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UITextField+Shake/UITextField+Shake.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = UITextField_Shake;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E796AEC7F39E06E7259E57440353582A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D105B03873E19AC361053C1D81FF613F /* Pods-PracticeIt.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PracticeIt/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PracticeIt/Pods-PracticeIt.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PracticeIt;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EA619253DACCCB37D516EBA9C4221435 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CAAAD2A6BF1C6F332F496CA239E0226 /* SWTableViewCell.xcconfig */;
+			baseConfigurationReference = 65600CFDEBCF872F20B1C149BFE33FF4 /* SWTableViewCell.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1576,11 +1744,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12880283CF578310277C1463A2198E2B /* Build configuration list for PBXNativeTarget "UITextField+Shake" */ = {
+		02E78B8527223CEF4997ED556C3284DE /* Build configuration list for PBXNativeTarget "UITextField+Shake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				79D2C16C3CC4A73F54A0BB3F391B2913 /* Debug */,
-				DD7783041AE71F4D75F15A84535A0E10 /* Release */,
+				23517F82AF2FEBF2580A458AB3A6888F /* Debug */,
+				B6D11CAB34C58DE89E10E2F2FF249D1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1594,6 +1762,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		57E03C819FC4CEE5D8F6567F5A37EA36 /* Build configuration list for PBXNativeTarget "TableViewDragger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A81604BAD8E7926E431BFC4EFFC1ECC4 /* Debug */,
+				8CA2868B7727951A175C7F47AC1626C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B121CEFBDFC68FD73C0C6BCD04DD223 /* Build configuration list for PBXNativeTarget "Pods-PracticeIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86412937A858F5D82217B3360F0791BC /* Debug */,
+				126298E1AB2C232490939F9C66E4C741 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		828019692235DCF35A70F03A6366A87C /* Build configuration list for PBXNativeTarget "MZFormSheetPresentationController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1603,11 +1789,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A653B764534FFACEBFF0BA96C1C10062 /* Build configuration list for PBXNativeTarget "Pods-PracticeIt" */ = {
+		BB565FCDACE8ACF51C8264F7A46E69C0 /* Build configuration list for PBXNativeTarget "SWTableViewCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A2F04734172D02CD08AC97EEF7AD2BB /* Debug */,
-				E796AEC7F39E06E7259E57440353582A /* Release */,
+				A58E0178AA83E13D116D5914FE95A22A /* Debug */,
+				DAFEBA7D629AD04013F781ADA48483A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1617,24 +1803,6 @@
 			buildConfigurations = (
 				707CD72E1F28E75249F36E1A185FD41E /* Debug */,
 				281B36EA331EA3FA8554FC37D5BD5637 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CBF4A698C33A7F56F3E4B80A824534ED /* Build configuration list for PBXNativeTarget "TableViewDragger" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				260F0CB503B5C5C913396D9BC821BB4E /* Debug */,
-				BB6190697823DE2CC4F574DA408346E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DB53FB09265A88497643CCBE534EE81B /* Build configuration list for PBXNativeTarget "SWTableViewCell" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A25979E63BDCD2FD91183AA55EE8273 /* Debug */,
-				EA619253DACCCB37D516EBA9C4221435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1653,6 +1821,15 @@
 			buildConfigurations = (
 				83B6C2255D756113925BEA9D041C308B /* Debug */,
 				0752F808BC820BC843D4BCB72DE9A6C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC573E17B9E82AEECF44665A3394E642 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE95AB95F75A3524D69EB796557946BC /* Debug */,
+				A0F070B5C9BA06837F4A3F83EA1B10AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

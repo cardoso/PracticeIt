@@ -45,9 +45,11 @@
     if([self currentTask].currentTime == 0)
         [self.delegate practice:self didStartTask:[self currentTask]];
     
-    [self currentTask].currentTime++;
+    [self currentTask].currentTime += 0.1;
     
-    if([self currentTask].currentTime > [self currentTask].time) {
+    [self.delegate didTimerTickOnPractice:self];
+    
+    if([self currentTask].currentTime >= [self currentTask].time) {
         [self.delegate practice:self willFinishTask:[self currentTask]];
         
         self.currentTaskIndex++;
@@ -59,36 +61,7 @@
             [self.delegate didFinishPractice:self];
         }
     }
-    
-    [self.delegate didTimerTickOnPractice:self];
 }
-
-/*- (BOOL)timerTick {
-    if(self.isPaused){
-        return NO;
-    }
-    if(self.currentTaskIndex == -1){
-        self.currentTaskIndex = 0;
-        //[self.delegate practice:self didStartTask:[self currentTask]];
-        [self.delegate onPracticeStarted];
-    }
-    [self currentTask].currentTime++;
-    
-    if([self currentTask].currentTime > [self currentTask].time){
-        self.currentTask.currentTime = self.currentTask.time;
-        self.currentTaskIndex++;
-        if(self.currentTaskIndex < [self.tasks count]){
-            //[self.delegate practice:self didStartTask:[self currentTask]];
-        }else{
-            self.currentTaskIndex = -1;
-            [self stopTimer];
-            [self.delegate onPracticeFinished];
-        }
-        
-    }
-    [self.delegate onTimerTick];
-    return YES;
-}*/
 
 -(BOOL)pause {
     if([self isPaused])
@@ -125,7 +98,7 @@
 }
 
 -(BOOL)nextTask {
-    if(self.currentTaskIndex < 0){
+    /*if(self.currentTaskIndex < 0){
         return NO;
     }
     
@@ -133,7 +106,18 @@
         return NO;
     }
     
-    self.currentTask.currentTime = self.currentTask.time-1;
+    self.currentTask.currentTime = self.currentTask.time;
+    
+    return YES;*/
+    
+    if(self.currentTaskIndex >= [self taskCount]){
+        return NO;
+    }
+    
+    [self currentTask].currentTime = [self currentTask].time;
+    [self timerTick];
+    
+    [self currentTask].currentTime = 0;
     
     return YES;
 }
@@ -143,7 +127,7 @@
         return NO;
     }
     
-    [self currentTask].currentTime = -1;
+    [self currentTask].currentTime = 0;
     [self timerTick];
     
     self.currentTaskIndex--;
@@ -159,7 +143,7 @@
 
 -(void)startTimer {
     [self.timer invalidate];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timerTick) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(timerTick) userInfo:nil repeats:YES];
 }
 
 -(void)stopTimer {

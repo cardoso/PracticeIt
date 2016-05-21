@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '512B262A71A5C2D4A09CBD9725F015B3'
+               BlueprintIdentifier = 'DD59EFE42FF0B078A6FA93836096CF54'
                BlueprintName = 'TableViewDragger'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TableViewDragger.framework'>

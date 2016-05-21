@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MarqueeLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PracticeIt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>332057E6C33A447FFE2F54673CAC064F</key>
+		<key>2E3A8B3FC37F6106DA3B3DA7EE52D470</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>512B262A71A5C2D4A09CBD9725F015B3</key>
+		<key>39A334E75511748DB30833FA4E57A176</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52AC2D79F5AC952DCED9F55F7F22C5FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C5E81301AB6601998841A8D3D165631</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9C21158A7B41D923AD9278EC173670D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D5E7EEB41E84B1DF9BFD573EE7AD1D28</key>
+		<key>A7F56A69BE1373742F9A495EEB52F4D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD59EFE42FF0B078A6FA93836096CF54</key>
 		<dict>
 			<key>primary</key>
 			<true/>

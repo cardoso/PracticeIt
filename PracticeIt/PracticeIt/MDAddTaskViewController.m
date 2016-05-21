@@ -14,12 +14,15 @@
 
 #import "MDMediaPickerController.h"
 
+#import "MarqueeLabel/MarqueeLabel.h"
+
 @interface MDAddTaskViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextField *ttsMessageTextField;
-@property (strong, nonatomic) IBOutlet UILabel *audioLabel;
+@property (strong, nonatomic) IBOutlet MarqueeLabel *audioLabel;
 @property (strong, nonatomic) IBOutlet MDTimeIntervalPickerView *timeIntervalPicker;
+@property (strong, nonatomic) IBOutlet UIButton *removeAudioButton;
 
 @property MDMediaPickerController *audioPicker;
 @property MPMediaItem *pickedAudio;
@@ -46,6 +49,8 @@
     
     self.cancelOutlet.layer.cornerRadius = 5;
     self.saveOutlet.layer.cornerRadius = 5;
+    
+    self.removeAudioButton.hidden = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -59,12 +64,17 @@
         if(task.audio) {
             self.audioLabel.text = task.audio.title;
             self.pickedAudio = task.audio;
+            self.removeAudioButton.hidden = NO;
         }
         else
-            self.audioLabel.text = @"No audio (tap to choose)";
+            self.audioLabel.text = @"No audio";
         
         self.isEditingTaskLoaded = YES;
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self.audioLabel triggerScrollStart];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -81,10 +91,20 @@
     [self presentViewController:self.audioPicker animated:YES completion:nil];
 }
 
+- (IBAction)removeAudioPressed:(UIButton *)sender {
+    if(self.pickedAudio) {
+        self.pickedAudio = nil;
+        self.removeAudioButton.hidden = YES;
+        self.audioLabel.text = @"No audio";
+    }
+}
+
 -(void)mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection {
     self.pickedAudio = [[mediaItemCollection items] objectAtIndex:0];
     self.audioLabel.text = self.pickedAudio.title;
     [self.audioPicker dismissViewControllerAnimated:YES completion:nil];
+    
+    self.removeAudioButton.hidden = NO;
 }
 
 -(void)mediaPickerDidCancel:(MPMediaPickerController *)mediaPicker {
