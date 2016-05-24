@@ -27,6 +27,14 @@
 
 @property (strong, nonatomic) TableViewDragger *dragger;
 
+
+@property (strong, nonatomic) IBOutlet UIImageView *tutorial1ImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *tutorial2ImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *tutorial3ImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *tutorial4ImageView;
+
+@property (strong, nonatomic) NSTimer *marqueeTimer;
+
 @property BOOL isDragging;
 
 @end
@@ -55,11 +63,44 @@
     self.manageView.practiceIt = self.practiceIt;
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    self.tutorial1ImageView.alpha = 0;
+    self.tutorial2ImageView.alpha = 0;
+    self.tutorial3ImageView.alpha = 0;
+    self.tutorial4ImageView.alpha = 0;
+    
+    self.marqueeTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(marqueeTimerTicked) userInfo:self repeats:YES];
+    
+    if([self.practiceIt practiceCount] == 0) {
+        self.practiceIt.tutorialStep = 0;
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [self.tableOfPractices reloadData];
     [self.practiceIt saveData];
+    
+    // TUTORIALS
+    if(self.practiceIt.tutorialStep == 0) {
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial1ImageView.alpha = 1;
+        [UIView commitAnimations];
+    }
+    
+    if(self.practiceIt.tutorialStep == 1) {
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial2ImageView.alpha = 1;
+        [UIView commitAnimations];
+    }
+    
+    if(self.practiceIt.tutorialStep == 3) {
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial4ImageView.alpha = 1;
+        [UIView commitAnimations];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,6 +197,21 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.practiceIt indexForPractice:practice] inSection:0];
     [self.tableOfPractices insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     [self.tableOfPractices endUpdates];
+    
+    if(self.practiceIt.tutorialStep == 0) {
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial1ImageView.alpha = 0;
+        [UIView commitAnimations];
+        
+        self.practiceIt.tutorialStep = 1;
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial2ImageView.alpha = 1;
+        [UIView commitAnimations];
+    }
+    
     [self.practiceIt saveData];
 }
 
@@ -182,11 +238,24 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 #pragma mark - TableViewDelegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //[self performSegueWithIdentifier:@"segueToManagePractice" sender:indexPath];
+    //[self performSegueWithIdentifier:@"segueToManagePractice" sender:indexPath]
+    
     self.manageView.synthesizer = self.synthesizer;
     [self.manageView loadViewIfNeeded];
-    [self.manageView loadPractice:[self.practiceIt practiceAtIndex:indexPath.row]];
     [self.splitViewController showDetailViewController:self.manageView.navigationController sender:self];
+    
+    if(self.practiceIt.tutorialStep == 3) {
+        self.practiceIt.tutorialStep = 4;
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial4ImageView.alpha = 0;
+        [UIView commitAnimations];
+        
+        [self.practiceIt saveData];
+    }
+    
+    [self.manageView loadPractice:[self.practiceIt practiceAtIndex:indexPath.row]];
 }
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -277,11 +346,53 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
     }
 }
 
+-(void)swipeableTableViewCellDidEndScrolling:(SWTableViewCell *)cell {
+    if(self.practiceIt.tutorialStep == 1) {
+        self.practiceIt.tutorialStep = 2;
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial2ImageView.alpha = 0;
+        [UIView commitAnimations];
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial3ImageView.alpha = 1;
+        [UIView commitAnimations];
+    }
+}
+
+-(void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state {
+    if(state == 0 && self.practiceIt.tutorialStep <= 2) {
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial3ImageView.alpha = 0;
+        [UIView commitAnimations];
+        
+        self.practiceIt.tutorialStep = 3;
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:1];
+        self.tutorial4ImageView.alpha = 1;
+        [UIView commitAnimations];
+    }
+}
+
 //#pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 //}
+
+- (void) marqueeTimerTicked {
+    NSLog(@"wow0");
+    for(MDPracticeTableViewCell *cell in self.tableOfPractices.visibleCells) {
+        NSLog(@"wow1");
+        if(!cell.titleLabel.awayFromHome) {
+            [cell.titleLabel triggerScrollStart];
+        }
+    }
+}
 
 @end

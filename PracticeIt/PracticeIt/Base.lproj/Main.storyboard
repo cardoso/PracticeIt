@@ -195,13 +195,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Practice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no9-sm-KiU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Practice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no9-sm-KiU" customClass="MarqueeLabel">
                                                     <rect key="frame" x="48" y="8" width="544" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="XwQ-2V-wD1"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="labelize" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="marqueeType">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ST-xX-UBX">
                                                     <rect key="frame" x="8" y="8" width="32" height="32"/>
@@ -230,13 +247,49 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="XVY-en-ASS"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial1" translatesAutoresizingMaskIntoConstraints="NO" id="GCH-oH-mgY">
+                                <rect key="frame" x="318" y="64" width="256" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="2w7-5T-hGa"/>
+                                    <constraint firstAttribute="width" constant="256" id="fh1-JS-Z6b"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial2" translatesAutoresizingMaskIntoConstraints="NO" id="XWg-vi-yhO" userLabel="tutorial2 Image View">
+                                <rect key="frame" x="151" y="131" width="298" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="OxE-J4-szG"/>
+                                    <constraint firstAttribute="height" constant="53" id="mtM-v3-fRY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial3" translatesAutoresizingMaskIntoConstraints="NO" id="QnK-8o-X7K" userLabel="tutorial3 Image View">
+                                <rect key="frame" x="196" y="131" width="208" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Rzi-SL-HMa"/>
+                                    <constraint firstAttribute="width" constant="208" id="XRr-Hy-ZPP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial4" translatesAutoresizingMaskIntoConstraints="NO" id="KH4-dU-kel" userLabel="tutorial4 Image View">
+                                <rect key="frame" x="163" y="116" width="270" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="5ny-vF-NeG"/>
+                                    <constraint firstAttribute="height" constant="131" id="66W-ef-Jcg"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uO7-r3-Qhd" secondAttribute="bottom" id="7rf-aK-BUq"/>
+                            <constraint firstItem="uO7-r3-Qhd" firstAttribute="top" secondItem="QnK-8o-X7K" secondAttribute="bottom" constant="-184" id="C5N-WS-2g7"/>
                             <constraint firstItem="uO7-r3-Qhd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SCt-y5-qEL"/>
+                            <constraint firstItem="KH4-dU-kel" firstAttribute="centerX" secondItem="uO7-r3-Qhd" secondAttribute="centerX" constant="-2" id="U5M-sj-BUv"/>
                             <constraint firstAttribute="trailing" secondItem="uO7-r3-Qhd" secondAttribute="trailing" id="U6T-YZ-tCn"/>
+                            <constraint firstItem="QnK-8o-X7K" firstAttribute="centerX" secondItem="uO7-r3-Qhd" secondAttribute="centerX" id="ZDR-ea-P6w"/>
+                            <constraint firstItem="GCH-oH-mgY" firstAttribute="leading" secondItem="uO7-r3-Qhd" secondAttribute="trailing" constant="-282" id="gBW-p6-WE5"/>
                             <constraint firstItem="uO7-r3-Qhd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h3H-9w-GZm"/>
+                            <constraint firstItem="XWg-vi-yhO" firstAttribute="centerX" secondItem="uO7-r3-Qhd" secondAttribute="centerX" id="hu6-5u-xcj"/>
+                            <constraint firstItem="uO7-r3-Qhd" firstAttribute="top" secondItem="XWg-vi-yhO" secondAttribute="bottom" constant="-184" id="pqL-Ea-EKs"/>
+                            <constraint firstItem="uO7-r3-Qhd" firstAttribute="top" secondItem="KH4-dU-kel" secondAttribute="bottom" constant="-247" id="uhl-b8-azb"/>
+                            <constraint firstItem="uO7-r3-Qhd" firstAttribute="top" secondItem="GCH-oH-mgY" secondAttribute="bottom" constant="-117" id="zdS-gh-pjX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Practice It" id="mh9-BY-2z3">
@@ -250,6 +303,10 @@
                     <connections>
                         <outlet property="AddBarButton" destination="Q7d-dV-Ka6" id="gLZ-Nj-AAS"/>
                         <outlet property="tableOfPractices" destination="uO7-r3-Qhd" id="B41-DS-5FI"/>
+                        <outlet property="tutorial1ImageView" destination="GCH-oH-mgY" id="l4D-2Y-Y2Y"/>
+                        <outlet property="tutorial2ImageView" destination="XWg-vi-yhO" id="DlL-MG-z7o"/>
+                        <outlet property="tutorial3ImageView" destination="QnK-8o-X7K" id="VBw-lM-OZ3"/>
+                        <outlet property="tutorial4ImageView" destination="KH4-dU-kel" id="H2q-Yu-bRt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -338,7 +395,7 @@
                                                                 <constraint firstAttribute="width" constant="32" id="Af2-pD-6k5"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD3-ze-jyU">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VD3-ze-jyU" customClass="MarqueeLabel">
                                                             <rect key="frame" x="48" y="0.0" width="536" height="35"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="35" id="Dq0-eK-0SF"/>
@@ -346,8 +403,22 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="labelize" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="marqueeType">
+                                                                    <integer key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBH-cZ-8dK">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBH-cZ-8dK" customClass="MarqueeLabel">
                                                             <rect key="frame" x="48" y="40" width="536" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="mXr-Wv-4Vl"/>
@@ -355,6 +426,20 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="labelize" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="marqueeType">
+                                                                    <integer key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
@@ -393,11 +478,25 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uld-V6-AXg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uld-V6-AXg" customClass="MarqueeLabel">
                                                     <rect key="frame" x="8" y="8" width="584" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="marqueeType">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="labelize" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -432,14 +531,32 @@
                                     <outlet property="delegate" destination="4Es-OK-pgE" id="uK5-Gh-84z"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial5" translatesAutoresizingMaskIntoConstraints="NO" id="kXh-8O-Vrv">
+                                <rect key="frame" x="330" y="63" width="240" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="JpS-9H-wDx"/>
+                                    <constraint firstAttribute="width" constant="240" id="lDA-um-VKl"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial7" translatesAutoresizingMaskIntoConstraints="NO" id="zyK-GL-C2l">
+                                <rect key="frame" x="221" y="461" width="172" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="Gla-34-z1Y"/>
+                                    <constraint firstAttribute="height" constant="88" id="lv0-J3-dPW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zyK-GL-C2l" firstAttribute="centerX" secondItem="PIf-gZ-OBm" secondAttribute="centerX" constant="7" id="0z0-iW-0Oa"/>
+                            <constraint firstItem="kXh-8O-Vrv" firstAttribute="top" secondItem="Tsv-y9-Hqv" secondAttribute="bottom" constant="-1" id="9fn-6u-eeT"/>
                             <constraint firstItem="X1M-nE-wzj" firstAttribute="leading" secondItem="b1D-X0-4MX" secondAttribute="leading" id="Br0-Su-Ywi"/>
+                            <constraint firstItem="zyK-GL-C2l" firstAttribute="top" secondItem="PIf-gZ-OBm" secondAttribute="bottom" constant="-95" id="FIA-f6-dUO"/>
                             <constraint firstAttribute="trailing" secondItem="PIf-gZ-OBm" secondAttribute="trailing" id="Gut-Jj-JI4"/>
                             <constraint firstAttribute="trailing" secondItem="X1M-nE-wzj" secondAttribute="trailing" id="Shr-pk-1Ww"/>
                             <constraint firstItem="dkk-7r-SKk" firstAttribute="top" secondItem="X1M-nE-wzj" secondAttribute="bottom" id="W7I-3B-KAC"/>
                             <constraint firstItem="PIf-gZ-OBm" firstAttribute="top" secondItem="Tsv-y9-Hqv" secondAttribute="bottom" id="c3W-d4-MG0"/>
+                            <constraint firstItem="kXh-8O-Vrv" firstAttribute="leading" secondItem="PIf-gZ-OBm" secondAttribute="trailing" constant="-270" id="g2v-62-aff"/>
                             <constraint firstItem="PIf-gZ-OBm" firstAttribute="leading" secondItem="b1D-X0-4MX" secondAttribute="leading" id="u3g-WE-I0S"/>
                             <constraint firstItem="X1M-nE-wzj" firstAttribute="top" secondItem="PIf-gZ-OBm" secondAttribute="bottom" id="uE0-Ed-PjB"/>
                         </constraints>
@@ -457,6 +574,8 @@
                         <outlet property="startButton" destination="2Y2-ev-Yix" id="Bhr-JG-4uS"/>
                         <outlet property="tableOfTasks" destination="PIf-gZ-OBm" id="2BM-kl-wcl"/>
                         <outlet property="toolbar" destination="X1M-nE-wzj" id="sPf-TO-nmo"/>
+                        <outlet property="tutorial5ImageView" destination="kXh-8O-Vrv" id="95a-eF-rwA"/>
+                        <outlet property="tutorial6ImageView" destination="zyK-GL-C2l" id="VnH-fk-BWG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6u-h1-T5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -697,6 +816,12 @@
     <resources>
         <image name="icon_chat" width="512" height="512"/>
         <image name="megaphone" width="512" height="512"/>
+        <image name="tutorial1" width="521" height="72"/>
+        <image name="tutorial2" width="480" height="90"/>
+        <image name="tutorial3" width="319" height="82"/>
+        <image name="tutorial4" width="363" height="220"/>
+        <image name="tutorial5" width="442" height="54"/>
+        <image name="tutorial7" width="253" height="132"/>
         <image name="x_button" width="128" height="128"/>
     </resources>
 </document>
