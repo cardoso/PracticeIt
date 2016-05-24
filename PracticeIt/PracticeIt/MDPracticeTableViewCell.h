@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MarqueeLabel/MarqueeLabel.h"
 #import "SWTableViewCell.h"
 
 // SWTableViewCell pod
 @interface MDPracticeTableViewCell : SWTableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet MarqueeLabel *titleLabel;
 
 @end

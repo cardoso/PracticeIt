@@ -15,6 +15,8 @@
 @property NSMutableArray *practices;
 @property NSObject<MDPracticeItDelegate> *delegate;
 
+@property NSInteger tutorialStep;
+
 
 -(MDPractice*)practiceAtIndex:(NSInteger)index;
 -(NSInteger)indexForPractice:(MDPractice*)practice;

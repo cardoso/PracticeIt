@@ -31,6 +31,11 @@
 @property TableViewDragger *dragger;
 @property BOOL isDragging;
 
+@property (strong, nonatomic) IBOutlet UIImageView *tutorial5ImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *tutorial6ImageView;
+
+@property (strong, nonatomic) NSTimer *marqueeTimer;
+
 @end
 
 @implementation MDManagePracticeViewController
@@ -56,6 +61,11 @@
     [self loadPractice:nil];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    self.tutorial5ImageView.alpha = 0;
+    self.tutorial6ImageView.alpha = 0;
+    
+    self.marqueeTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(marqueeTimerTicked) userInfo:self repeats:YES];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -88,6 +98,14 @@
         else [self setStartPauseEnabled:NO];
         
         [self.navigationItem.rightBarButtonItem setEnabled:YES];
+        
+        if(self.practiceIt.tutorialStep == 4) {
+            [UIView beginAnimations:@"asd" context:nil];
+            [UIView setAnimationDuration:0.5];
+            self.tutorial5ImageView.alpha = 1;
+            [UIView commitAnimations];
+        }
+        
     }
     else {
         self.practice = nil;
@@ -296,6 +314,20 @@
     
     if([self.practice taskCount] == 1)
         [self setStartPauseEnabled:YES];
+    
+    if(self.practiceIt.tutorialStep == 4) {
+        self.practiceIt.tutorialStep = 5;
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial5ImageView.alpha = 0;
+        [UIView commitAnimations];
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:1];
+        self.tutorial6ImageView.alpha = 1;
+        [UIView commitAnimations];
+    }
 }
 
 -(void)practice:(id)practice didEditTask:(MDTask *)task {
@@ -312,10 +344,17 @@
 }
 
 -(void)practice:(MDPractice*)practice willRemoveTask:(MDTask *)task {
-    [self.practice previousTask];
     
-    if([self.practice taskCount] == 1)
+    if([self.practice indexForTask:task] == [self.practice taskCount] -1) {
+        [self.practice reset];
+    }
+    
+    if([self.practice taskCount] == 1) {
+        [self.practice reset];
         [self setStartPauseEnabled:NO];
+    }
+    
+    [self.practice reset];
 }
 
 -(void)practice:(id)practice didRemoveTask:(MDTask *)task {
@@ -351,7 +390,14 @@
         self.audioPlayer = nil;
     }
 
-    
+    if(self.practiceIt.tutorialStep == 5) {
+        self.practiceIt.tutorialStep = 6;
+        
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:0.5];
+        self.tutorial6ImageView.alpha = 0;
+        [UIView commitAnimations];
+    }
 }
 
 -(void)practice:(id)practice willFinishTask:(MDTask *)task {
@@ -361,15 +407,7 @@
 }
 
 -(void)didStartPractice:(MDPractice*)practice {
-    /*NSLog(@"%@",self.actionsToolbar.items);
-    UIBarButtonItem *pause = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:nil action:nil];*/
-    
-    /*self.actionsToolbar.items = pause;
-    [[self.actionsToolbar setItems:[[self.actionsToolbar.items mutableCopy] replaceObjectAtIndex:3 withObject:pause]] ];
-    NSMutableArray *placeholder = [[NSMutableArray alloc] init];
-    placeholder = [self.actionsToolbar.items mutableCopy];
-    [placeholder replaceObjectAtIndex:3 withObject:pause];
-    self.actionsToolbar.items = placeholder;*/
+
 }
 
 -(void)didFinishPractice:(MDPractice*)practice {
@@ -421,6 +459,24 @@
             [self.tableOfTasks deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         }
         [self.tableOfTasks endUpdates];
+    }
+}
+
+- (void) marqueeTimerTicked {
+    NSLog(@"wow0");
+    for(MDTaskTableViewCell *cell in self.tableOfTasks.visibleCells) {
+
+        if(!cell.titleLabel.awayFromHome) {
+            [cell.titleLabel triggerScrollStart];
+        }
+        
+        if(!cell.audioLabel.awayFromHome) {
+            [cell.audioLabel triggerScrollStart];
+        }
+        
+        if(!cell.ttsMessageLabel.awayFromHome) {
+            [cell.ttsMessageLabel triggerScrollStart];
+        }
     }
 }
 

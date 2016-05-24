@@ -100,6 +100,64 @@
 }
 
 -(BOOL)loadData {
+    BOOL result1 = [self loadPractices];
+    BOOL result2 = [self loadUserProperties];
+    
+    return result1 && result2;
+}
+
+-(BOOL)saveData {
+    BOOL result1 = [self savePractices];
+    BOOL result2 = [self saveUserProperties];
+    
+    return result1 && result2;
+}
+
+-(BOOL)savePractices {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"practices.plist"];
+    
+    NSMutableArray *arrPractices = [NSMutableArray array];
+    
+    for(MDPractice *practice in self.practices) {
+        
+        NSDictionary *dictPractice = [NSMutableDictionary dictionary];
+        
+        [dictPractice setValue:practice.title forKey:@"title"];
+        [dictPractice setValue:practice.desc forKey:@"desc"];
+        [dictPractice setValue:practice.iconName forKey:@"iconName"];
+        
+        NSMutableArray *arrTasks = [NSMutableArray array];
+        
+        for(MDTask *task in practice.tasks) {
+            NSMutableDictionary *dictTask = [NSMutableDictionary dictionary];
+            
+            [dictTask setValue:task.title forKey:@"title"];
+            [dictTask setValue:task.ttsMessage forKey:@"ttsMessage"];
+            [dictTask setValue:[NSNumber numberWithUnsignedLongLong:task.audio.persistentID] forKey:@"audio"];
+            [dictTask setValue:[NSNumber numberWithDouble:task.time] forKey:@"time"];
+            
+            [arrTasks addObject:dictTask];
+        }
+        
+        [dictPractice setValue:arrTasks forKey:@"tasks"];
+        
+        [arrPractices addObject:dictPractice];
+    }
+    
+    NSError *error = nil;
+    
+    NSData *plistData = [NSPropertyListSerialization dataWithPropertyList:arrPractices format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
+    
+    if(plistData) {
+        [plistData writeToFile:plistPath atomically:YES];
+    }
+    
+    return YES;
+}
+
+-(BOOL)loadPractices {
     NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPath = [paths objectAtIndex:0];
     NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"practices.plist"];
@@ -148,43 +206,37 @@
     return YES;
 }
 
--(BOOL)saveData {
+-(BOOL)loadUserProperties {
     NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPath = [paths objectAtIndex:0];
-    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"practices.plist"];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"user.plist"];
     
-    NSMutableArray *arrPractices = [NSMutableArray array];
-    
-    for(MDPractice *practice in self.practices) {
-        
-        NSDictionary *dictPractice = [NSMutableDictionary dictionary];
-        
-        [dictPractice setValue:practice.title forKey:@"title"];
-        [dictPractice setValue:practice.desc forKey:@"desc"];
-        [dictPractice setValue:practice.iconName forKey:@"iconName"];
-        
-        NSMutableArray *arrTasks = [NSMutableArray array];
-        
-        for(MDTask *task in practice.tasks) {
-            NSMutableDictionary *dictTask = [NSMutableDictionary dictionary];
-            
-            [dictTask setValue:task.title forKey:@"title"];
-            [dictTask setValue:task.ttsMessage forKey:@"ttsMessage"];
-            [dictTask setValue:[NSNumber numberWithUnsignedLongLong:task.audio.persistentID] forKey:@"audio"];
-            [dictTask setValue:[NSNumber numberWithDouble:task.time] forKey:@"time"];
-            
-            [arrTasks addObject:dictTask];
-        }
-        
-        [dictPractice setValue:arrTasks forKey:@"tasks"];
-        
-        [arrPractices addObject:dictPractice];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+    {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"user" ofType:@"plist"];
     }
     
-    NSError *error = nil;
-    //NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:arrPractices format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
-    NSData *plistData = [NSPropertyListSerialization dataWithPropertyList:arrPractices format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
+    NSDictionary *userPropertiesDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
+    
+    self.tutorialStep = ((NSNumber*)[userPropertiesDictionary objectForKey:@"tutorialStep"]).integerValue;
+    
+    return YES;
+}
 
+-(BOOL)saveUserProperties {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"user.plist"];
+    
+    NSMutableDictionary *userPropertiesDictionary = [NSMutableDictionary dictionary];
+    
+    [userPropertiesDictionary setObject:[NSNumber numberWithInteger:self.tutorialStep] forKey:@"tutorialStep"];
+    
+    NSError *error = nil;
+
+    NSData *plistData = [NSPropertyListSerialization dataWithPropertyList:userPropertiesDictionary format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
+    
     if(plistData) {
         [plistData writeToFile:plistPath atomically:YES];
     }
