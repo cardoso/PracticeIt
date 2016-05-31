@@ -147,9 +147,6 @@
     oldSelectedCell.layer.borderWidth = 0;
     selectedCell.layer.borderWidth = 2;
     
-    
-    NSLog(@"%@ %@", oldSelectedCell, selectedCell);
-    
     self.selectedIconIndex = indexPath.row;
 }
 

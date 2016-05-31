@@ -386,9 +386,7 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 //}
 
 - (void) marqueeTimerTicked {
-    NSLog(@"wow0");
     for(MDPracticeTableViewCell *cell in self.tableOfPractices.visibleCells) {
-        NSLog(@"wow1");
         if(!cell.titleLabel.awayFromHome) {
             [cell.titleLabel triggerScrollStart];
         }

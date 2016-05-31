@@ -28,7 +28,6 @@
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle {
-    NSLog(@"asd");
     return UIStatusBarStyleDefault;
 }
 
