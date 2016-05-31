@@ -6,13 +6,14 @@
 //
 //
 
-#import "MZFormSheetPresentationViewController.h"
-#import "MZFormSheetPresentationViewControllerSegue.h"
+#import "SWTableViewCell/SWTableViewCell.h"
+
+#import "MZFormSheetPresentationController/MZFormSheetPresentationViewController.h"
+#import "MZFormSheetPresentationController/MZFormSheetPresentationViewControllerSegue.h"
 
 #import "MDManagePracticeViewController.h"
 #import "MDTaskTableViewCell.h"
 #import "MDAddTaskViewController.h"
-
 
 @interface MDManagePracticeViewController ()
 
@@ -463,7 +464,6 @@
 }
 
 - (void) marqueeTimerTicked {
-    NSLog(@"wow0");
     for(MDTaskTableViewCell *cell in self.tableOfTasks.visibleCells) {
 
         if(!cell.titleLabel.awayFromHome) {
