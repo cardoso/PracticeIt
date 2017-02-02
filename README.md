@@ -5,6 +5,12 @@ My first published iOS App. A productivity app written in Objective-C.
 * Antônio Matheus Martins Cardoso
 * Daniel Silva Alves
 
+## Preview
+![PREVIEW1](https://github.com/matheusmcardoso/PracticeIt/blob/master/media/00_createpractices.jpeg) ![PREVIEW2](https://github.com/matheusmcardoso/PracticeIt/blob/master/media/01_practices.jpeg)
+![PREVIEW3](https://github.com/matheusmcardoso/PracticeIt/blob/master/media/02_createtasks.jpeg)
+![PREVIEW4](https://github.com/matheusmcardoso/PracticeIt/blob/master/media/03_tasks.jpeg)
+
+
 ## Showcased Skills
 ### Some of the skills showcased in this project are:
 
