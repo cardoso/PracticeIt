@@ -2,8 +2,8 @@
 My first published iOS App. A productivity app written in Objective-C.
 
 ## Developers
-* Matheus Cardoso - @cardoso
-* Daniel Silva - @dskwf
+* Matheus Cardoso - [@cardoso](https://github.com/cardoso)
+* Daniel Silva - [@dskwf](https://github.com/dskwf)
 
 ## Preview
 ![PREVIEW1](https://github.com/matheusmcardoso/PracticeIt/blob/master/media/00_createpractices.jpeg) ![PREVIEW2](https://github.com/matheusmcardoso/PracticeIt/blob/master/media/01_practices.jpeg)
