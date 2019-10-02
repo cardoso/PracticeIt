@@ -52,9 +52,9 @@
     
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
     
-    self.dragger = [[TableViewDragger alloc] initWithTableView:self.tableOfPractices];
-    self.dragger.delegate = self;
-    self.dragger.dataSource = self;
+    //self.dragger = [[TableViewDragger alloc] init];
+    //self.dragger.delegate = self;
+    //self.dragger.dataSource = self;
     
     self.splitViewController.delegate = self;
     self.splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
@@ -270,7 +270,7 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 
 #pragma mark - TableViewDraggerDelegate
 
--(BOOL)dragger:(TableViewDragger *)dragger moveDraggingAtIndexPath:(NSIndexPath *)indexPath newIndexPath:(NSIndexPath *)newIndexPath {
+/*-(BOOL)dragger:(TableViewDragger *)dragger moveDraggingAtIndexPath:(NSIndexPath *)indexPath newIndexPath:(NSIndexPath *)newIndexPath {
     [self.tableOfPractices moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
     [self.practiceIt movePracticeAtIndex:indexPath.row toIndex:newIndexPath.row];
     [self.practiceIt saveData];
@@ -308,7 +308,7 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 
 -(BOOL)dragger:(TableViewDragger *)dragger shouldDragAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
-}
+}*/
 
 #pragma mark - SWTableViewCell
 

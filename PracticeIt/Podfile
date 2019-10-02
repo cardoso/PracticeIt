@@ -10,9 +10,8 @@ target 'PracticeIt' do
   pod 'UITextField+Shake', '~> 1.1'
   pod 'MZFormSheetPresentationController', '~> 2.4'
   use_frameworks!
-  pod "TableViewDragger"
+  pod 'TableViewDragger'
   pod 'MarqueeLabel'
-  pod 
 
   target 'PracticeItTests' do
     inherit! :search_paths

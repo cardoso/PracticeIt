@@ -1,7 +1,9 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/MZAppearance" "$PODS_CONFIGURATION_BUILD_DIR/MZFormSheetPresentationController" "$PODS_CONFIGURATION_BUILD_DIR/MarqueeLabel" "$PODS_CONFIGURATION_BUILD_DIR/SWTableViewCell" "$PODS_CONFIGURATION_BUILD_DIR/TableViewDragger" "$PODS_CONFIGURATION_BUILD_DIR/UITextField+Shake"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MZAppearance" "${PODS_CONFIGURATION_BUILD_DIR}/MZFormSheetPresentationController" "${PODS_CONFIGURATION_BUILD_DIR}/MarqueeLabel" "${PODS_CONFIGURATION_BUILD_DIR}/SWTableViewCell" "${PODS_CONFIGURATION_BUILD_DIR}/TableViewDragger" "${PODS_CONFIGURATION_BUILD_DIR}/UITextField+Shake"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/MZAppearance/MZAppearance.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MZFormSheetPresentationController/MZFormSheetPresentationController.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MarqueeLabel/MarqueeLabel.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SWTableViewCell/SWTableViewCell.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/TableViewDragger/TableViewDragger.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/UITextField+Shake/UITextField_Shake.framework/Headers"
-PODS_BUILD_DIR = $BUILD_DIR
-PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MZAppearance/MZAppearance.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MZFormSheetPresentationController/MZFormSheetPresentationController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MarqueeLabel/MarqueeLabel.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SWTableViewCell/SWTableViewCell.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/TableViewDragger/TableViewDragger.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/UITextField+Shake/UITextField_Shake.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "MZAppearance" -framework "MZFormSheetPresentationController" -framework "MarqueeLabel" -framework "QuartzCore" -framework "SWTableViewCell" -framework "TableViewDragger" -framework "UIKit" -framework "UITextField_Shake"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

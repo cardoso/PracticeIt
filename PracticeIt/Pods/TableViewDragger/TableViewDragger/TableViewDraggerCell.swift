@@ -10,12 +10,12 @@ import UIKit
 
 class TableViewDraggerCell: UIScrollView {
     private let zoomingView: UIView!
-    
+
     var dragAlpha: CGFloat = 1
     var dragScale: CGFloat = 1
     var dragShadowOpacity: Float = 0.4
-    
-    var dropIndexPath: NSIndexPath = NSIndexPath(index: 0)
+
+    var dropIndexPath: IndexPath = IndexPath(index: 0)
     var offset: CGPoint = CGPoint.zero {
         didSet {
             offset.x -= (bounds.width / 2)
@@ -31,107 +31,105 @@ class TableViewDraggerCell: UIScrollView {
     var viewHeight: CGFloat {
         return zoomingView.bounds.height * zoomScale
     }
-    
-    private func adjustCenter(var center: CGPoint) -> CGPoint {
+
+    private func adjustCenter(_ center: CGPoint) -> CGPoint {
+        var center = center
         center.x -= offset.x
         center.y -= offset.y
         return center
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
-        zoomingView = UIView(frame: CGRect.zero)
+        zoomingView = UIView(frame: .zero)
         super.init(coder: aDecoder)
     }
-    
-    init(cell: UITableViewCell) {
-        cell.frame.origin = CGPoint.zero
-        cell.contentView.alpha = 1
-        
-        zoomingView = UIView(frame: cell.frame)
+
+    init(cell: UIView) {
+        zoomingView = UIView(frame: cell.bounds)
         zoomingView.addSubview(cell)
-        
-        super.init(frame: cell.frame)
-        
+
+        super.init(frame: cell.bounds)
+
         delegate = self
         clipsToBounds = false
-        
-        layer.shadowColor = UIColor.blackColor().CGColor
+
+        layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0
         layer.shadowRadius = 5
-        layer.shadowOffset = CGSize.zero
-        
+        layer.shadowOffset = .zero
+
         addSubview(zoomingView)
     }
-    
-    func transformToPoint(point: CGPoint) {
+
+    func transformToPoint(_ point: CGPoint) {
         if dragScale > 1 {
             maximumZoomScale = dragScale
         } else {
             minimumZoomScale = dragScale
         }
-        
+
         var center = zoomingView.center
         center.x -= (center.x * dragScale) - point.x
         center.y -= (center.y * dragScale) - point.y
-        
-        UIView.animateWithDuration(0.25, delay: 0.1, options: .CurveEaseInOut, animations: {
+
+        UIView.animate(withDuration: 0.25, delay: 0.1, options: .curveEaseInOut, animations: {
             self.zoomingView.center = center
             self.zoomScale = self.dragScale
             self.alpha = self.dragAlpha
-            }, completion: nil)
-        
+        }, completion: nil)
+
         CATransaction.begin()
         let anim = CABasicAnimation(keyPath: "shadowOpacity")
         anim.fromValue = 0
         anim.toValue = dragShadowOpacity
         anim.duration = 0.1
-        anim.removedOnCompletion = false
-        anim.fillMode = kCAFillModeForwards
-        layer.addAnimation(anim, forKey: "cellDragAnimation")
+        anim.isRemovedOnCompletion = false
+        anim.fillMode = .forwards
+        layer.add(anim, forKey: "cellDragAnimation")
         CATransaction.commit()
     }
-    
-    func absoluteCenterForScrollView(scrollView: UIScrollView) -> CGPoint {
+
+    func adjustedCenter(on scrollView: UIScrollView) -> CGPoint {
         var center = location
         center.y -= scrollView.contentOffset.y
         center.x = scrollView.center.x
         return center
     }
-    
-    func drop(center: CGPoint, completion: (() -> Void)? = nil) {
-        UIView.animateWithDuration(0.25) {
+
+    func drop(_ center: CGPoint, completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: 0.25) {
             self.zoomingView.adjustCenterAtRect(self.zoomingView.frame)
             self.center = center
             self.zoomScale = 1.0
             self.alpha = 1.0
         }
-        
+
         CATransaction.begin()
         let anim = CABasicAnimation(keyPath: "shadowOpacity")
         anim.fromValue = dragShadowOpacity
         anim.toValue = 0
         anim.duration = 0.15
         anim.beginTime = CACurrentMediaTime() + 0.15
-        anim.removedOnCompletion = false
-        anim.fillMode = kCAFillModeForwards
+        anim.isRemovedOnCompletion = false
+        anim.fillMode = .forwards
         CATransaction.setCompletionBlock {
             self.removeFromSuperview()
-            
+
             completion?()
         }
-        layer.addAnimation(anim, forKey: "cellDropAnimation")
+        layer.add(anim, forKey: "cellDropAnimation")
         CATransaction.commit()
     }
 }
 
 extension TableViewDraggerCell: UIScrollViewDelegate {
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return zoomingView
     }
 }
 
 private extension UIView {
-    func adjustCenterAtRect(rect: CGRect) {
+    func adjustCenterAtRect(_ rect: CGRect) {
         let center = CGPoint(x: rect.size.width / 2, y: rect.size.height / 2)
         self.center = center
     }

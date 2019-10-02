@@ -6,24 +6,33 @@ PODS:
   - MZFormSheetPresentationController (2.4.0):
     - MZAppearance
   - SWTableViewCell (0.3.7)
-  - TableViewDragger (0.0.4)
-  - UITextField+Shake (1.1.2)
+  - TableViewDragger (1.3.0)
+  - "UITextField+Shake (1.1.2)"
 
 DEPENDENCIES:
   - MarqueeLabel
   - MZFormSheetPresentationController (~> 2.4)
   - SWTableViewCell (~> 0.3.7)
   - TableViewDragger
-  - UITextField+Shake (~> 1.1)
+  - "UITextField+Shake (~> 1.1)"
+
+SPEC REPOS:
+  trunk:
+    - MarqueeLabel
+    - MZAppearance
+    - MZFormSheetPresentationController
+    - SWTableViewCell
+    - TableViewDragger
+    - "UITextField+Shake"
 
 SPEC CHECKSUMS:
   MarqueeLabel: 26ecbdd54105dcb282cd3b56452f891d524b233b
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
   MZFormSheetPresentationController: 3b9b6d76adc9f81c2defd0bb59e0f3dc2431e41e
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
-  TableViewDragger: 244876a4cd385316f177b7cb750e587bfe6ef4a5
-  UITextField+Shake: 47cc0429dafb3da580686339ad2da091249a8ea2
+  TableViewDragger: 5933729a18d1606e16388d72f6d4fe5f3a0bcaf4
+  "UITextField+Shake": 47cc0429dafb3da580686339ad2da091249a8ea2
 
-PODFILE CHECKSUM: b652dd7f56c16da29e26f0262a7ee0e97ddb2295
+PODFILE CHECKSUM: 48912134c34c00090c40477a155ebf64d5766eee
 
-COCOAPODS: 1.0.0.rc.1
+COCOAPODS: 1.8.1

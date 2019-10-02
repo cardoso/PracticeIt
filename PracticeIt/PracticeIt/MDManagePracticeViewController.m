@@ -49,10 +49,10 @@
     self.synthesizer.delegate = self;
     
     // Dragger
-    self.dragger = [[TableViewDragger alloc] initWithTableView:self.tableOfTasks];
+    /*self.dragger = [TableViewDragger alloc];
     self.dragger.delegate = self;
     self.dragger.dataSource = self;
-    self.dragger.cellAlpha = 0.7;
+    self.dragger.cellAlpha = 0.7;*/
     
     // Create pause button
     self.pauseButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePressed:)];
